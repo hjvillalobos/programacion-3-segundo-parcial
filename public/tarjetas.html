@@ -33,6 +33,20 @@
     <button id="retry-material" type="button" hidden>Reintentar carga</button>
     <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
     <h2 id="tarjetas">Repaso con tarjetas</h2>
+    <form class="study-filters screenonly" role="search" aria-label="Buscar y filtrar tarjetas" data-study-for="lista-tarjetas" data-item-label="tarjetas" hidden>
+      <div class="filter-fields">
+        <label for="study-query">Buscar en las tarjetas
+          <input id="study-query" name="q" type="search" placeholder="Concepto, pregunta o código" aria-describedby="study-search-help" autocomplete="off" aria-controls="lista-tarjetas">
+        </label>
+        <label for="study-topic">Tema
+          <select id="study-topic" name="topic" aria-controls="lista-tarjetas"><option value="">Todos los temas</option></select>
+        </label>
+        <button type="button" data-clear-filters disabled>Limpiar filtros</button>
+      </div>
+      <p id="study-search-help" class="meta">Busca en el contenido sin distinguir mayúsculas ni tildes. Puedes combinar varias palabras con un tema.</p>
+      <p role="status" aria-live="polite" aria-atomic="true" data-filter-count></p>
+      <p class="empty-state" data-filter-empty hidden>No hay coincidencias. Prueba otras palabras o limpia los filtros para volver a ver todo el material.</p>
+    </form>
     <nav class="screenonly pagination" aria-label="Páginas del material, arriba" data-pagination-for="lista-tarjetas"></nav>
     <div id="lista-tarjetas"></div>
     <nav class="screenonly pagination" aria-label="Páginas del material, abajo" data-pagination-for="lista-tarjetas"></nav>

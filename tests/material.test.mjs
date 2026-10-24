@@ -139,7 +139,7 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
   globalThis.location = { hash: '#p41', pathname: '/repo/imprimir.html' };
   globalThis.requestAnimationFrame = (callback) => callback();
   let prints = 0;
-  globalThis.window = { print: () => prints++ };
+  globalThis.window = { print: () => prints++, addEventListener() {} };
   const requested = [];
   globalThis.fetch = async (url) => {
     requested.push(url);

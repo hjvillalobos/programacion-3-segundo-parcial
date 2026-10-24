@@ -310,6 +310,48 @@ summary:active {
   margin: 1.5rem 0;
 }
 
+.study-filters {
+  margin-block: 1.5rem;
+  padding-block: 1rem;
+  border-block: 1px solid var(--line);
+}
+
+.filter-fields {
+  display: grid;
+  gap: 1rem;
+  align-items: end;
+}
+
+.filter-fields label {
+  min-width: 0;
+  font-weight: 650;
+}
+
+.filter-fields input,
+.filter-fields select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  margin-top: .4rem;
+  padding: .6rem .7rem;
+  border: 1px solid var(--control);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+}
+
+.filter-fields input::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+
+.filter-fields button {
+  justify-self: start;
+}
+
 .page-count {
   flex-basis: 100%;
   color: var(--muted);
@@ -442,6 +484,9 @@ td a {
 }
 
 @media (min-width: 40rem) {
+  .filter-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .page-shell {
     padding: 2rem 2rem 4rem;
   }
@@ -461,6 +506,9 @@ td a {
 }
 
 @media (min-width: 56rem) {
+  .filter-fields {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) auto;
+  }
   .site-menu > summary {
     display: none;
   }

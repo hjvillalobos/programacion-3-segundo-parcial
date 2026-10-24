@@ -1,8 +1,10 @@
 import { element, renderCards, renderQuestions, renderSolutions, renderSources, renderCoverage, richContent } from './render.js';
 import { pageForId } from './routes.js';
 import { paginate } from './pagination.js';
+import { mountStudyFilters } from './study-filters.js';
 
 const loadingMessage = document.querySelector('#estado-carga')?.textContent || 'Cargando material de estudio...';
+const materialViews = new Map();
 
 function currentTargetId() {
   try {
@@ -39,22 +41,24 @@ async function loadMaterial() {
       const nodes = items.length ? render(items) : [element('p', { class: 'empty-state', role: 'status' }, [
         'Todavía no hay contenido en esta sección. Puedes repasar con el material de las otras secciones.',
       ])];
-      return [selector, nodes, items.length > 0];
+      return [selector, nodes, items.length > 0, items];
     }));
-    loaded.forEach(([selector, nodes, hasContent]) => {
+    materialViews.clear();
+    loaded.forEach(([selector, nodes, hasContent, items]) => {
       const container = document.querySelector(selector);
       container.replaceChildren(...nodes);
       const controls = document.querySelectorAll(`[data-pagination-for="${selector.slice(1)}"]`);
+      const form = document.querySelector(`[data-study-for="${selector.slice(1)}"]`);
+      if (form) form.hidden = true;
       controls.forEach((control) => { control.hidden = !hasContent; });
       if (controls.length && hasContent) {
-        const pages = paginate(container, nodes, controls, {
+        const options = {
           targetId: currentTargetId(),
           onNavigate: (id) => history.replaceState(null, '', `#${id}`),
-        });
-        window.addEventListener('hashchange', () => {
-          pages.reveal(currentTargetId());
-          scrollToInitialTarget();
-        });
+        };
+        materialViews.set(selector, form
+          ? mountStudyFilters({ items, nodes, container, controls, form, ...options })
+          : paginate(container, nodes, controls, options));
       }
     });
     status.hidden = true;
@@ -91,6 +95,11 @@ if (legacyPage) location.replace(`${legacyPage}${location.hash}`);
 loadMaterial().then(() => {
   if (document.readyState === 'complete') scrollToInitialTarget();
   else window.addEventListener('load', scrollToInitialTarget, { once: true });
+});
+
+window.addEventListener('hashchange', () => {
+  materialViews.forEach((view) => view.reveal(currentTargetId()));
+  scrollToInitialTarget();
 });
 
 document.querySelector('#retry-material')?.addEventListener('click', () => {
