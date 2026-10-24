@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulacro I · Programación 3</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/exam.css">
+  <script type="module" src="assets/js/exam-page.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="stamp">EIF206 · Examen anterior · Práctica cronometrada</span>
+      <h1>Simulacro I</h1>
+      <p>Practica, entrega y revisa tu resultado.</p>
+    </header>
+    <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="tarjetas.html">Tarjetas</a>
+      <a href="cuestionario.html">Cuestionario</a>
+      <a href="solucionario.html">Solucionario</a>
+      <a href="simulacro-1.html" aria-current="page">Simulacro I</a>
+      <a href="referencias.html">Referencias</a>
+      <a href="imprimir.html">Imprimir</a>
+    </nav>
+    <p id="exam-load-status" role="status">Cargando simulacro...</p>
+    <noscript>Activa JavaScript para realizar el simulacro.</noscript>
+    <p id="storage-notice" role="status" hidden>El navegador no permite guardar este intento. Mantén esta página abierta para conservar tus respuestas.</p>
+
+    <section id="exam-setup" class="item" hidden>
+      <h2>Antes de comenzar</h2>
+      <p id="exam-description"></p>
+      <ul>
+        <li>Dispones de <strong id="exam-duration"></strong>. El tiempo empieza al pulsar Comenzar.</li>
+        <li>Las preguntas y sus opciones se mezclan en cada nuevo intento.</li>
+        <li>Puedes cambiar tus respuestas y moverte entre preguntas antes de entregar.</li>
+        <li>Al agotarse el tiempo, el intento se entrega automáticamente.</li>
+        <li>Las preguntas sin responder valen cero. La revisión aparece después de entregar.</li>
+        <li>El intento se conserva al recargar esta pestaña; el cronómetro sigue corriendo.</li>
+      </ul>
+      <button id="start-exam" type="button" class="primary-button">Comenzar simulacro</button>
+    </section>
+
+    <section id="exam-running" hidden>
+      <div class="exam-toolbar">
+        <p>Tiempo restante: <strong id="exam-timer" role="timer" aria-live="off">90:00</strong></p>
+        <p id="exam-progress" role="status"></p>
+      </div>
+      <p id="exam-announcement" role="status"></p>
+      <details class="screenonly">
+        <summary>Ir a una pregunta</summary>
+        <p>Las preguntas marcadas como respondidas ya tienen una opción seleccionada.</p>
+        <div id="exam-map" class="exam-map" role="group" aria-label="Preguntas del intento"></div>
+      </details>
+      <form id="exam-form">
+        <div id="exam-question" class="item"></div>
+        <div class="exam-actions">
+          <button id="previous-question" type="button">Anterior</button>
+          <button id="next-question" type="button">Siguiente</button>
+          <button type="submit" class="primary-button">Terminar intento</button>
+        </div>
+      </form>
+      <section id="submit-confirmation" class="item" aria-labelledby="submit-title" hidden>
+        <h2 id="submit-title">Confirmar entrega</h2>
+        <p id="submit-summary"></p>
+        <p>Después de entregar no podrás cambiar las respuestas. El cronómetro continúa mientras decides.</p>
+        <div class="exam-actions">
+          <button id="cancel-submit" type="button">Seguir respondiendo</button>
+          <button id="confirm-submit" type="button" class="primary-button">Confirmar entrega</button>
+        </div>
+      </section>
+    </section>
+
+    <section id="exam-results" hidden>
+      <h2 id="exam-results-title" tabindex="-1">Resultado del Simulacro I</h2>
+      <p>Nota obtenida: <strong id="exam-score" class="exam-score"></strong></p>
+      <p id="exam-result-summary"></p>
+      <p id="exam-result-time"></p>
+      <button id="retry-exam" type="button">Preparar otro intento</button>
+      <h3>Revisión de respuestas</h3>
+      <p>Abre cada pregunta para comparar tu respuesta con la clave del examen anterior.</p>
+      <nav id="review-top" class="pagination screenonly" aria-label="Páginas de revisión, arriba"></nav>
+      <div id="exam-review"></div>
+      <nav id="review-bottom" class="pagination screenonly" aria-label="Páginas de revisión, abajo"></nav>
+    </section>
+  </main>
+</body>
+</html>

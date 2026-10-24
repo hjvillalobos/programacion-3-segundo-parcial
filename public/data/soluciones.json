@@ -1,0 +1,762 @@
+[
+  {
+    "id": "r1",
+    "pregunta": "p1",
+    "titulo": "Respuesta P01",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "B. Es estructural porque organiza una composición de objetos. A se enfoca en construir instancias; C se centra en colaboración o algoritmos; D describe un ámbito distinto y no una familia GoF."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r2",
+    "pregunta": "p2",
+    "titulo": "Respuesta P02",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "C. Strategy encapsula alternativas del mismo algoritmo. A difunde avisos; B compone jerarquías; D cambia interfaces incompatibles."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r3",
+    "pregunta": "p3",
+    "titulo": "Respuesta P03",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "A. El sujeto notifica mediante un contrato de observador. B fija dependencias concretas; C ofrece estructura de árbol sin suscripciones; D cambia algoritmos y no modela notificaciones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r4",
+    "pregunta": "p4",
+    "titulo": "Respuesta P04",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "D. Abstract Factory produce familias relacionadas. A crea por pasos; B limita instancias; C agrupa notificaciones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r5",
+    "pregunta": "p5",
+    "titulo": "Respuesta P05",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "B. Adapter traduce el contrato. A añade comportamiento conservando el contrato; C simplifica un subsistema; D intercambia algoritmos."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r6",
+    "pregunta": "p6",
+    "titulo": "Respuesta P06",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "C. El DAO concentra acceso y mapeo de persistencia. A presenta datos; B transporta datos; D atiende eventos de interfaz y debe delegar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r7",
+    "pregunta": "p7",
+    "titulo": "Respuesta P07",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "A. La tupla es un registro completo y el dominio limita valores de un atributo. B invierte conceptos; C confunde dominio con relación; D convierte una regla de valores en un orden físico."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r8",
+    "pregunta": "p8",
+    "titulo": "Respuesta P08",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "D. El usuario referenciado debe existir. A niega la relación 1:N; B acepta una referencia inválida; C confunde integridad referencial con consecutividad."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r9",
+    "pregunta": "p9",
+    "titulo": "Respuesta P09",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "B. Un atributo no primo depende de parte de la clave compuesta. A requeriría valores no atómicos; C correspondería a una dependencia transitiva entre no claves; D ignora la dependencia parcial."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r10",
+    "pregunta": "p10",
+    "titulo": "Respuesta P10",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "C. Mantener la FK id_tipo en USUARIOS y almacenar la descripción en TIPOS_USUARIO elimina la dependencia transitiva del ejemplo. A solo elimina una restricción; B no corrige la dependencia; D mezcla más hechos."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r11",
+    "pregunta": "p11",
+    "titulo": "Respuesta P11",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "A. INSERT crea una fila. B define estructura y es DDL; C lee; D cambia una fila existente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r12",
+    "pregunta": "p12",
+    "titulo": "Respuesta P12",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "D. JDBC define contratos y Connector/J los implementa para MySQL. A confunde API con motor; B trata DSN como sentencia; C identifica incorrectamente JDBC con mapeo automatizado."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r13",
+    "pregunta": "p13",
+    "titulo": "Respuesta P13",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "B. Cerrar la conexión lógica permite normalmente devolverla al pool. A agota recursos; C mezcla pool con sentencia; D invalida sin necesidad el conjunto completo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r14",
+    "pregunta": "p14",
+    "titulo": "Respuesta P14",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "C. next() posiciona el cursor en cada fila y los getters permiten construir objetos. A no avanza el cursor; B modifica la base; D no transforma resultados."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r15",
+    "pregunta": "p15",
+    "titulo": "Respuesta P15",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "A. Comparten memoria del proceso, por lo que hay que coordinar accesos a datos compartidos. B describe aislamiento de procesos; C excluye una posibilidad válida; D confunde objeto con hilo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r16",
+    "pregunta": "p16",
+    "titulo": "Respuesta P16",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "D. start() inicia la ejecución del nuevo Thread. A y B son llamadas ordinarias en el hilo actual; C pausa al hilo actual."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r17",
+    "pregunta": "p17",
+    "titulo": "Respuesta P17",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "B. Hay que poseer el monitor y volver a evaluar la condición después del despertar. A carece del monitor; C puede seguir con una condición ya falsa; D no coordina correctamente y consume CPU."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r18",
+    "pregunta": "p18",
+    "titulo": "Respuesta P18",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "C. Devuelve el Socket de esa conexión, que sirve para enviar y recibir. A confunde API de red y JDBC; B confunde escucha con conexión; D no representa la conexión."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r19",
+    "pregunta": "p19",
+    "titulo": "Respuesta P19",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "A. localhost apunta a B, donde corre el cliente. B presupone descubrimiento automático; C atribuye significado de host al puerto; D confunde resolución local con acceso público."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r20",
+    "pregunta": "p20",
+    "titulo": "Respuesta P20",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "D. Hay que completar la línea y enviar el buffer. A solo cambia el puerto; B no completa la línea; C no garantiza enviar el mensaje ni delimitarlo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r21",
+    "pregunta": "p21",
+    "titulo": "Respuesta P21",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. La unicidad y la construcción segura no vuelven atómicas las operaciones sobre el estado. Un contador o conexión compartida todavía exige un diseño concurrente apropiado. Debe distinguirse publicación de la instancia y sincronización de su uso."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r22",
+    "pregunta": "p22",
+    "titulo": "Respuesta P22",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Verdadero. Ese contrato común permite tratar uniformemente elementos individuales y grupos. El compuesto conserva hijos y combina sus resultados; una hoja realiza la operación básica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r23",
+    "pregunta": "p23",
+    "titulo": "Respuesta P23",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. La intención y el contrato determinan el patrón: Decorator añade responsabilidades conservando el contrato; Adapter traduce una interfaz; Facade simplifica el acceso a un subsistema. Envolver, por sí solo, no identifica el patrón."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r24",
+    "pregunta": "p24",
+    "titulo": "Respuesta P24",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Verdadero. En el ejemplo de una FK simple, un valor no nulo debe referenciar una clave válida; la nulabilidad es una restricción distinta. Si la relación es obligatoria, hay que agregar NOT NULL."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r25",
+    "pregunta": "p25",
+    "titulo": "Respuesta P25",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. Si ya está en 1FN, esa clave simple evita dependencias parciales respecto de ella, pero puede haber una dependencia transitiva, como id_usuario → id_tipo → nombre_tipo. Es necesario analizar también 3FN."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r26",
+    "pregunta": "p26",
+    "titulo": "Respuesta P26",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. Especificidad del motor y dependencia del sistema operativo son asuntos distintos. Connector/J es un driver JDBC tipo 4 escrito en Java; eso no elimina la necesidad de verificar compatibilidad entre versiones del driver, Java y MySQL."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r27",
+    "pregunta": "p27",
+    "titulo": "Respuesta P27",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. Pueden alternarse en un solo núcleo. Paralelismo exige ejecución simultánea; concurrencia no. Más hilos tampoco garantizan acelerar una tarea."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r28",
+    "pregunta": "p28",
+    "titulo": "Respuesta P28",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. Los hilos pueden poseer simultáneamente monitores diferentes. Todos los accesos que participan en esa protección deben coordinarse mediante el mismo monitor, o sustituirse por una estrategia concurrente correcta."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r29",
+    "pregunta": "p29",
+    "titulo": "Respuesta P29",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. TCP ofrece un flujo de bytes ordenado, no mensajes de aplicación. Las lecturas pueden dividir o agrupar lo escrito; el protocolo debe delimitar mensajes, por ejemplo con líneas o longitudes."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r30",
+    "pregunta": "p30",
+    "titulo": "Respuesta P30",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Falso. Son recursos diferentes. El cierre de escucha impide nuevas aceptaciones y desbloquea accept() con una excepción; las conexiones ya aceptadas deben gestionarse y cerrarse por separado."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r31",
+    "pregunta": "p31",
+    "titulo": "Respuesta P31",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Debe distinguir: Strategy encapsula el algoritmo de exportación e introduce un contrato estable; una fábrica concentra selección y creación del producto. Pueden colaborar. Un método estático con un switch puede ser una fábrica simple: no basta para afirmar que implementa Factory Method GoF, que delega la creación mediante redefinición en subclases. Justificar el costo de añadir abstracciones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r32",
+    "pregunta": "p32",
+    "titulo": "Respuesta P32",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "a) Builder organiza construcción por pasos y validación. b) Abstract Factory crea una familia compatible; Factory Method decide un producto mediante un método redefinible. c) Singleton podría imponer una instancia en su ámbito, pero introduce acceso global y puede dificultar pruebas; su estado mutable necesita coordinación. También es válida una configuración inmutable inyectada, justificando por qué evita necesitar Singleton."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r33",
+    "pregunta": "p33",
+    "titulo": "Respuesta P33",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Facade simplifica el subsistema, pero puede crecer en exceso si concentra demasiadas responsabilidades. Proxy representa el servicio remoto, pero no elimina latencia ni fallas. Decorator añade auditoría delegando mediante el mismo contrato, pero muchas envolturas dificultan el seguimiento. Deben identificarse intención, rol y consecuencia, no solo nombres."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r34",
+    "pregunta": "p34",
+    "titulo": "Respuesta P34",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "USUARIOS(id_usuario PK); CONVERSACIONES(id_conversacion PK, id_usuario FK); MENSAJES(id_mensaje PK, id_conversacion FK). Usuario 1:N Conversación y Conversación 1:N Mensaje; usar NOT NULL si cada conversación y mensaje debe tener dueño. Una conversación puede existir sin mensajes y no se pierde su identidad al borrar el último. Las políticas ON DELETE deben decidirse explícitamente. N:M se implementaría mediante una tabla intermedia si varios usuarios participaran en varias conversaciones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r35",
+    "pregunta": "p35",
+    "titulo": "Respuesta P35",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Definir dominios, reglas de negocio, claves candidatas y dependencias. Revisar atomicidad y grupos repetidos (1FN), dependencias parciales de no primos respecto de claves compuestas (2FN) y las condiciones de 3FN, incluyendo las transitivas típicas entre no claves. Unas filas sugieren problemas, pero no prueban todas las dependencias: estas se basan en las reglas. Diseñar hasta 3FN según el curso y desnormalizar solo con evidencia de una necesidad medible y un plan de consistencia."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r36",
+    "pregunta": "p36",
+    "titulo": "Respuesta P36",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En objetos hay identidad y referencias, métodos, herencia y colecciones. En el modelo relacional hay tuplas, claves y relaciones por valores; herencia y métodos no se trasladan directamente. JDBC permite ejecutar SQL y leer resultados; el programador realiza el mapeo manual. Un ORM como Hibernate automatiza parte de esa transformación, sin eliminar las decisiones de diseño relacional."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r37",
+    "pregunta": "p37",
+    "titulo": "Respuesta P37",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La URL JDBC identifica protocolo, host, puerto y base, junto con el driver y las credenciales/configuración apropiados. Un DSN ODBC guarda una configuración nombrada del sistema que hay que provisionar en el entorno. Ninguna opción garantiza por sí misma más seguridad. Un pool reutiliza conexiones físicas y limita su disponibilidad; cerrar la conexión lógica suele devolverla. No se debe dejar prestada indefinidamente ni compartir indiscriminadamente una sola conexión mutable entre tareas."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r38",
+    "pregunta": "p38",
+    "titulo": "Respuesta P38",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Implementar Runnable solo define la tarea. Se puede crear Thread t = new Thread(tarea); t.start();. t.join() espera su terminación; t.isAlive() indica si inició y aún no terminó, no garantiza que esté ejecutando CPU en ese instante. Estados: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED. Llamar run() directamente no crea un hilo nuevo. El hilo termina cuando run() concluye."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r39",
+    "pregunta": "p39",
+    "titulo": "Respuesta P39",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Usar, por ejemplo, LinkedBlockingQueue<Mensaje>(100): productor usa put y consumidor take; bloquean ante cola llena o vacía y requieren manejar interrupciones. La cola incorpora coordinación que de otro modo requeriría wait/notify y una condición protegida. Un evento síncrono llama al receptor en el hilo emisor. Un socket remoto requiere protocolo y tratamiento de fallas de red. Distribución describe ubicación; asincronía describe la forma de esperar. Definir una política de terminación para el consumidor."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r40",
+    "pregunta": "p40",
+    "titulo": "Respuesta P40",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Verificar servidor iniciado, dirección de escucha, host real y puerto, conectividad y reglas de red; localhost en el cliente apunta al cliente. Distinguir rechazo de conexión de timeout, sin asumir que cada error tiene una sola causa. Configurar timeout de conexión mediante connect y de lectura mediante setSoTimeout. Con conexión establecida, revisar UTF-8, formato, orden de intercambio, delimitadores y flush. readLine()==null indica EOF sin más datos; no es un mensaje vacío. TCP usa flujo fiable y ordenado mientras funciona; UDP usa datagramas sin esas garantías. Cerrar recursos por conexión y la escucha cuando corresponda, de forma separada."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r41",
+    "pregunta": "p41",
+    "titulo": "Respuesta P41",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Definir un contrato Exportador, dos implementaciones y un servicio que delega en el objeto recibido. La selección o creación queda fuera del servicio. La ventaja es añadir algoritmos sin cambiar su delegación; el costo es administrar las estrategias."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "interface Exportador { String exportar(String texto); }\nclass Csv implements Exportador {\n    public String exportar(String t) { return \"CSV:\" + t; }\n}\nclass Xml implements Exportador {\n    public String exportar(String t) { return \"XML:\" + t; }\n}\nclass ServicioExportacion {\n    private final Exportador exportador;\n    ServicioExportacion(Exportador e) { this.exportador = e; }\n    String exportar(String t) { return exportador.exportar(t); }\n}\n// El cliente elige la estrategia; el servicio solo delega.\n// Ejemplo dentro de un método:\n// String resultado = new ServicioExportacion(new Csv()).exportar(\"hola\");"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r42",
+    "pregunta": "p42",
+    "titulo": "Respuesta P42",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El historial registra observadores de una interfaz y los notifica al agregar un mensaje. Las vistas se suscriben desde fuera. Debe existir baja para evitar retener observadores. La notificación sigue siendo síncrona porque se invocan métodos en el mismo hilo."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.util.*;\ninterface Observador { void nuevoMensaje(String texto); }\nclass Historial {\n    private final List<String> mensajes = new ArrayList<>();\n    private final List<Observador> observadores = new ArrayList<>();\n    void suscribir(Observador o) {\n        if (!observadores.contains(o)) observadores.add(o);\n    }\n    void retirar(Observador o) { observadores.remove(o); }\n    void agregar(String texto) {\n        mensajes.add(texto);\n        // Copia para permitir cambios en suscripciones durante el aviso.\n        for (Observador o : new ArrayList<>(observadores)) {\n            o.nuevoMensaje(texto);\n        }\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r43",
+    "pregunta": "p43",
+    "titulo": "Respuesta P43",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Hoja y compuesto implementan el mismo contrato. El compuesto recorre sus hijos y delega. Una lista aislada sin contrato compartido y composición recursiva no basta. Para conservar un árbol, controlar la inserción: rechazar que un nodo se añada a sí mismo o a un descendiente como antecesor; controlar también la propiedad de padres si se exige un único padre."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.util.*;\ninterface ElementoMenu { void mostrar(); }\nclass Opcion implements ElementoMenu {\n    private final String texto;\n    Opcion(String t) { texto = t; }\n    public void mostrar() { System.out.println(texto); }\n}\nclass Submenu implements ElementoMenu {\n    private final List<ElementoMenu> hijos = new ArrayList<>();\n    void agregar(ElementoMenu e) {\n        if (e == this) throw new IllegalArgumentException(\"Ciclo directo\");\n        // Para árboles arbitrarios también se deben detectar ciclos indirectos.\n        hijos.add(e);\n    }\n    public void mostrar() {\n        for (ElementoMenu e : hijos) e.mostrar();\n    }\n}\n// El ejemplo presupone que quien construye el menú evita ciclos indirectos."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r44",
+    "pregunta": "p44",
+    "titulo": "Respuesta P44",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "1FN: extraer la colección de teléfonos a filas de TELEFONOS_ESTUDIANTE. 2FN: separar datos que dependen solo de estudiante o de curso; nota depende de la pareja. 3FN: separar DOCENTES porque curso → docente → nombre_docente. Con las dependencias indicadas, las relaciones finales están en 3FN. No inventar dependencias a partir de los nombres ni usar una clave artificial para ocultar las existentes."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "ESTUDIANTES(\n  estudiante PK,\n  nombre_estudiante\n)\nTELEFONOS_ESTUDIANTE(\n  estudiante FK -> ESTUDIANTES.estudiante,\n  telefono,\n  PK(estudiante, telefono)\n)\nDOCENTES(docente PK, nombre_docente)\nCURSOS(\n  curso PK,\n  nombre_curso,\n  docente FK -> DOCENTES.docente\n)\nMATRICULA(\n  estudiante FK -> ESTUDIANTES.estudiante,\n  curso FK -> CURSOS.curso,\n  nota,\n  PK(estudiante, curso)\n)"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r45",
+    "pregunta": "p45",
+    "titulo": "Respuesta P45",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La sentencia debe usar dos parámetros, asignados en orden 1 y 2. executeUpdate() devuelve las filas afectadas. try-with-resources libera sentencia y conexión aun ante SQLException. Un resultado cero indica que no se actualizó ninguna fila según las condiciones y la semántica del driver; no debe informarse éxito ciego."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.sql.*;\nimport javax.sql.DataSource;\n\n// Método dentro de una clase de acceso a datos:\nstatic int actualizarNombre(DataSource ds, int id, String nombre)\n        throws SQLException {\n    String sql = \"UPDATE usuarios SET nombre=? WHERE id_usuario=?\";\n    try (Connection c = ds.getConnection();\n         PreparedStatement ps = c.prepareStatement(sql)) {\n        ps.setString(1, nombre); // Valor, no fragmento de SQL.\n        ps.setInt(2, id);\n        return ps.executeUpdate();\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r46",
+    "pregunta": "p46",
+    "titulo": "Respuesta P46",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El DAO avanza el cursor, convierte cada fila y devuelve datos independientes de los recursos JDBC. Una lista vacía representa ausencia de filas. Entregar ResultSet a la vista acopla presentación y persistencia y dificulta determinar quién cierra conexión y sentencia. El mapeo manual no convierte JDBC en ORM."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.sql.*;\nimport java.util.*;\nimport javax.sql.DataSource;\n\nclass UsuarioDTO {\n    final int id;\n    final String nombre;\n    UsuarioDTO(int id, String nombre) { this.id = id; this.nombre = nombre; }\n}\nclass UsuarioDAO {\n    static List<UsuarioDTO> listarActivos(DataSource ds) throws SQLException {\n        List<UsuarioDTO> usuarios = new ArrayList<>();\n        String sql = \"SELECT id_usuario, nombre FROM usuarios WHERE activo=?\";\n        try (Connection c = ds.getConnection();\n             PreparedStatement ps = c.prepareStatement(sql)) {\n            ps.setBoolean(1, true);\n            try (ResultSet rs = ps.executeQuery()) {\n                while (rs.next()) {\n                    usuarios.add(new UsuarioDTO(\n                        rs.getInt(\"id_usuario\"), rs.getString(\"nombre\")));\n                }\n            }\n        }\n        return usuarios;\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r47",
+    "pregunta": "p47",
+    "titulo": "Respuesta P47",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "No está garantizado: n++ no es atómico y se pueden perder actualizaciones. Un mismo objeto Contador debe proteger incrementos y lecturas con su monitor; también sería válido AtomicInteger. join espera que cada hilo termine, pero no vuelve atómicas operaciones que ya se ejecutaron con carrera."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "class Contador {\n    private int n;\n    synchronized void incrementar() { n++; }\n    synchronized int valor() { return n; }\n}\n// Dentro de un método que declara throws InterruptedException:\nContador c = new Contador();\nRunnable tarea = () -> {\n    for (int i = 0; i < 1000; i++) c.incrementar();\n};\nThread a = new Thread(tarea);\nThread b = new Thread(tarea);\na.start();\nb.start();\na.join(); // Esperar terminación; no sustituye al monitor.\nb.join();\nSystem.out.println(c.valor()); // 2000, bajo los supuestos indicados."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r48",
+    "pregunta": "p48",
+    "titulo": "Respuesta P48",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La tarea revisa la interrupción y termina cuando se interrumpe la espera. Debe restaurar el indicador antes de salir si no propaga la excepción. finally asegura la limpieza. No se emplean Thread.stop() ni un cierre ficticio del objeto Thread."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "public void run() {\n    try {\n        while (!Thread.currentThread().isInterrupted()) {\n            Thread.sleep(1000);\n            trabajar();\n        }\n    } catch (InterruptedException e) {\n        Thread.currentThread().interrupt(); // Restaurar y terminar.\n    } finally {\n        limpiar();\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r49",
+    "pregunta": "p49",
+    "titulo": "Respuesta P49",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "write no agrega terminador y BufferedWriter puede retener el texto. Enviar newLine y flush. El timeout de conexión y el de lectura son independientes. readLine retorna null ante EOF sin más datos; distinguirlo de una respuesta vacía. Ambos extremos deben usar la misma codificación y secuencia del protocolo."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.io.*;\nimport java.net.*;\nimport java.nio.charset.StandardCharsets;\n\nstatic String ping(String host, int puerto) throws IOException {\n    try (Socket s = new Socket()) {\n        s.connect(new InetSocketAddress(host, puerto), 3000);\n        s.setSoTimeout(3000); // Timeout de lectura, no de conexión.\n        try (BufferedWriter out = new BufferedWriter(new OutputStreamWriter(\n                     s.getOutputStream(), StandardCharsets.UTF_8));\n             BufferedReader in = new BufferedReader(new InputStreamReader(\n                     s.getInputStream(), StandardCharsets.UTF_8))) {\n            out.write(\"PING\");\n            out.newLine(); // Delimitar mensaje.\n            out.flush();   // Enviar el buffer.\n            String respuesta = in.readLine();\n            if (respuesta == null) throw new EOFException(\"Sin respuesta\");\n            if (!\"PONG\".equals(respuesta))\n                throw new IOException(\"Respuesta inesperada: \" + respuesta);\n            return respuesta;\n        }\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r50",
+    "pregunta": "p50",
+    "titulo": "Respuesta P50",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Separar aceptación de atención. Un pool fijo con cola limitada evita crecimiento ilimitado de hilos y cola; ante saturación cerrar el socket rechazado. Cada manejador posee y cierra su conexión. Para negocio real, interpretar y validar petición, invocar servicio y delegar persistencia al DAO con conexiones de duración acotada. Un apagado completo cierra escucha, deja de aceptar, coordina tareas y cierra sockets pendientes/activos según la política. El ejemplo es un servidor de demostración; su método atender atiende una sola línea y su finally no constituye por sí solo un protocolo completo de apagado."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "import java.io.*;\nimport java.net.*;\nimport java.nio.charset.StandardCharsets;\nimport java.util.concurrent.*;\n\nclass ServidorDemo {\n    static void atender(Socket s) {\n        // Se adquiere la propiedad del socket y se libera al terminar.\n        try (Socket cliente = s) {\n            cliente.setSoTimeout(3000);\n            try (BufferedReader in = new BufferedReader(new InputStreamReader(\n                         cliente.getInputStream(), StandardCharsets.UTF_8));\n                 BufferedWriter out = new BufferedWriter(new OutputStreamWriter(\n                         cliente.getOutputStream(), StandardCharsets.UTF_8))) {\n                String peticion = in.readLine();\n                if (peticion == null) return;\n                out.write(\"PING\".equals(peticion) ? \"PONG\" : \"ERROR\");\n                out.newLine();\n                out.flush();\n            }\n        } catch (IOException e) {\n            System.err.println(\"Cliente: \" + e.getMessage());\n        }\n    }\n    public static void main(String[] args) throws IOException {\n        ThreadPoolExecutor pool = new ThreadPoolExecutor(\n            4, 4, 0L, TimeUnit.MILLISECONDS,\n            new ArrayBlockingQueue<Runnable>(20),\n            new ThreadPoolExecutor.AbortPolicy());\n        try (ServerSocket servidor = new ServerSocket(5000)) {\n            while (true) {\n                Socket s = servidor.accept();\n                try {\n                    pool.execute(() -> atender(s));\n                } catch (RejectedExecutionException e) {\n                    // Sin trabajador ni lugar en cola: no filtrar recursos.\n                    try { s.close(); }\n                    catch (IOException cierre) {\n                        System.err.println(cierre.getMessage());\n                    }\n                }\n            }\n        } finally {\n            pool.shutdown(); // Solicitud de cierre ordenado del pool.\n        }\n    }\n}\n// Para apagar externamente: mantener una referencia controlada al\n// ServerSocket, cerrarlo para desbloquear accept(), y coordinar la\n// finalización/cierre de tareas pendientes y sockets activos.\n// El timeout limita esperas de lectura sin datos; no fija una duración\n// total de sesión frente a un cliente que envía bytes muy lentamente."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

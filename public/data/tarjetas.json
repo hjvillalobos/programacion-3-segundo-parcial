@@ -1,0 +1,1252 @@
+[
+  {
+    "id": "t1",
+    "titulo": "T01. ¿Qué aporta un patrón de diseño?",
+    "meta": "Patrones de diseño · Base: R1",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Describe una solución reutilizable a un problema de diseño recurrente, con responsabilidades y consecuencias. Se adapta al contexto; no es código listo para copiar."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Elegir un patrón exige identificar qué cambia y qué debe permanecer estable."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t2",
+    "titulo": "T02. ¿Cómo se distinguen las tres familias principales de patrones?",
+    "meta": "Patrones de diseño · Base: R1",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Creacionales: creación de objetos. Estructurales: composición de clases y objetos. De comportamiento: colaboración, responsabilidades y algoritmos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Factory Method / Composite / Strategy, respectivamente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t3",
+    "titulo": "T03. ¿Cuáles son las responsabilidades de Strategy?",
+    "meta": "Patrones de diseño · Base: R4",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una interfaz define el algoritmo; las estrategias concretas lo implementan; el contexto recibe una estrategia y le delega la operación."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un servicio de exportación utiliza un Exportador intercambiable: CSV o XML."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t4",
+    "titulo": "T04. ¿Qué roles participan en Observer?",
+    "meta": "Patrones de diseño · Base: R4, R5",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un sujeto mantiene suscripciones y notifica cambios; los observadores reciben avisos mediante un contrato común."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Al agregar un mensaje, el modelo avisa a la vista del historial y al contador."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t5",
+    "titulo": "T05. ¿Qué riesgos introduce Observer?",
+    "meta": "Patrones de diseño · Base: R4, R5",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Suscripciones olvidadas, actualizaciones encadenadas y dependencia del orden de notificación. Las llamadas síncronas pueden bloquear al emisor; el patrón no crea hilos automáticamente."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Dar de baja una vista cerrada evita conservarla innecesariamente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t6",
+    "titulo": "T06. ¿Qué distingue a Composite de una simple lista?",
+    "meta": "Patrones de diseño · Base: R3",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Modela una jerarquía parte-todo. Hojas y compuestos comparten un contrato; el compuesto delega recursivamente en sus hijos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un menú puede contener opciones y otros menús; ambos implementan mostrar()."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t7",
+    "titulo": "T07. ¿En qué difieren Factory Method y Abstract Factory?",
+    "meta": "Patrones de diseño · Base: R2",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Factory Method permite que una subclase decida qué producto crear al redefinir un método de creación. Abstract Factory ofrece operaciones para crear una familia compatible de productos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Una fábrica de tema crea conjuntamente botones y menús del mismo estilo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t8",
+    "titulo": "T08. ¿Qué asegura Singleton y qué no asegura?",
+    "meta": "Patrones de diseño · Base: R2",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Busca una única instancia y un punto de acceso dentro del ámbito de su implementación. No vuelve seguros sus campos mutables ni crea una instancia global entre procesos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un Singleton compartido no hace segura una Connection usada simultáneamente por varios hilos."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t9",
+    "titulo": "T09. ¿Cuándo ayuda Builder?",
+    "meta": "Patrones de diseño · Base: R22",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Cuando construir un objeto requiere varios pasos u opciones. Separa el proceso de construcción y facilita validar el resultado."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Configurar una solicitud con destinatario, contenido y opciones antes de build()."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t10",
+    "titulo": "T10. ¿Qué problema resuelve Adapter?",
+    "meta": "Patrones de diseño · Base: R6",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Traduce una interfaz existente al contrato que espera el cliente. Permite reutilizar un componente incompatible sin modificarlo."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Adaptar enviarTexto(String) a la interfaz Notificador.notificar(String)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t11",
+    "titulo": "T11. ¿Cómo añade comportamiento Decorator?",
+    "meta": "Patrones de diseño · Base: R6",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Envuelve un componente que implementa el mismo contrato y agrega trabajo antes o después de delegar."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un exportador envuelto añade registro de actividad sin cambiar el exportador base."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t12",
+    "titulo": "T12. ¿Cuál es la responsabilidad de Facade?",
+    "meta": "Patrones de diseño · Base: R6",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Ofrecer una entrada sencilla a un subsistema con varias operaciones internas."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " ServicioHistorial coordina consulta de conversaciones y mensajes para la interfaz."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t13",
+    "titulo": "T13. ¿Qué hace Proxy?",
+    "meta": "Patrones de diseño · Base: R7",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Representa a otro objeto para controlar o mediar su acceso. Puede incorporar carga diferida o comunicación remota."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un proxy remoto traduce una llamada local en una solicitud por red; la red puede fallar."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t14",
+    "titulo": "T14. ¿En qué se diferencian DAO y DTO?",
+    "meta": "Patrones de diseño · Base: R8, A",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "DAO encapsula operaciones de persistencia. DTO transporta datos entre partes de la aplicación. El servicio coordina reglas de negocio."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " UsuarioDAO.consultar(id) devuelve un UsuarioDTO; la vista no ejecuta SQL."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t15",
+    "titulo": "T15. ¿Cómo justifico elegir un patrón?",
+    "meta": "Patrones de diseño · Base: R1, R6",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Explico el problema, el aspecto variable, los roles, la ventaja y el costo. Si la abstracción no aporta una mejora concreta, no la agrego."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Strategy facilita cambiar algoritmos, pero obliga a administrar estrategias y su selección."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t16",
+    "titulo": "T16. ¿Qué significan relación, tupla, atributo y dominio?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 2-4",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Relación: tabla en la representación usual. Tupla: fila. Atributo: columna. Dominio: valores admitidos para un atributo. El orden físico no define el significado."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " activo puede admitir únicamente los valores definidos por sus restricciones."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t17",
+    "titulo": "T17. ¿Qué diferencian PK y FK?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 4-5",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La PK identifica filas de forma única y no admite NULL. Una FK no nula debe corresponder a una clave referenciada válida."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Una conversación debe apuntar a un usuario existente si id_usuario es NOT NULL."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t18",
+    "titulo": "T18. ¿Qué aportan UNIQUE, NOT NULL y las restricciones de dominio?",
+    "meta": "Bases de datos y persistencia · Base: A p. 5; R24",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "UNIQUE impide duplicados de valores sujetos a la restricción; NOT NULL exige un valor; tipos y restricciones limitan el dominio."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En MySQL un índice UNIQUE puede admitir varios NULL; combinarlo con NOT NULL si el dato es obligatorio."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t19",
+    "titulo": "T19. ¿Cómo se implementan 1:1, 1:N y N:M?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 6-7",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "1:1 suele usar una FK con unicidad; 1:N coloca la FK en el lado N; N:M necesita una tabla intermedia."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Usuario 1:N Conversación; Conversación 1:N Mensaje; Matrícula enlaza Estudiante y Curso."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t20",
+    "titulo": "T20. ¿Qué anomalías busca reducir la normalización?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 9-10",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Inserción: no poder guardar un hecho sin otro. Actualización: modificar el mismo dato en muchas filas. Eliminación: perder un hecho al borrar otro."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Borrar el último mensaje no debería borrar la identidad de su conversación."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t21",
+    "titulo": "T21. ¿Qué exige 1FN en los ejemplos del curso?",
+    "meta": "Bases de datos y persistencia · Base: A p. 11",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Atributos con valores atómicos para el dominio elegido y ausencia de grupos repetitivos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Separar los teléfonos de un usuario en filas relacionadas; no guardarlos como lista separada por comas."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t22",
+    "titulo": "T22. ¿Qué dependencia elimina 2FN?",
+    "meta": "Bases de datos y persistencia · Base: A p. 12",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Las dependencias parciales de atributos no primos respecto de una parte propia de una clave candidata compuesta; además exige 1FN."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En Matrícula(estudiante, curso, nombre_estudiante, nota), nombre_estudiante depende solo de estudiante."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t23",
+    "titulo": "T23. ¿Cómo se reconoce el problema típico de 3FN?",
+    "meta": "Bases de datos y persistencia · Base: A p. 13",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En los casos del curso, un atributo no clave depende de otro atributo no clave y no directamente de la clave. Requiere 2FN."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " id_usuario → id_tipo → nombre_tipo. Separar TIPOS_USUARIO. Formalmente, para toda dependencia no trivial X→A, X debe ser superclave o A atributo primo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t24",
+    "titulo": "T24. ¿Por qué no conviene dividir cada dato en una tabla?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 14-15",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La separación debe responder a entidades y dependencias. Normalizar reduce redundancia, pero añade uniones; desnormalizar requiere una razón técnica medible."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En AVI se separan usuarios, conversaciones y mensajes; no una tabla por atributo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t25",
+    "titulo": "T25. ¿Qué es el desajuste objeto-relacional?",
+    "meta": "Bases de datos y persistencia · Base: A pp. 16-17",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Objetos usan identidad, referencias y comportamiento; tablas representan valores y claves. Persistir exige transformar esas representaciones."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Una referencia a Usuario se representa con id_usuario; una colección de mensajes corresponde a filas relacionadas."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t26",
+    "titulo": "T26. ¿Cómo se relacionan DDL, DML y CRUD?",
+    "meta": "Bases de datos y persistencia · Base: A p. 8; B p. 6",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "DDL define estructuras, como CREATE TABLE. CRUD: crear, leer, actualizar y eliminar datos mediante INSERT, SELECT, UPDATE y DELETE. IMEC expresa las mismas operaciones como insertar, modificar, eliminar y consultar."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En estas clases SELECT se estudia dentro de DML; otras clasificaciones lo llaman DQL. CRUD Create no significa CREATE TABLE."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t27",
+    "titulo": "T27. ¿Son lo mismo JDBC, un driver y un DSN?",
+    "meta": "Bases de datos y persistencia · Base: B pp. 3-4; R9",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "JDBC es la API de Java; un driver como Connector/J implementa el acceso al motor. Un DSN es una configuración nombrada, típica de ODBC."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " El driver JDBC tipo 4 de MySQL está escrito en Java: depender de un motor no implica depender del sistema operativo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t28",
+    "titulo": "T28. ¿Para qué sirve un pool de conexiones?",
+    "meta": "Bases de datos y persistencia · Base: B p. 5",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Reutiliza conexiones físicas para reducir el costo de abrirlas. El código pide una conexión y la devuelve al terminar."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En una conexión lógica obtenida de un pool, close() normalmente la devuelve al pool."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t29",
+    "titulo": "T29. ¿Cuáles son los pasos de una operación JDBC?",
+    "meta": "Bases de datos y persistencia · Base: B pp. 2, 5; R10",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Obtener conexión, preparar sentencia, asignar parámetros, ejecutar, procesar resultados y liberar recursos, también ante excepciones."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " try-with-resources cierra ResultSet, sentencia y conexión en orden inverso al de adquisición."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t30",
+    "titulo": "T30. ¿Por qué usar parámetros en PreparedStatement?",
+    "meta": "Bases de datos y persistencia · Base: R11",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Separa valores de la estructura SQL y evita interpretar esos valores como instrucciones. Los índices de parámetros empiezan en 1."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " UPDATE usuarios SET activo=? WHERE id_usuario=?; setBoolean(1, false); setInt(2, id)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t31",
+    "titulo": "T31. ¿Qué retornan executeQuery() y executeUpdate()?",
+    "meta": "Bases de datos y persistencia · Base: R10",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "executeQuery() produce un ResultSet para una consulta. executeUpdate() devuelve un conteo de filas afectadas para INSERT, UPDATE o DELETE en los casos habituales."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " DELETE con WHERE id_usuario=? puede afectar cero filas si el usuario no existe."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t32",
+    "titulo": "T32. ¿Qué diferencia el mapeo manual de un ORM?",
+    "meta": "Bases de datos y persistencia · Base: B p. 7; R10",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En JDBC manual, el código avanza con ResultSet.next() y lee columnas para crear objetos. Un ORM automatiza parte del mapeo y la persistencia."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Hibernate es un ORM; JDBC es una API de acceso, no un ORM."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t33",
+    "titulo": "T33. ¿Cómo se reparten responsabilidades en la aplicación del curso?",
+    "meta": "Bases de datos y persistencia · Base: A p. 18; R8",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Vista captura y presenta; controlador recibe eventos; servicios coordinan; lógica aplica reglas; datos/DAO ejecuta SQL y mapea; MySQL persiste."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Sustituir JSON/XML por MySQL debe concentrar cambios de persistencia en la capa de datos."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t34",
+    "titulo": "T34. ¿Qué distingue proceso, hilo y clase activa?",
+    "meta": "Hilos y comunicación · Base: C pp. 2-4",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un proceso tiene su propio espacio de memoria. Sus hilos comparten memoria. Una clase activa organiza una ejecución propia mediante uno o más hilos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un objeto servidor puede coordinar tareas mientras la interfaz sigue respondiendo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t35",
+    "titulo": "T35. ¿Concurrencia equivale a paralelismo?",
+    "meta": "Hilos y comunicación · Base: C pp. 4, 11-12; R12",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "No. Concurrencia permite progreso intercalado de tareas; paralelismo implica ejecución simultánea. Más hilos también añaden costos de memoria y planificación."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " En un núcleo dos hilos pueden alternarse sin ejecutarse simultáneamente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t36",
+    "titulo": "T36. ¿Qué diferencia Thread, Runnable, start() y run()?",
+    "meta": "Hilos y comunicación · Base: C pp. 5-6; R12, R13",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Runnable define una tarea; Thread representa un hilo. start() inicia una ejecución concurrente que invoca run(); llamar run() directamente es una llamada ordinaria."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Estados oficiales: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED; no existe RUNNING separado."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t37",
+    "titulo": "T37. ¿Qué hacen sleep(), join() e isAlive()?",
+    "meta": "Hilos y comunicación · Base: C p. 6; R12",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "sleep pausa al hilo actual sin liberar monitores que posea; join espera la terminación de otro hilo; isAlive informa si inició y aún no terminó."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " join coordina la espera por una tarea; sleep no garantiza que esa tarea ya terminó."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t38",
+    "titulo": "T38. ¿Cómo se solicita terminar una tarea cooperativamente?",
+    "meta": "Hilos y comunicación · Base: C pp. 6, 10; R12",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "interrupt() solicita interrupción; la tarea debe responder según su diseño. Puede consultar el indicador o atender InterruptedException."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Al terminar por interrupción, liberar recursos; si no se propaga InterruptedException, suele restaurarse el indicador con Thread.currentThread().interrupt()."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t39",
+    "titulo": "T39. ¿Por qué contador++ puede fallar con varios hilos?",
+    "meta": "Hilos y comunicación · Base: C p. 7",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Combina lectura, incremento y escritura; intercalarlas pierde actualizaciones. Proteger el acceso con el mismo monitor o usar una operación atómica apropiada."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " synchronized en objetos distintos no protege un contador compartido de manera conjunta."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t40",
+    "titulo": "T40. ¿Qué reglas exigen wait(), notify() y notifyAll()?",
+    "meta": "Hilos y comunicación · Base: C p. 8; R14",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Se debe poseer el monitor del objeto. wait libera ese monitor mientras espera y debe estar dentro de un while que compruebe la condición."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " notify despierta un candidato; notifyAll despierta a todos los que esperan ese monitor. Deben volver a competir por el bloqueo."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t41",
+    "titulo": "T41. ¿Qué resuelve BlockingQueue en productor-consumidor?",
+    "meta": "Hilos y comunicación · Base: C pp. 8-9; R15",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Coordina intercambio seguro de elementos. take espera si está vacía; put espera si una cola de capacidad limitada está llena."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Eventos, colas y sockets en localhost son mecanismos distintos; una llamada por evento puede seguir siendo síncrona."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t42",
+    "titulo": "T42. ¿Qué riesgos hay al crear muchos hilos o bloquear mal?",
+    "meta": "Hilos y comunicación · Base: C pp. 10-12; R16",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Consumo excesivo de recursos, competencia y posibles interbloqueos. Usar límites y un orden consistente al adquirir bloqueos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un pool de hilos limita trabajadores; una cola sin límite todavía puede crecer sin control."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t43",
+    "titulo": "T43. ¿Qué representa un socket TCP?",
+    "meta": "Hilos y comunicación · Base: R17, R23",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un extremo de una conexión de flujo de bytes. TCP conserva orden y entrega fiable mientras la conexión funciona; no conserva fronteras de mensajes ni garantiza éxito ante toda falla."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " UDP intercambia datagramas y no ofrece por sí mismo las garantías de entrega y orden de TCP."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t44",
+    "titulo": "T44. ¿Para qué sirven ServerSocket y Socket?",
+    "meta": "Hilos y comunicación · Base: R18",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "ServerSocket escucha y accept() obtiene un Socket para cada conexión. Socket permite enviar y recibir; existe en ambos extremos."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " El servidor conserva el socket de escucha para aceptar nuevas conexiones y usa otro para cada cliente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t45",
+    "titulo": "T45. ¿Qué se configura para una conexión remota?",
+    "meta": "Hilos y comunicación · Base: R19, R20",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El cliente necesita host y puerto del servidor; este debe escuchar en una dirección accesible. Debe existir conectividad y permiso de red."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " localhost siempre apunta a la computadora donde corre ese proceso, no a la computadora del compañero."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t46",
+    "titulo": "T46. ¿Cómo se delimitan mensajes sobre TCP?",
+    "meta": "Hilos y comunicación · Base: R21",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Mediante un protocolo acordado: por ejemplo, líneas terminadas en salto de línea, codificadas en UTF-8. Hay que enviar los datos almacenados en buffers."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Con BufferedWriter, usar write(texto), newLine() y flush(); readLine() consume una línea completa."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t47",
+    "titulo": "T47. ¿Qué significan accept(), EOF y un timeout?",
+    "meta": "Hilos y comunicación · Base: R19, R20",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "accept espera una conexión; readLine retorna null al finalizar el flujo sin más caracteres. Un timeout limita una espera concreta y produce una excepción."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " setSoTimeout limita lecturas del Socket; el timeout de connect se configura aparte con connect(direccion, milisegundos)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t48",
+    "titulo": "T48. ¿Cómo atiende un servidor a varios clientes?",
+    "meta": "Hilos y comunicación · Base: R18, R16",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El bucle de aceptación entrega cada Socket a una tarea distinta. Cada manejador procesa su conexión; el estado compartido requiere coordinación."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Un ThreadPoolExecutor con trabajadores y cola limitados permite controlar recursos y rechazar exceso de carga."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t49",
+    "titulo": "T49. ¿Qué diferencia aplicación distribuida de asíncrona?",
+    "meta": "Hilos y comunicación · Base: C p. 13; R18",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Distribuida: componentes en procesos o equipos comunicados. Asíncrona: una operación permite continuar sin esperar allí su resultado. Son propiedades diferentes."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Una consulta remota puede bloquear al cliente; una tarea local puede ejecutarse asíncronamente."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "t50",
+    "titulo": "T50. ¿Cómo se integran red, negocio y persistencia?",
+    "meta": "Hilos y comunicación · Base: R19, R20; A p. 18",
+    "respuesta": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El manejador interpreta mensajes, delega en servicios y estos en DAO. Cada tarea libera sus recursos de red y datos; cerrar escucha y cerrar una conexión son acciones distintas."
+        ]
+      },
+      {
+        "tipo": "p",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "Ejemplo:"
+            ]
+          },
+          " Los clientes comparten el servicio, pero no una Connection mutable global sin coordinación."
+        ]
+      }
+    ]
+  }
+]

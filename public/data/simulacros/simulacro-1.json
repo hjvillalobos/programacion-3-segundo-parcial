@@ -1,0 +1,1210 @@
+{
+  "id": "simulacro-1",
+  "version": 1,
+  "titulo": "Simulacro I",
+  "duracionSegundos": 5400,
+  "descripcion": "50 preguntas de selección única del examen anterior. Cada respuesta correcta vale un punto; la nota se calcula sobre 100.",
+  "origen": "Transcripción de un examen anterior. Las respuestas correctas corresponden a la clave visible en el material de referencia.",
+  "preguntas": [
+    {
+      "id": "s1-p01",
+      "numeroOriginal": 1,
+      "enunciado": "¿Cuál de los siguientes es un patrón de diseño estructural?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Command"
+        },
+        {
+          "id": "b",
+          "texto": "Adapter"
+        },
+        {
+          "id": "c",
+          "texto": "Factory Method"
+        },
+        {
+          "id": "d",
+          "texto": "Template Method"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p02",
+      "numeroOriginal": 2,
+      "enunciado": "¿Cuál de los siguientes patrones se usa para agregar responsabilidades dinámicamente a un objeto?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Chain of Responsibility"
+        },
+        {
+          "id": "b",
+          "texto": "Factory"
+        },
+        {
+          "id": "c",
+          "texto": "Flyweight"
+        },
+        {
+          "id": "d",
+          "texto": "Decorator"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p03",
+      "numeroOriginal": 3,
+      "enunciado": "¿Cuál es el método adecuado para ejecutar un INSERT en JDBC?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "executeUpdate()"
+        },
+        {
+          "id": "b",
+          "texto": "commit()"
+        },
+        {
+          "id": "c",
+          "texto": "runInsert()"
+        },
+        {
+          "id": "d",
+          "texto": "executeQuery()"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p04",
+      "numeroOriginal": 4,
+      "enunciado": "¿Cuál forma de acceso JDBC permite insertar parámetros y evita inyección SQL?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "ResultSet"
+        },
+        {
+          "id": "b",
+          "texto": "PreparedStatement"
+        },
+        {
+          "id": "c",
+          "texto": "CallableQuery"
+        },
+        {
+          "id": "d",
+          "texto": "Statement"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p05",
+      "numeroOriginal": 5,
+      "enunciado": "¿Qué patrón de comportamiento define una operación pero deja pasos a subclases?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Builder"
+        },
+        {
+          "id": "b",
+          "texto": "Memento"
+        },
+        {
+          "id": "c",
+          "texto": "State"
+        },
+        {
+          "id": "d",
+          "texto": "Template Method"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p06",
+      "numeroOriginal": 6,
+      "enunciado": "¿Qué patrón permite convertir la interfaz de una clase en otra que el cliente espera?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Strategy"
+        },
+        {
+          "id": "b",
+          "texto": "Prototype"
+        },
+        {
+          "id": "c",
+          "texto": "Adapter"
+        },
+        {
+          "id": "d",
+          "texto": "Builder"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p07",
+      "numeroOriginal": 7,
+      "enunciado": "¿Qué patrón permite crear familias de objetos relacionados sin especificar su clase concreta?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Bridge"
+        },
+        {
+          "id": "b",
+          "texto": "Decorator"
+        },
+        {
+          "id": "c",
+          "texto": "Abstract Factory"
+        },
+        {
+          "id": "d",
+          "texto": "Iterator"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p08",
+      "numeroOriginal": 8,
+      "enunciado": "accept() en ServerSocket retorna:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Un puerto disponible"
+        },
+        {
+          "id": "b",
+          "texto": "Un flujo de entrada"
+        },
+        {
+          "id": "c",
+          "texto": "Un booleano"
+        },
+        {
+          "id": "d",
+          "texto": "Un objeto Socket"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p09",
+      "numeroOriginal": 9,
+      "enunciado": "Actualizar la interfaz gráfica desde un hilo no EDT:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Depende del JVM"
+        },
+        {
+          "id": "b",
+          "texto": "Debe hacerse usando invokeLater"
+        },
+        {
+          "id": "c",
+          "texto": "Debe hacerse con sleep()"
+        },
+        {
+          "id": "d",
+          "texto": "Es permitido sin restricciones"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p10",
+      "numeroOriginal": 10,
+      "enunciado": "Cuando un cliente no está conectado y el servidor ejecuta accept():",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se lanza SQLException"
+        },
+        {
+          "id": "b",
+          "texto": "Se detiene el servidor"
+        },
+        {
+          "id": "c",
+          "texto": "El puerto se libera"
+        },
+        {
+          "id": "d",
+          "texto": "El hilo se bloquea esperando conexión"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p11",
+      "numeroOriginal": 11,
+      "enunciado": "Cuando un hilo espera datos en un socket usando read(), ocurre:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Cierre automático del socket"
+        },
+        {
+          "id": "b",
+          "texto": "Ejecución paralela garantizada"
+        },
+        {
+          "id": "c",
+          "texto": "Creación de un hilo adicional"
+        },
+        {
+          "id": "d",
+          "texto": "Bloqueo del hilo hasta recibir datos"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p12",
+      "numeroOriginal": 12,
+      "enunciado": "Dentro de JDBC, el método executeQuery retorna:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "int"
+        },
+        {
+          "id": "b",
+          "texto": "Ninguna"
+        },
+        {
+          "id": "c",
+          "texto": "ResultSet"
+        },
+        {
+          "id": "d",
+          "texto": "Connection"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p13",
+      "numeroOriginal": 13,
+      "enunciado": "El método next() de ResultSet retorna:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "True si hay otro registro"
+        },
+        {
+          "id": "b",
+          "texto": "El valor de la siguiente columna"
+        },
+        {
+          "id": "c",
+          "texto": "Un objeto Serializable"
+        },
+        {
+          "id": "d",
+          "texto": "El número de filas restantes"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p14",
+      "numeroOriginal": 14,
+      "enunciado": "El método run() pertenece a:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "La lógica que ejecuta un Thread"
+        },
+        {
+          "id": "b",
+          "texto": "El motor JDBC interno"
+        },
+        {
+          "id": "c",
+          "texto": "La creación del socket"
+        },
+        {
+          "id": "d",
+          "texto": "El inicio de la interfaz gráfica"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p15",
+      "numeroOriginal": 15,
+      "enunciado": "El patrón Composite permite:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Crear solo una instancia global"
+        },
+        {
+          "id": "b",
+          "texto": "Separar interfaz de implementación"
+        },
+        {
+          "id": "c",
+          "texto": "Notificar cambios de estado a observadores"
+        },
+        {
+          "id": "d",
+          "texto": "Tratar objetos individuales y compuestos de manera uniforme"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p16",
+      "numeroOriginal": 16,
+      "enunciado": "El patrón DAO se utiliza para:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Separar lógica de negocio del acceso a datos"
+        },
+        {
+          "id": "b",
+          "texto": "Implementar hilos en sockets"
+        },
+        {
+          "id": "c",
+          "texto": "Mejorar concurrencia de hilos"
+        },
+        {
+          "id": "d",
+          "texto": "Diseñar interfaces gráficas"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p17",
+      "numeroOriginal": 17,
+      "enunciado": "El patrón Observer es útil cuando:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Solo debe existir una instancia global"
+        },
+        {
+          "id": "b",
+          "texto": "Muchos objetos dependen del estado de otro"
+        },
+        {
+          "id": "c",
+          "texto": "Se encapsula una petición en un objeto"
+        },
+        {
+          "id": "d",
+          "texto": "Se quiere iterar secuencias sin exponer representación"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p18",
+      "numeroOriginal": 18,
+      "enunciado": "El patrón Proxy se usa cuando:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se desea encapsular algoritmos"
+        },
+        {
+          "id": "b",
+          "texto": "Se requiere desacoplar abstracción e implementación"
+        },
+        {
+          "id": "c",
+          "texto": "Se quiere controlar el acceso a un objeto real"
+        },
+        {
+          "id": "d",
+          "texto": "Se maneja comportamiento dependiente del estado"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p19",
+      "numeroOriginal": 19,
+      "enunciado": "El patrón Singleton pertenece a la clasificación de:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Patrones creacionales"
+        },
+        {
+          "id": "b",
+          "texto": "Patrones de comportamiento"
+        },
+        {
+          "id": "c",
+          "texto": "Metapatrones"
+        },
+        {
+          "id": "d",
+          "texto": "Patrones estructurales"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p20",
+      "numeroOriginal": 20,
+      "enunciado": "El principal riesgo de acceso concurrente sin sincronización es:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Condiciones de carrera"
+        },
+        {
+          "id": "b",
+          "texto": "Pérdida de memoria RAM"
+        },
+        {
+          "id": "c",
+          "texto": "Errores de sintaxis SQL"
+        },
+        {
+          "id": "d",
+          "texto": "Bloqueo del puerto"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p21",
+      "numeroOriginal": 21,
+      "enunciado": "En Java un socket puede ser accedido por:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ningún hilo directamente"
+        },
+        {
+          "id": "b",
+          "texto": "Solo un hilo"
+        },
+        {
+          "id": "c",
+          "texto": "Dos hilos máximo"
+        },
+        {
+          "id": "d",
+          "texto": "Varios hilos con sincronización"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p22",
+      "numeroOriginal": 22,
+      "enunciado": "En JDBC, DriverManager.getConnection requiere al menos:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "URL, usuario y contraseña"
+        },
+        {
+          "id": "b",
+          "texto": "Nombre de la tabla"
+        },
+        {
+          "id": "c",
+          "texto": "Puerto y lista de columnas"
+        },
+        {
+          "id": "d",
+          "texto": "Versión del motor"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p23",
+      "numeroOriginal": 23,
+      "enunciado": "En JDBC, un error de conexión lanza:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "IOException"
+        },
+        {
+          "id": "b",
+          "texto": "NullPointerException"
+        },
+        {
+          "id": "c",
+          "texto": "SQLException"
+        },
+        {
+          "id": "d",
+          "texto": "DriverException"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p24",
+      "numeroOriginal": 24,
+      "enunciado": "En un chat multicliente, ¿qué ocurre si dos hilos escriben al mismo OutputStream sin control?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "El servidor se reinicia"
+        },
+        {
+          "id": "b",
+          "texto": "Se cierran todos los sockets"
+        },
+        {
+          "id": "c",
+          "texto": "Se mezclan los datos (condición de carrera)"
+        },
+        {
+          "id": "d",
+          "texto": "Se activa automáticamente un lock interno"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p25",
+      "numeroOriginal": 25,
+      "enunciado": "En un chat multihilo, cada cliente se atiende con:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Un único hilo compartido"
+        },
+        {
+          "id": "b",
+          "texto": "Un hilo dedicado"
+        },
+        {
+          "id": "c",
+          "texto": "Un proceso externo"
+        },
+        {
+          "id": "d",
+          "texto": "Un trigger SQL"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p26",
+      "numeroOriginal": 26,
+      "enunciado": "En un servidor de chat, para evitar colisiones al broadcast:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se ejecuta sleep() antes del envío"
+        },
+        {
+          "id": "b",
+          "texto": "Se usa un solo hilo global"
+        },
+        {
+          "id": "c",
+          "texto": "Se envía un JSON por tabla"
+        },
+        {
+          "id": "d",
+          "texto": "Se sincroniza la lista de clientes conectados"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p27",
+      "numeroOriginal": 27,
+      "enunciado": "En una arquitectura distribuida, el cliente usa un hilo para:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Compilar clases"
+        },
+        {
+          "id": "b",
+          "texto": "Actualizar el EDT del servidor"
+        },
+        {
+          "id": "c",
+          "texto": "Escuchar mensajes del servidor"
+        },
+        {
+          "id": "d",
+          "texto": "Crear tablas en la BD"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p28",
+      "numeroOriginal": 28,
+      "enunciado": "En una relación 1:N, la llave foránea debe ubicarse en:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "La tabla del lado 1"
+        },
+        {
+          "id": "b",
+          "texto": "Una tercera tabla intermedia"
+        },
+        {
+          "id": "c",
+          "texto": "La tabla del lado N"
+        },
+        {
+          "id": "d",
+          "texto": "Ambas tablas"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p29",
+      "numeroOriginal": 29,
+      "enunciado": "En una sentencia SELECT, si no se especifica WHERE:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Solo devuelve la primera fila"
+        },
+        {
+          "id": "b",
+          "texto": "Se produce error"
+        },
+        {
+          "id": "c",
+          "texto": "Solo columnas numéricas"
+        },
+        {
+          "id": "d",
+          "texto": "Se devuelven todas las filas de la tabla"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p30",
+      "numeroOriginal": 30,
+      "enunciado": "flush() se usa para:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Vaciar el buffer y forzar envío"
+        },
+        {
+          "id": "b",
+          "texto": "Transmitir múltiples hilos"
+        },
+        {
+          "id": "c",
+          "texto": "Cerrar el socket"
+        },
+        {
+          "id": "d",
+          "texto": "Reservar memoria"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p31",
+      "numeroOriginal": 31,
+      "enunciado": "La sentencia SQL UPDATE puede:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Modificar solo columnas numéricas"
+        },
+        {
+          "id": "b",
+          "texto": "Modificar solamente claves primarias"
+        },
+        {
+          "id": "c",
+          "texto": "Modificar una o varias columnas según condición"
+        },
+        {
+          "id": "d",
+          "texto": "Crear nuevas columnas si no existen"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p32",
+      "numeroOriginal": 32,
+      "enunciado": "La Tercera Forma Normal elimina:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Dependencias transitivas"
+        },
+        {
+          "id": "b",
+          "texto": "Llaves compuestas"
+        },
+        {
+          "id": "c",
+          "texto": "Relaciones 1:1"
+        },
+        {
+          "id": "d",
+          "texto": "Dependencias funcionales parciales"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p33",
+      "numeroOriginal": 33,
+      "enunciado": "Lo que se escribe en OutputStream de un socket llega a:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "InputStream del socket en el otro extremo"
+        },
+        {
+          "id": "b",
+          "texto": "La consola del sistema"
+        },
+        {
+          "id": "c",
+          "texto": "La memoria del cliente local"
+        },
+        {
+          "id": "d",
+          "texto": "Un archivo temporal"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p34",
+      "numeroOriginal": 34,
+      "enunciado": "Los sockets permiten:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Enviar señales de hardware"
+        },
+        {
+          "id": "b",
+          "texto": "Enviar y recibir datos entre programas en red"
+        },
+        {
+          "id": "c",
+          "texto": "Modificar archivos de sistema"
+        },
+        {
+          "id": "d",
+          "texto": "Acceder a bases de datos locales"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p35",
+      "numeroOriginal": 35,
+      "enunciado": "Mapear objetos Java a registros de una tabla se conoce como:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "DTO Casting"
+        },
+        {
+          "id": "b",
+          "texto": "ORM"
+        },
+        {
+          "id": "c",
+          "texto": "Hash Serialization"
+        },
+        {
+          "id": "d",
+          "texto": "XML Binding"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p36",
+      "numeroOriginal": 36,
+      "enunciado": "ObjectInputStream.readObject bloquea hasta:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Cambie el estado del hilo"
+        },
+        {
+          "id": "b",
+          "texto": "Recibir datos completos"
+        },
+        {
+          "id": "c",
+          "texto": "El usuario presione Enter"
+        },
+        {
+          "id": "d",
+          "texto": "Se cierre la BD"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p37",
+      "numeroOriginal": 37,
+      "enunciado": "ObjectOutputStream sirve para enviar:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Consultas SQL"
+        },
+        {
+          "id": "b",
+          "texto": "Solo texto UTF"
+        },
+        {
+          "id": "c",
+          "texto": "Objetos serializados"
+        },
+        {
+          "id": "d",
+          "texto": "Datos solo primitivos"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p38",
+      "numeroOriginal": 38,
+      "enunciado": "Regularmente una llave foránea en una tabla T debe:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ser llave primaria en T"
+        },
+        {
+          "id": "b",
+          "texto": "Llamarse igual en ambas tablas obligatoriamente"
+        },
+        {
+          "id": "c",
+          "texto": "Ser una columna única en T"
+        },
+        {
+          "id": "d",
+          "texto": "Ser del mismo tipo de datos en ambas tablas"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p39",
+      "numeroOriginal": 39,
+      "enunciado": "ServerSocket se usa en:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "El cliente"
+        },
+        {
+          "id": "b",
+          "texto": "El servidor"
+        },
+        {
+          "id": "c",
+          "texto": "Solo en arquitecturas UDP"
+        },
+        {
+          "id": "d",
+          "texto": "Ambos lados"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p40",
+      "numeroOriginal": 40,
+      "enunciado": "Si el cliente se desconecta abruptamente, al leer del socket ocurre:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "DriverException"
+        },
+        {
+          "id": "b",
+          "texto": "SQLException"
+        },
+        {
+          "id": "c",
+          "texto": "RuntimeError GUI"
+        },
+        {
+          "id": "d",
+          "texto": "IOException o EOFException"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p41",
+      "numeroOriginal": 41,
+      "enunciado": "SwingUtilities.invokeLater permite:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Forzar garbage collection"
+        },
+        {
+          "id": "b",
+          "texto": "Cerrar conexiones JDBC"
+        },
+        {
+          "id": "c",
+          "texto": "Delegar código al EDT"
+        },
+        {
+          "id": "d",
+          "texto": "Suspender sockets"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p42",
+      "numeroOriginal": 42,
+      "enunciado": "Thread.sleep detiene:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Solo el hilo actual"
+        },
+        {
+          "id": "b",
+          "texto": "Solo el EDT"
+        },
+        {
+          "id": "c",
+          "texto": "Toda la aplicación"
+        },
+        {
+          "id": "d",
+          "texto": "Los hilos en espera de sockets"
+        }
+      ],
+      "correcta": "a"
+    },
+    {
+      "id": "s1-p43",
+      "numeroOriginal": 43,
+      "enunciado": "Un ciclo controlado por bandera booleana en hilos sirve para:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Resetear la pila de ejecución"
+        },
+        {
+          "id": "b",
+          "texto": "Sincronizar conexiones JDBC"
+        },
+        {
+          "id": "c",
+          "texto": "Destruir todos los objetos asociados"
+        },
+        {
+          "id": "d",
+          "texto": "Detener limpiamente la ejecución del hilo"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p44",
+      "numeroOriginal": 44,
+      "enunciado": "Un ejemplo de patrón de creación que clona objetos existentes en vez de crearlos desde cero es:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Command"
+        },
+        {
+          "id": "b",
+          "texto": "Iterator"
+        },
+        {
+          "id": "c",
+          "texto": "Facade"
+        },
+        {
+          "id": "d",
+          "texto": "Prototype"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p45",
+      "numeroOriginal": 45,
+      "enunciado": "Un hilo termina su ejecución cuando:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Se invoca stop() siempre"
+        },
+        {
+          "id": "b",
+          "texto": "Finaliza el método run()"
+        },
+        {
+          "id": "c",
+          "texto": "Otro hilo lo desconecta"
+        },
+        {
+          "id": "d",
+          "texto": "Se destruye el objeto Thread"
+        }
+      ],
+      "correcta": "b"
+    },
+    {
+      "id": "s1-p46",
+      "numeroOriginal": 46,
+      "enunciado": "Un Proxy en comunicación cliente-servidor sirve para:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Controlar uso de CPU"
+        },
+        {
+          "id": "b",
+          "texto": "Reemplazar hilos EDT"
+        },
+        {
+          "id": "c",
+          "texto": "Ocultar detalles de conexión al cliente"
+        },
+        {
+          "id": "d",
+          "texto": "Encriptar datos automáticamente"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p47",
+      "numeroOriginal": 47,
+      "enunciado": "Un script para crear una base de datos puede incluir sentencias:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Create Table y Create Field"
+        },
+        {
+          "id": "b",
+          "texto": "Create Table y Create Primary Key"
+        },
+        {
+          "id": "c",
+          "texto": "Ninguna"
+        },
+        {
+          "id": "d",
+          "texto": "Create Database y Create Table"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p48",
+      "numeroOriginal": 48,
+      "enunciado": "Un socket requiere para conectarse:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Ruta de archivo"
+        },
+        {
+          "id": "b",
+          "texto": "Solo usuario"
+        },
+        {
+          "id": "c",
+          "texto": "Nombre de tabla"
+        },
+        {
+          "id": "d",
+          "texto": "IP + puerto"
+        }
+      ],
+      "correcta": "d"
+    },
+    {
+      "id": "s1-p49",
+      "numeroOriginal": 49,
+      "enunciado": "Una aplicación Java con interfaz Swing utiliza al menos:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Cero hilos explícitos"
+        },
+        {
+          "id": "b",
+          "texto": "Tres hilos obligatoriamente"
+        },
+        {
+          "id": "c",
+          "texto": "Dos hilos: main y EDT"
+        },
+        {
+          "id": "d",
+          "texto": "Un único hilo"
+        }
+      ],
+      "correcta": "c"
+    },
+    {
+      "id": "s1-p50",
+      "numeroOriginal": 50,
+      "enunciado": "Una base de datos normalizada busca principalmente:",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Eliminar redundancia y dependencias no deseadas"
+        },
+        {
+          "id": "b",
+          "texto": "Reducir tamaño de índices"
+        },
+        {
+          "id": "c",
+          "texto": "Aumentar registros por tabla"
+        },
+        {
+          "id": "d",
+          "texto": "Mejorar velocidad de red"
+        }
+      ],
+      "correcta": "a"
+    }
+  ]
+}

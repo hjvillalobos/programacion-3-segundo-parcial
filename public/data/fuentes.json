@@ -1,0 +1,590 @@
+[
+  {
+    "id": "fuente-A",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "A."
+        ]
+      },
+      " Material del curso: CLASE_7_8_9_PROGRA_III.pdf. 19 páginas. Modelo relacional, integridad, cardinalidades, 1FN-3FN, objetos, AVI y capas."
+    ]
+  },
+  {
+    "id": "fuente-B",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "B."
+        ]
+      },
+      " Material del curso: CLASE_10 (1).pdf. 9 páginas. Drivers, DSN, conexiones, pool, DML y mapeo/ORM."
+    ]
+  },
+  {
+    "id": "fuente-C",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "C."
+        ]
+      },
+      " Material del curso: CLASE_11 (2).pdf. 14 páginas. Clases activas, procesos, hilos, sincronización y comunicación local."
+    ]
+  },
+  {
+    "id": "fuente-R1",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R1."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "NASA/HEASARC: clasificación de patrones"
+        ],
+        "atributos": {
+          "href": "https://heasarc.gsfc.nasa.gov/docs/software/xspec/xspec12/design/designPatterns/designpatterns.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Clasificación y uso de patrones en software real."
+    ]
+  },
+  {
+    "id": "fuente-R2",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R2."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "NASA/HEASARC: patrones creacionales"
+        ],
+        "atributos": {
+          "href": "https://heasarc.gsfc.nasa.gov/docs/software/xspec/xspec12/design/designPatterns/creational/creational.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Singleton, Factory y Abstract Factory."
+    ]
+  },
+  {
+    "id": "fuente-R3",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R3."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "NASA/HEASARC: patrones estructurales"
+        ],
+        "atributos": {
+          "href": "https://heasarc.gsfc.nasa.gov/docs/software/xspec/xspec12/design/designPatterns/structural/structural.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Composite y jerarquías parte-todo."
+    ]
+  },
+  {
+    "id": "fuente-R4",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R4."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "NASA/HEASARC: patrones de comportamiento"
+        ],
+        "atributos": {
+          "href": "https://heasarc.gsfc.nasa.gov/docs/software/xspec/xspec12/design/designPatterns/behavioral/behavioral.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Observer y Strategy."
+    ]
+  },
+  {
+    "id": "fuente-R5",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R5."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: PropertyChangeSupport"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.desktop/java/beans/PropertyChangeSupport.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Ejemplo oficial de suscripción, baja y aviso a listeners."
+    ]
+  },
+  {
+    "id": "fuente-R6",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R6."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Microsoft Press / autor Steve McConnell: Code Complete, muestra editorial"
+        ],
+        "atributos": {
+          "href": "https://www.informit.com/content/images/9780735619678/samplepages/9780735619678.pdf",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Capítulo 5: uso de patrones y tabla 5-1. Apoyo de Adapter, Decorator, Facade y criterios de selección."
+    ]
+  },
+  {
+    "id": "fuente-R7",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R7."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: eBusiness Smart Components, patrones"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/cd/E13210_01/wlcs/docs20/pdf/comp.pdf",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Proxy y familias de patrones; documentación histórica para conceptos."
+    ]
+  },
+  {
+    "id": "fuente-R8",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R8."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: Data Access Object"
+        ],
+        "atributos": {
+          "href": "https://www.oracle.com/java/technologies/dataaccessobject.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Responsabilidades de acceso a datos y transferencia de objetos."
+    ]
+  },
+  {
+    "id": "fuente-R9",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R9."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "MySQL: descripción de Connector/J"
+        ],
+        "atributos": {
+          "href": "https://dev.mysql.com/doc/connector-j/en/connector-j-overview.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Driver JDBC tipo 4, implementación Java."
+    ]
+  },
+  {
+    "id": "fuente-R10",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R10."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: procesamiento SQL con JDBC"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/jdbc/basics/processingsqlstatements.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Flujo JDBC, resultados y cierre de recursos."
+    ]
+  },
+  {
+    "id": "fuente-R11",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R11."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: PreparedStatement"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Parámetros y separación entre datos y SQL."
+    ]
+  },
+  {
+    "id": "fuente-R12",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R12."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: Thread"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". start, run, join, sleep, interrupciones y finalización."
+    ]
+  },
+  {
+    "id": "fuente-R13",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R13."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: Thread.State"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Thread.State.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Los seis estados oficiales."
+    ]
+  },
+  {
+    "id": "fuente-R14",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R14."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: Guarded Blocks"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Monitor, wait y condición dentro de while."
+    ]
+  },
+  {
+    "id": "fuente-R15",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R15."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: BlockingQueue"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/BlockingQueue.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Productor-consumidor y bloqueo por disponibilidad/capacidad."
+    ]
+  },
+  {
+    "id": "fuente-R16",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R16."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: ThreadPoolExecutor"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/concurrent/ThreadPoolExecutor.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Trabajadores, cola y políticas de rechazo."
+    ]
+  },
+  {
+    "id": "fuente-R17",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R17."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: All About Sockets"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/networking/sockets/index.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Canal TCP y extremos de la conexión."
+    ]
+  },
+  {
+    "id": "fuente-R18",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R18."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: servidor con sockets y múltiples clientes"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/networking/sockets/clientServer.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Aceptación, protocolo y atención por tareas."
+    ]
+  },
+  {
+    "id": "fuente-R19",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R19."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: Socket"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/Socket.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Conexión, flujos, timeout de lectura y cierre."
+    ]
+  },
+  {
+    "id": "fuente-R20",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R20."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: ServerSocket"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/net/ServerSocket.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Escucha, accept y cierre de escucha."
+    ]
+  },
+  {
+    "id": "fuente-R21",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R21."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: lectura y escritura con sockets"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/networking/sockets/readingWriting.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Intercambio por líneas y recursos de una conexión."
+    ]
+  },
+  {
+    "id": "fuente-R22",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R22."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle Java API: HttpRequest.Builder"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/en/java/javase/25/docs/api/java.net.http/java/net/http/HttpRequest.Builder.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Ejemplo oficial de construcción con opciones y build(); API disponible desde Java 11, citada solo como ejemplo conceptual."
+    ]
+  },
+  {
+    "id": "fuente-R23",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R23."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "Oracle: datagramas UDP"
+        ],
+        "atributos": {
+          "href": "https://docs.oracle.com/javase/tutorial/networking/datagrams/index.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Comparación conceptual de datagramas UDP con el flujo TCP."
+    ]
+  },
+  {
+    "id": "fuente-R24",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "R24."
+        ]
+      },
+      {
+        "tipo": "a",
+        "contenido": [
+          "MySQL: CREATE INDEX e índices UNIQUE"
+        ],
+        "atributos": {
+          "href": "https://dev.mysql.com/doc/refman/8.4/en/create-index.html",
+          "target": "_blank",
+          "rel": "noopener noreferrer"
+        }
+      },
+      ". Unicidad y valores NULL en índices UNIQUE."
+    ]
+  }
+]
