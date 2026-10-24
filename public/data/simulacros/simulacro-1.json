@@ -28,7 +28,12 @@
           "texto": "Template Method"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "Adapter es estructural porque adapta la interfaz de un objeto a la que espera el cliente. Factory Method es creacional; Command y Template Method pertenecen a comportamiento.",
+      "referencias": [
+        "R1",
+        "R3"
+      ]
     },
     {
       "id": "s1-p02",
@@ -52,7 +57,11 @@
           "texto": "Decorator"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Decorator envuelve un objeto y conserva su interfaz para añadir responsabilidades. Permite combinar añadidos sin crear una subclase por cada combinación; Chain of Responsibility organiza el paso de una petición entre manejadores.",
+      "referencias": [
+        "R6"
+      ]
     },
     {
       "id": "s1-p03",
@@ -76,7 +85,12 @@
           "texto": "executeQuery()"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "executeUpdate permite ejecutar INSERT, UPDATE y DELETE, y devuelve el número de filas afectadas. executeQuery se usa cuando la sentencia devuelve un ResultSet; commit confirma una transacción y no sustituye la ejecución del INSERT.",
+      "referencias": [
+        "R10",
+        "R11"
+      ]
     },
     {
       "id": "s1-p04",
@@ -100,7 +114,11 @@
           "texto": "Statement"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "PreparedStatement separa el SQL de los valores enlazados mediante parámetros. Esa protección depende de usarlos: concatenar entrada del usuario en el SQL antes de prepararlo sigue siendo inseguro. ResultSet representa resultados, no una sentencia parametrizada.",
+      "referencias": [
+        "R11"
+      ]
     },
     {
       "id": "s1-p05",
@@ -124,7 +142,11 @@
           "texto": "Template Method"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Template Method fija el esqueleto de un algoritmo y deja determinados pasos a las subclases. State cambia el comportamiento según el estado y Builder se ocupa de construir objetos, no de definir esos pasos de ejecución.",
+      "referencias": [
+        "R4"
+      ]
     },
     {
       "id": "s1-p06",
@@ -148,7 +170,12 @@
           "texto": "Builder"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Adapter traduce un contrato existente al que necesita el cliente. No exige modificar la clase adaptada: un objeto adaptador puede delegar en ella y convertir las llamadas o los datos necesarios.",
+      "referencias": [
+        "R3",
+        "R6"
+      ]
     },
     {
       "id": "s1-p07",
@@ -172,7 +199,11 @@
           "texto": "Iterator"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Abstract Factory ofrece operaciones para crear productos de una misma familia sin acoplar el cliente a sus clases concretas. La aplicación elige una fábrica y obtiene componentes relacionados mediante sus interfaces.",
+      "referencias": [
+        "R2"
+      ]
     },
     {
       "id": "s1-p08",
@@ -196,7 +227,11 @@
           "texto": "Un objeto Socket"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "accept espera una conexión entrante y, cuando la acepta, devuelve un Socket para comunicarse con ese cliente. El ServerSocket sigue siendo el punto de escucha; los flujos se obtienen del Socket retornado.",
+      "referencias": [
+        "R20"
+      ]
     },
     {
       "id": "s1-p09",
@@ -220,7 +255,11 @@
           "texto": "Es permitido sin restricciones"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "En Swing, las actualizaciones habituales de componentes deben ejecutarse en el Event Dispatch Thread, EDT. Desde otro hilo, invokeLater permite programarlas allí. La lectura de red o el trabajo lento debe permanecer fuera del EDT.",
+      "referencias": [
+        "C"
+      ]
     },
     {
       "id": "s1-p10",
@@ -244,7 +283,11 @@
           "texto": "El hilo se bloquea esperando conexión"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Con el comportamiento bloqueante habitual y sin tiempo límite configurado, accept espera hasta que llegue una conexión. Esa espera no libera el puerto ni detiene todo el proceso; un cierre o un tiempo límite pueden interrumpirla.",
+      "referencias": [
+        "R20"
+      ]
     },
     {
       "id": "s1-p11",
@@ -268,7 +311,12 @@
           "texto": "Bloqueo del hilo hasta recibir datos"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Una lectura bloqueante espera cuando todavía no hay datos disponibles. También puede terminar por fin de flujo, un error o un tiempo límite configurado; la clave describe la espera normal y no una garantía de recibir datos siempre.",
+      "referencias": [
+        "R19",
+        "R21"
+      ]
     },
     {
       "id": "s1-p12",
@@ -292,7 +340,11 @@
           "texto": "Connection"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "executeQuery devuelve un ResultSet para recorrer las filas obtenidas. No devuelve la conexión ni un número de filas afectadas; este último es el resultado habitual de executeUpdate.",
+      "referencias": [
+        "R10"
+      ]
     },
     {
       "id": "s1-p13",
@@ -316,7 +368,11 @@
           "texto": "El número de filas restantes"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "next avanza el cursor una fila y devuelve true si quedó situado en una fila válida. El cursor comienza antes de la primera fila y false indica que ya no hay otra fila para leer.",
+      "referencias": [
+        "R10"
+      ]
     },
     {
       "id": "s1-p14",
@@ -340,7 +396,11 @@
           "texto": "El inicio de la interfaz gráfica"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "run contiene la tarea que ejecutará el hilo. Para iniciar un nuevo hilo se llama a start; invocar run directamente ejecuta una llamada ordinaria en el hilo actual.",
+      "referencias": [
+        "R12"
+      ]
     },
     {
       "id": "s1-p15",
@@ -364,7 +424,11 @@
           "texto": "Tratar objetos individuales y compuestos de manera uniforme"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Composite representa jerarquías parte-todo mediante un contrato común para hojas y agrupaciones. El cliente puede invocar la misma operación en un elemento individual o en un compuesto que delega en sus hijos.",
+      "referencias": [
+        "R3"
+      ]
     },
     {
       "id": "s1-p16",
@@ -388,7 +452,11 @@
           "texto": "Diseñar interfaces gráficas"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "DAO concentra las operaciones de persistencia detrás de una interfaz, separando el acceso a datos de la lógica de negocio. Así, el resto de la aplicación no necesita repetir consultas ni detalles de conexión.",
+      "referencias": [
+        "R8"
+      ]
     },
     {
       "id": "s1-p17",
@@ -412,7 +480,12 @@
           "texto": "Se quiere iterar secuencias sin exponer representación"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "Observer establece una relación de suscripción: cuando cambia el sujeto, avisa a los objetos interesados. Encapsular una petición corresponde a Command; restringir la creación a una instancia corresponde a Singleton.",
+      "referencias": [
+        "R4",
+        "R5"
+      ]
     },
     {
       "id": "s1-p18",
@@ -436,7 +509,11 @@
           "texto": "Se maneja comportamiento dependiente del estado"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Proxy representa a otro objeto y media su acceso, por ejemplo para aplicar permisos, carga diferida o comunicación remota. Mantener una interfaz equivalente permite que el cliente lo utilice como sustituto del objeto real.",
+      "referencias": [
+        "R7"
+      ]
     },
     {
       "id": "s1-p19",
@@ -460,7 +537,11 @@
           "texto": "Patrones estructurales"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "Singleton es creacional porque controla la creación y el acceso a una instancia única dentro del ámbito previsto. Esa unicidad no garantiza por sí sola que el estado mutable sea seguro para varios hilos.",
+      "referencias": [
+        "R2"
+      ]
     },
     {
       "id": "s1-p20",
@@ -484,7 +565,12 @@
           "texto": "Bloqueo del puerto"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "Una condición de carrera aparece cuando el resultado depende de cómo se intercalan accesos concurrentes a estado compartido. Por ejemplo, dos incrementos no coordinados pueden perder una actualización aunque cada hilo ejecute instrucciones válidas.",
+      "referencias": [
+        "C",
+        "R14"
+      ]
     },
     {
       "id": "s1-p21",
@@ -508,7 +594,12 @@
           "texto": "Varios hilos con sincronización"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Un Socket puede compartirse entre varios hilos; no hay un máximo fijo de dos. Deben coordinarse las operaciones que comparten estado o componen mensajes, especialmente varios escritores, y evitar que distintos lectores compitan por los mismos datos.",
+      "referencias": [
+        "C",
+        "R19"
+      ]
     },
     {
       "id": "s1-p22",
@@ -532,7 +623,11 @@
           "texto": "Versión del motor"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "La clave corresponde a la sobrecarga habitual getConnection(url, usuario, contraseña). El enunciado simplifica la API: también existe getConnection(url) y otra variante con Properties; las credenciales exigidas dependen del driver y de la configuración.",
+      "referencias": [
+        "R10"
+      ]
     },
     {
       "id": "s1-p23",
@@ -556,7 +651,11 @@
           "texto": "DriverException"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Los fallos de acceso a la base de datos mediante JDBC se comunican mediante SQLException o alguna de sus subclases. Conviene examinar la causa, el estado SQL y el código del proveedor para diagnosticar el fallo.",
+      "referencias": [
+        "R10"
+      ]
     },
     {
       "id": "s1-p24",
@@ -580,7 +679,12 @@
           "texto": "Se activa automáticamente un lock interno"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Sin coordinación, las escrituras que forman mensajes pueden intercalarse y romper su delimitación. La mezcla es un riesgo, no un resultado inevitable de cada ejecución; se debe proteger el mensaje completo o usar un único escritor por conexión.",
+      "referencias": [
+        "C",
+        "R21"
+      ]
     },
     {
       "id": "s1-p25",
@@ -604,7 +708,11 @@
           "texto": "Un trigger SQL"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "En el modelo de chat del examen, cada cliente tiene un hilo dedicado que puede esperar sus mensajes sin bloquear la atención a los demás. Es una arquitectura posible, no una obligación: también existen pools y diseños con entrada/salida no bloqueante.",
+      "referencias": [
+        "R18"
+      ]
     },
     {
       "id": "s1-p26",
@@ -628,7 +736,12 @@
           "texto": "Se sincroniza la lista de clientes conectados"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "La lista compartida necesita acceso y recorridos coordinados cuando entran o salen clientes durante el broadcast. Eso protege la colección, pero no basta para proteger cada salida: los envíos concurrentes al mismo cliente también necesitan orden y coordinación.",
+      "referencias": [
+        "C",
+        "R18"
+      ]
     },
     {
       "id": "s1-p27",
@@ -652,7 +765,12 @@
           "texto": "Crear tablas en la BD"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Un hilo receptor puede esperar mensajes del servidor mientras el cliente atiende otras tareas. En una interfaz Swing, ese hilo no debe modificar directamente los componentes: debe publicar las actualizaciones en el EDT.",
+      "referencias": [
+        "C",
+        "R18"
+      ]
     },
     {
       "id": "s1-p28",
@@ -676,7 +794,11 @@
           "texto": "Ambas tablas"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "En una relación uno a muchos, cada fila del lado muchos guarda una referencia a la fila del lado uno. Por ejemplo, muchos empleados pueden compartir el mismo identificador de departamento como clave foránea.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p29",
@@ -700,7 +822,11 @@
           "texto": "Se devuelven todas las filas de la tabla"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "En una consulta simple sobre una tabla, omitir WHERE significa no aplicar un filtro de filas con esa cláusula. La respuesta supone que no hay otras operaciones que limiten el resultado, como LIMIT, agregaciones o filtros adicionales.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p30",
@@ -724,7 +850,11 @@
           "texto": "Reservar memoria"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "flush solicita escribir al destino los datos pendientes del búfer. No cierra el socket ni añade delimitadores de mensaje; tampoco garantiza que la aplicación remota ya los haya leído o procesado.",
+      "referencias": [
+        "R21"
+      ]
     },
     {
       "id": "s1-p31",
@@ -748,7 +878,11 @@
           "texto": "Crear nuevas columnas si no existen"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "UPDATE cambia valores de una o varias columnas de las filas seleccionadas por la condición. No crea columnas: eso requiere una operación de definición como ALTER TABLE. Omitir WHERE puede actualizar todas las filas.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p32",
@@ -772,7 +906,11 @@
           "texto": "Dependencias funcionales parciales"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "En la explicación introductoria del temario, 3FN elimina dependencias transitivas de atributos no clave respecto de una clave, una vez cumplida 2FN. No exige eliminar las claves compuestas ni las relaciones uno a uno.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p33",
@@ -796,7 +934,12 @@
           "texto": "Un archivo temporal"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "Los bytes escritos en la salida de un extremo se leen en la entrada del extremo conectado. En TCP constituyen un flujo: el receptor no debe asumir que una escritura equivale exactamente a una lectura o a un mensaje completo.",
+      "referencias": [
+        "R17",
+        "R21"
+      ]
     },
     {
       "id": "s1-p34",
@@ -820,7 +963,11 @@
           "texto": "Acceder a bases de datos locales"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "Los sockets son extremos de comunicación que permiten intercambiar datos entre programas. El protocolo y las direcciones determinan cómo se comunican; no implican acceso directo a archivos del sistema ni a tablas de una base de datos.",
+      "referencias": [
+        "R17"
+      ]
     },
     {
       "id": "s1-p35",
@@ -844,7 +991,11 @@
           "texto": "XML Binding"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "ORM significa mapeo objeto-relacional y relaciona objetos con estructuras de tablas y registros. Un framework puede automatizar parte de ese trabajo; asignar columnas a objetos manualmente no implica usar uno.",
+      "referencias": [
+        "B"
+      ]
     },
     {
       "id": "s1-p36",
@@ -868,7 +1019,11 @@
           "texto": "Se cierre la BD"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "readObject necesita los datos de la representación serializada para reconstruir el objeto y puede bloquear mientras llegan. La espera también puede terminar con una excepción, por ejemplo por fin inesperado del flujo o por datos incompatibles.",
+      "referencias": [
+        "R21"
+      ]
     },
     {
       "id": "s1-p37",
@@ -892,7 +1047,12 @@
           "texto": "Datos solo primitivos"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "ObjectOutputStream puede escribir objetos mediante serialización para que un ObjectInputStream los reconstruya. Los objetos deben cumplir el contrato de serialización, normalmente Serializable; el flujo también ofrece métodos para escribir valores primitivos.",
+      "referencias": [
+        "C",
+        "R21"
+      ]
     },
     {
       "id": "s1-p38",
@@ -916,7 +1076,11 @@
           "texto": "Ser del mismo tipo de datos en ambas tablas"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Las columnas relacionadas por una clave foránea deben tener tipos compatibles conforme a las reglas del motor. Usar el mismo tipo es la regla práctica del examen; no es obligatorio que tengan el mismo nombre ni que la columna hija sea única.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p39",
@@ -940,7 +1104,12 @@
           "texto": "Ambos lados"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "ServerSocket representa el punto de escucha del servidor TCP y acepta conexiones entrantes. El cliente usa un Socket para conectarse y el servidor obtiene otro Socket por cada conexión aceptada. UDP utiliza otras clases.",
+      "referencias": [
+        "R20",
+        "R23"
+      ]
     },
     {
       "id": "s1-p40",
@@ -964,7 +1133,12 @@
           "texto": "IOException o EOFException"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Una rotura detectada durante la lectura puede producir IOException; una lectura de objetos que encuentra un final inesperado puede producir EOFException. No toda desconexión genera una excepción: InputStream.read puede devolver -1 y readLine puede devolver null al llegar al fin del flujo.",
+      "referencias": [
+        "R19",
+        "R21"
+      ]
     },
     {
       "id": "s1-p41",
@@ -988,7 +1162,11 @@
           "texto": "Suspender sockets"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "invokeLater coloca una tarea en la cola del EDT para ejecutarla de forma asíncrona. Sirve para actualizar la interfaz desde otros hilos; no espera su finalización ni convierte el EDT en un lugar adecuado para tareas largas.",
+      "referencias": [
+        "C"
+      ]
     },
     {
       "id": "s1-p42",
@@ -1012,7 +1190,11 @@
           "texto": "Los hilos en espera de sockets"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "Thread.sleep pausa el hilo que lo llama, no todos los hilos de la aplicación. Si ese hilo es el EDT, la interfaz puede dejar de responder durante la pausa. sleep tampoco libera los monitores que el hilo posea.",
+      "referencias": [
+        "R12"
+      ]
     },
     {
       "id": "s1-p43",
@@ -1036,7 +1218,12 @@
           "texto": "Detener limpiamente la ejecución del hilo"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "La bandera permite solicitar una salida cooperativa del bucle y ejecutar la limpieza al terminar. Si otro hilo la modifica, necesita visibilidad, por ejemplo mediante volatile o sincronización. Cambiarla no desbloquea por sí solo una lectura de red pendiente.",
+      "referencias": [
+        "C",
+        "R12"
+      ]
     },
     {
       "id": "s1-p44",
@@ -1060,7 +1247,11 @@
           "texto": "Prototype"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Prototype crea objetos a partir de otros existentes mediante una operación de copia. Debe definirse qué se copia y qué referencias se comparten; una copia superficial no equivale automáticamente a duplicar todo el grafo de objetos.",
+      "referencias": [
+        "R2"
+      ]
     },
     {
       "id": "s1-p45",
@@ -1084,7 +1275,12 @@
           "texto": "Se destruye el objeto Thread"
         }
       ],
-      "correcta": "b"
+      "correcta": "b",
+      "explicacion": "Un hilo termina cuando sale de run, normalmente al completar su trabajo o también por una excepción no capturada. No hace falta destruir el objeto Thread ni usar stop; un Thread terminado no puede volver a iniciarse.",
+      "referencias": [
+        "R12",
+        "R13"
+      ]
     },
     {
       "id": "s1-p46",
@@ -1108,7 +1304,11 @@
           "texto": "Encriptar datos automáticamente"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "Un proxy remoto ofrece al cliente una interfaz de acceso mientras encapsula detalles de la comunicación con el servidor. Esa intermediación no cifra automáticamente los datos: el cifrado requiere un mecanismo específico.",
+      "referencias": [
+        "R7"
+      ]
     },
     {
       "id": "s1-p47",
@@ -1132,7 +1332,11 @@
           "texto": "Create Database y Create Table"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "CREATE DATABASE define la base de datos en los motores que admiten esa instrucción y CREATE TABLE define tablas. Las columnas y las restricciones se declaran dentro de la definición de tabla o mediante ALTER TABLE, no con CREATE FIELD.",
+      "referencias": [
+        "A"
+      ]
     },
     {
       "id": "s1-p48",
@@ -1156,7 +1360,12 @@
           "texto": "IP + puerto"
         }
       ],
-      "correcta": "d"
+      "correcta": "d",
+      "explicacion": "Para conectar un socket TCP se identifica un destino mediante dirección y puerto del servicio. También puede usarse un nombre de host que se resuelva a una dirección IP; usuario o tabla no sustituyen esos datos.",
+      "referencias": [
+        "R17",
+        "R19"
+      ]
     },
     {
       "id": "s1-p49",
@@ -1180,7 +1389,11 @@
           "texto": "Un único hilo"
         }
       ],
-      "correcta": "c"
+      "correcta": "c",
+      "explicacion": "La clave se refiere al arranque habitual de una aplicación Swing: el hilo que ejecuta main programa la interfaz en el EDT. No es un recuento constante: main puede terminar y la JVM puede mantener otros hilos internos o trabajadores.",
+      "referencias": [
+        "C"
+      ]
     },
     {
       "id": "s1-p50",
@@ -1204,7 +1417,11 @@
           "texto": "Mejorar velocidad de red"
         }
       ],
-      "correcta": "a"
+      "correcta": "a",
+      "explicacion": "La normalización organiza relaciones para reducir redundancia y anomalías de inserción, modificación y eliminación causadas por dependencias inadecuadas. No busca eliminar toda repetición de valores ni garantiza por sí sola consultas más rápidas.",
+      "referencias": [
+        "A"
+      ]
     }
   ]
 }

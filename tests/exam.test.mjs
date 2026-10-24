@@ -1,10 +1,23 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import test from 'node:test';
 import { validateExam, shuffle, createAttempt, remainingSeconds, answerQuestion, finishAttempt, isValidAttempt, gradeAttempt, formatTime } from '../public/assets/js/exam.js';
 
 const exam = JSON.parse(readFileSync(new URL('../public/data/simulacros/simulacro-1.json', import.meta.url), 'utf8'));
 const start = 1_000_000;
+test('las explicaciones completan el Simulacro I sin alterar su banco original', () => {
+  const sources = new Set(JSON.parse(readFileSync(new URL('../public/data/fuentes.json', import.meta.url), 'utf8')).map((source) => source.id));
+  const original = structuredClone(exam);
+  for (const question of original.preguntas) {
+    assert.ok(question.explicacion.length > 60, question.id);
+    assert.ok(question.referencias.length > 0, question.id);
+    for (const source of question.referencias) assert.ok(sources.has(`fuente-${source}`), source);
+    delete question.explicacion;
+    delete question.referencias;
+  }
+  assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), 'b5a75ac967018aa7358697689b706df4643be4ef3281baa6292bfdf8844938f7');
+});
 function seededRandom() {
   let state = 12345;
   return () => ((state = state * 16807 % 2147483647) - 1) / 2147483646;

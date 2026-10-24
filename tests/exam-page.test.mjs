@@ -83,6 +83,10 @@ test(`${examId}: entrega al vencer, conserva resultados y permite reiniciar`, as
     assert.equal(finished.reason, 'expired');
     assert.equal(nodes['exam-running'].hidden, true);
     assert.equal(nodes['exam-results'].hidden, false);
+    for (const questionId of active.questionOrder.slice(0, 10)) {
+      const question = exam.preguntas.find((item) => item.id === questionId);
+      assert.ok(nodes['exam-review'].textContent.includes(question.explicacion));
+    }
     assert.match(nodes['exam-result-time'].textContent, /entrega automática/);
     assert.match(nodes['exam-result-time'].textContent, /90:00/);
     assert.equal(interval, null);
