@@ -1,0 +1,1225 @@
+{
+  "id": "simulacro-2",
+  "version": 1,
+  "titulo": "Simulacro II",
+  "duracionSegundos": 5400,
+  "descripcion": "50 preguntas nuevas de selección única: 15 de patrones, 18 de bases de datos y 17 de hilos y comunicación. Cada acierto vale un punto; la nota se calcula sobre 100.",
+  "origen": "Preguntas originales de práctica basadas en el temario del material de estudio. No corresponden a un examen oficial del profesor.",
+  "preguntas": [
+    {
+      "id": "s2-p01", "numero": 1, "tema": "Patrones de diseño",
+      "enunciado": "Un servicio de respaldo debe elegir en ejecución entre varios algoritmos de compresión sin cambiar el código que solicita el respaldo. ¿Qué diseño encaja mejor?",
+      "opciones": [
+        { "id": "a", "texto": "Una instancia Singleton que contenga todos los condicionales de compresión." },
+        { "id": "b", "texto": "Un contexto que delegue la compresión en una estrategia intercambiable." },
+        { "id": "c", "texto": "Un Composite que convierta cada algoritmo en una hoja de un árbol." },
+        { "id": "d", "texto": "Un DTO que decida cómo comprimir cada archivo." }
+      ],
+      "correcta": "b",
+      "explicacion": "Strategy separa los algoritmos del contexto. Cambiar el objeto que implementa la compresión no obliga a modificar la delegación del servicio.",
+      "referencias": ["R4"]
+    },
+    {
+      "id": "s2-p02", "numero": 2, "tema": "Patrones de diseño",
+      "enunciado": "Un inventario notifica a sus observadores mediante llamadas síncronas. Uno de ellos realiza una consulta de red lenta dentro del aviso. ¿Qué consecuencia es posible?",
+      "opciones": [
+        { "id": "a", "texto": "Observer convierte automáticamente la consulta en una tarea de otro hilo." },
+        { "id": "b", "texto": "El observador lento se elimina automáticamente de las suscripciones." },
+        { "id": "c", "texto": "El sujeto recibe todas las respuestas antes de invocar al observador lento." },
+        { "id": "d", "texto": "El hilo que emite el aviso queda ocupado hasta que regrese esa llamada." }
+      ],
+      "correcta": "d",
+      "explicacion": "La suscripción no implica asincronía. En una notificación síncrona, el trabajo del observador se ejecuta en el hilo que lo invoca y puede retrasar los avisos siguientes.",
+      "referencias": ["R4", "R5"]
+    },
+    {
+      "id": "s2-p03", "numero": 3, "tema": "Patrones de diseño",
+      "enunciado": "Una carpeta puede contener archivos y otras carpetas. Ambos ofrecen calcularTamano(), y una carpeta suma recursivamente el resultado de sus hijos. ¿Qué patrón describe esa estructura?",
+      "opciones": [
+        { "id": "a", "texto": "Composite, porque hojas y compuestos comparten una operación." },
+        { "id": "b", "texto": "Observer, porque cada hijo necesariamente recibe notificaciones." },
+        { "id": "c", "texto": "Builder, porque todo recorrido de un árbol construye un objeto." },
+        { "id": "d", "texto": "Singleton, porque la raíz tiene que ser una instancia global." }
+      ],
+      "correcta": "a",
+      "explicacion": "Composite permite tratar una hoja y una agrupación mediante el mismo contrato. La delegación recursiva representa la relación parte-todo.",
+      "referencias": ["R3"]
+    },
+    {
+      "id": "s2-p04", "numero": 4, "tema": "Patrones de diseño",
+      "enunciado": "Una clase base ejecuta un proceso de importación e invoca crearLector(). Sus subclases redefinen ese método para proporcionar el lector concreto. ¿Qué patrón interviene en esa creación?",
+      "opciones": [
+        { "id": "a", "texto": "Adapter, porque la herencia cambia siempre una interfaz incompatible." },
+        { "id": "b", "texto": "Decorator, porque cada subclase envuelve un lector ya construido." },
+        { "id": "c", "texto": "Factory Method, porque la subclase decide qué producto devuelve el método creador." },
+        { "id": "d", "texto": "Abstract Factory, porque el proceso necesariamente crea varias familias de productos." }
+      ],
+      "correcta": "c",
+      "explicacion": "Factory Method deja la elección del producto concreto a una redefinición del método de creación. Crear una sola clase de producto no exige una fábrica de familias.",
+      "referencias": ["R2"]
+    },
+    {
+      "id": "s2-p05", "numero": 5, "tema": "Patrones de diseño",
+      "enunciado": "Un formato de archivo requiere un lector y un escritor compatibles. La aplicación quiere cambiar conjuntamente ambos componentes al elegir otro formato. ¿Qué abstracción resulta adecuada?",
+      "opciones": [
+        { "id": "a", "texto": "Un Iterator que recorra los nombres de los formatos." },
+        { "id": "b", "texto": "Una Abstract Factory que cree el lector y el escritor de la misma familia." },
+        { "id": "c", "texto": "Un Singleton que haga intercambiables todos los objetos del sistema." },
+        { "id": "d", "texto": "Un Observer que sustituya la construcción de componentes." }
+      ],
+      "correcta": "b",
+      "explicacion": "Abstract Factory agrupa operaciones de creación para productos relacionados. Elegir una implementación permite obtener componentes pertenecientes a una familia compatible.",
+      "referencias": ["R2"]
+    },
+    {
+      "id": "s2-p06", "numero": 6, "tema": "Patrones de diseño",
+      "enunciado": "Un informe se configura con título obligatorio y varias opciones. Se desea acumular esas decisiones y validar el resultado antes de obtener el objeto final. ¿Qué patrón ayuda a organizar ese proceso?",
+      "opciones": [
+        { "id": "a", "texto": "Builder, con pasos de configuración y una operación final de construcción." },
+        { "id": "b", "texto": "Proxy, para sustituir todas las validaciones por acceso remoto." },
+        { "id": "c", "texto": "Observer, para que cada opción cree una instancia independiente del informe." },
+        { "id": "d", "texto": "Composite, para obligar a que todos los atributos sean nodos de un árbol." }
+      ],
+      "correcta": "a",
+      "explicacion": "Builder concentra la preparación de un objeto con varias opciones y permite comprobar sus condiciones antes de entregar el resultado.",
+      "referencias": ["R22"]
+    },
+    {
+      "id": "s2-p07", "numero": 7, "tema": "Patrones de diseño",
+      "enunciado": "El sistema espera Salida.emitir(Documento), pero una biblioteca disponible ofrece imprimirFactura(Factura). No se puede modificar esa biblioteca. ¿Qué responsabilidad tendría un Adapter?",
+      "opciones": [
+        { "id": "a", "texto": "Garantizar que solo exista un documento en toda la aplicación." },
+        { "id": "b", "texto": "Convertir cada llamada en una suscripción a eventos." },
+        { "id": "c", "texto": "Añadir recursividad a la representación de las facturas." },
+        { "id": "d", "texto": "Traducir el contrato esperado y los datos necesarios a la llamada de la biblioteca." }
+      ],
+      "correcta": "d",
+      "explicacion": "Un Adapter conecta contratos incompatibles. La traducción permite reutilizar el componente existente sin exigir cambios en su interfaz pública.",
+      "referencias": ["R6"]
+    },
+    {
+      "id": "s2-p08", "numero": 8, "tema": "Patrones de diseño",
+      "enunciado": "Se necesita añadir compresión y registro de actividad a un objeto que implementa Guardador. Cada añadido conservará la misma interfaz y delegará en otro Guardador, permitiendo combinarlos. ¿Qué patrón encaja?",
+      "opciones": [
+        { "id": "a", "texto": "Facade, porque todo añadido debe reemplazar el contrato original por otro." },
+        { "id": "b", "texto": "Factory Method, porque delegar equivale a redefinir una creación." },
+        { "id": "c", "texto": "Decorator, por la composición de envoltorios con el mismo contrato." },
+        { "id": "d", "texto": "Observer, porque cada envoltorio representa una suscripción obligatoria." }
+      ],
+      "correcta": "c",
+      "explicacion": "Decorator agrega trabajo alrededor de una delegación y mantiene la interfaz del componente. Así pueden componerse varias responsabilidades sin modificar la implementación base.",
+      "referencias": ["R6"]
+    },
+    {
+      "id": "s2-p09", "numero": 9, "tema": "Patrones de diseño",
+      "enunciado": "Para reproducir un audio hay que coordinar decodificador, caché y dispositivo. Se ofrece reproducir(ruta) como entrada sencilla al conjunto. ¿Cuál es la función de esa Facade?",
+      "opciones": [
+        { "id": "a", "texto": "Reducir el conocimiento que el cliente necesita sobre las operaciones del subsistema." },
+        { "id": "b", "texto": "Garantizar que todos los componentes se ejecuten en hilos diferentes." },
+        { "id": "c", "texto": "Impedir que el subsistema pueda producir errores." },
+        { "id": "d", "texto": "Sustituir la persistencia de audio por objetos DTO." }
+      ],
+      "correcta": "a",
+      "explicacion": "Facade organiza una entrada de mayor nivel. El subsistema sigue existiendo y puede fallar, pero el cliente necesita conocer menos pasos internos.",
+      "referencias": ["R6"]
+    },
+    {
+      "id": "s2-p10", "numero": 10, "tema": "Patrones de diseño",
+      "enunciado": "Un objeto conserva la interfaz de Repositorio, comprueba permisos y solo después delega la petición al repositorio real. Su intención principal es controlar el acceso. ¿Qué patrón representa?",
+      "opciones": [
+        { "id": "a", "texto": "Builder, porque verificar permisos construye el repositorio." },
+        { "id": "b", "texto": "Composite, porque la delegación implica una jerarquía parte-todo." },
+        { "id": "c", "texto": "Adapter, porque siempre debe cambiar la interfaz pública." },
+        { "id": "d", "texto": "Proxy, porque representa a otro objeto y media su acceso." }
+      ],
+      "correcta": "d",
+      "explicacion": "Proxy mantiene una representación del objeto real para controlar su uso. La intención de mediar el acceso lo distingue de añadir responsabilidades por composición.",
+      "referencias": ["R7"]
+    },
+    {
+      "id": "s2-p11", "numero": 11, "tema": "Patrones de diseño",
+      "enunciado": "Un Singleton se publica correctamente, pero contiene una lista mutable usada por varios hilos. ¿Qué conclusión es válida sobre esa lista?",
+      "opciones": [
+        { "id": "a", "texto": "La unicidad del objeto vuelve atómicas todas las operaciones de la lista." },
+        { "id": "b", "texto": "La lista deja de ser compartida porque pertenece a una única instancia." },
+        { "id": "c", "texto": "Su acceso concurrente todavía necesita una estrategia de coordinación apropiada." },
+        { "id": "d", "texto": "La lista se copia automáticamente para cada hilo que obtiene la instancia." }
+      ],
+      "correcta": "c",
+      "explicacion": "Controlar cuántas instancias existen no protege automáticamente su estado mutable. La coordinación depende de las operaciones compartidas, no del nombre del patrón.",
+      "referencias": ["R2"]
+    },
+    {
+      "id": "s2-p12", "numero": 12, "tema": "Patrones de diseño",
+      "enunciado": "Un DAO debe devolver resultados que la vista pueda recorrer después de cerrar los recursos JDBC. ¿Qué retorno respeta mejor esa separación?",
+      "opciones": [
+        { "id": "a", "texto": "El ResultSet junto con instrucciones para que la vista lo cierre." },
+        { "id": "b", "texto": "Una colección de DTO construidos con los valores leídos antes del cierre." },
+        { "id": "c", "texto": "El PreparedStatement todavía enlazado a una conexión prestada." },
+        { "id": "d", "texto": "La Connection para que cada componente continúe consultando por su cuenta." }
+      ],
+      "correcta": "b",
+      "explicacion": "Los DTO transportan datos sin depender de un cursor abierto. El DAO puede adquirir, mapear y cerrar sus recursos dentro de una operación de duración acotada.",
+      "referencias": ["R8", "R10"]
+    },
+    {
+      "id": "s2-p13", "numero": 13, "tema": "Patrones de diseño",
+      "enunciado": "Se crea ProductoDTO con identificador, nombre y precio para comunicar datos entre capas. ¿Qué responsabilidad le corresponde principalmente?",
+      "opciones": [
+        { "id": "a", "texto": "Transportar esos valores entre las partes de la aplicación." },
+        { "id": "b", "texto": "Elegir y abrir conexiones para ejecutar las consultas SQL." },
+        { "id": "c", "texto": "Coordinar las suscripciones y el hilo de todos los observadores." },
+        { "id": "d", "texto": "Decidir por sí mismo todas las reglas comerciales del producto." }
+      ],
+      "correcta": "a",
+      "explicacion": "Un DTO representa datos que se transfieren. El acceso a persistencia corresponde al DAO y las decisiones de negocio se organizan fuera del objeto de transporte.",
+      "referencias": ["R8", "A"]
+    },
+    {
+      "id": "s2-p14", "numero": 14, "tema": "Patrones de diseño",
+      "enunciado": "Un método sencillo resuelve un requisito estable. Introducir un patrón añadiría interfaces y clases sin reducir un problema identificado. ¿Qué decisión está mejor justificada?",
+      "opciones": [
+        { "id": "a", "texto": "Añadir el patrón de todas formas, porque más clases aseguran menor acoplamiento." },
+        { "id": "b", "texto": "Elegir Singleton para eliminar cualquier costo de mantenimiento." },
+        { "id": "c", "texto": "Mantener la solución sencilla y reconsiderar una abstracción cuando exista una necesidad concreta." },
+        { "id": "d", "texto": "Combinar varios patrones para evitar tener que analizar el requisito." }
+      ],
+      "correcta": "c",
+      "explicacion": "Un patrón se justifica por el problema que resuelve y sus consecuencias. Añadir abstracciones sin una ventaja concreta aumenta el trabajo de comprensión y mantenimiento.",
+      "referencias": ["R1", "R6"]
+    },
+    {
+      "id": "s2-p15", "numero": 15, "tema": "Patrones de diseño",
+      "enunciado": "Una ventana se suscribe a un sujeto de larga vida y luego se cierra. El sujeto conserva referencias fuertes a los observadores. ¿Qué acción evita mantener innecesariamente esa ventana?",
+      "opciones": [
+        { "id": "a", "texto": "Llamar sleep() al cerrar, para que el recolector ignore la suscripción." },
+        { "id": "b", "texto": "Retirar su suscripción cuando la ventana deja de necesitar avisos." },
+        { "id": "c", "texto": "Sustituir el contrato del observador por una Connection compartida." },
+        { "id": "d", "texto": "Ocultar la ventana y asumir que todas las referencias externas desaparecen." }
+      ],
+      "correcta": "b",
+      "explicacion": "Cerrar u ocultar la interfaz no borra las referencias del sujeto. Dar de baja el observador evita conservarlo por una suscripción que ya no se utiliza.",
+      "referencias": ["R4", "R5"]
+    }
+    ,{
+  "id": "s2-p16",
+  "numero": 16,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "La clave primaria de Detalle es (pedido, linea). ¿Qué combinación se puede repetir?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "El par completo pedido y linea."
+    },
+    {
+      "id": "b",
+      "texto": "El valor de pedido, si cambia linea."
+    },
+    {
+      "id": "c",
+      "texto": "Una fila idéntica con todos sus valores."
+    },
+    {
+      "id": "d",
+      "texto": "El par completo, si el importe cambia."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "La unicidad se exige al conjunto de columnas de la clave. Un pedido puede tener varias líneas y el mismo número de línea puede aparecer en pedidos diferentes.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p17",
+  "numero": 17,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Una factura tiene una clave foránea obligatoria hacia Cliente. ¿Qué ocurre al insertar una factura cuyo cliente no existe, con la restricción activa?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Se crea automáticamente el cliente."
+    },
+    {
+      "id": "b",
+      "texto": "La factura se guarda sin cliente."
+    },
+    {
+      "id": "c",
+      "texto": "La inserción incumple la integridad referencial."
+    },
+    {
+      "id": "d",
+      "texto": "La clave foránea se convierte en primaria."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "La clave foránea exige que el valor referenciado exista en la tabla padre. El motor no inventa un cliente para completar la relación.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p18",
+  "numero": 18,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "En MySQL, el correo debe ser obligatorio y no repetirse. ¿Qué restricciones expresan ambos requisitos?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "UNIQUE y NOT NULL."
+    },
+    {
+      "id": "b",
+      "texto": "Solo UNIQUE, porque prohíbe todos los NULL."
+    },
+    {
+      "id": "c",
+      "texto": "Solo NOT NULL."
+    },
+    {
+      "id": "d",
+      "texto": "DEFAULT NULL y una clave foránea."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "UNIQUE impide correos duplicados, pero MySQL permite varios valores NULL en un índice único. NOT NULL añade la obligatoriedad del dato.",
+  "referencias": [
+    "R24"
+  ]
+},
+{
+  "id": "s2-p19",
+  "numero": 19,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Cada departamento tiene muchos empleados y cada empleado pertenece a un departamento. ¿Dónde se coloca normalmente la clave foránea?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "En Departamento, con una lista de empleados."
+    },
+    {
+      "id": "b",
+      "texto": "En ambas tablas con listas de identificadores."
+    },
+    {
+      "id": "c",
+      "texto": "En una columna distinta por cada empleado."
+    },
+    {
+      "id": "d",
+      "texto": "En Empleado, apuntando a Departamento."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "En una relación uno a muchos, cada fila del lado muchos guarda la referencia al lado uno. Así se representan varios empleados sin añadir columnas por empleado.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p20",
+  "numero": 20,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Un libro puede tener varios autores y un autor varios libros. ¿Qué estructura representa la relación sin listas en una celda?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Una columna autor1, autor2 y autor3 en Libro."
+    },
+    {
+      "id": "b",
+      "texto": "Una tabla LibroAutor con dos claves foráneas y unicidad del par."
+    },
+    {
+      "id": "c",
+      "texto": "Una única clave foránea libro en Autor."
+    },
+    {
+      "id": "d",
+      "texto": "Eliminar las claves primarias de ambas tablas."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "La tabla intermedia representa cada asociación mediante una fila. La unicidad del par impide registrar dos veces la misma asociación entre libro y autor.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p21",
+  "numero": 21,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Solo se guarda el nombre de un departamento en filas de empleados. No se puede registrar un departamento hasta contratar a alguien. ¿Qué problema aparece?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Una anomalía de inserción."
+    },
+    {
+      "id": "b",
+      "texto": "Un bloqueo entre hilos."
+    },
+    {
+      "id": "c",
+      "texto": "Una violación inevitable de toda clave primaria."
+    },
+    {
+      "id": "d",
+      "texto": "Una conexión JDBC de tipo 4."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "La existencia del departamento queda atada a la de un empleado. Separar ambas entidades permite insertar departamentos sin fabricar datos de empleados.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p22",
+  "numero": 22,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Una celda contiene varios teléfonos separados por comas y se necesita consultar cada teléfono individualmente. ¿Qué cambio favorece la primera forma normal?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Añadir más comas como separador."
+    },
+    {
+      "id": "b",
+      "texto": "Guardar toda la tabla como una cadena."
+    },
+    {
+      "id": "c",
+      "texto": "Representar cada teléfono en una fila relacionada con su persona."
+    },
+    {
+      "id": "d",
+      "texto": "Convertir la cadena en clave primaria."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "Los teléfonos que se tratan como valores independientes deben tener una representación independiente. Una tabla relacionada evita analizar listas dentro de una celda para consultarlos.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p23",
+  "numero": 23,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Existencia tiene clave (producto, bodega). La descripción depende solo de producto. ¿Qué cambio elimina esa dependencia parcial?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Duplicar la descripción por cada bodega."
+    },
+    {
+      "id": "b",
+      "texto": "Añadir otra columna calculada."
+    },
+    {
+      "id": "c",
+      "texto": "Cambiar el nombre de la clave."
+    },
+    {
+      "id": "d",
+      "texto": "Mover la descripción a Producto, identificado por producto."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "La descripción depende de una parte de la clave compuesta. Separarla en Producto evita repetirla en cada existencia y elimina esa dependencia parcial.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p24",
+  "numero": 24,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Factura tiene como única clave candidata idFactura. Guarda idSucursal y nombreSucursal; el nombre depende de idSucursal. ¿Qué mejora elimina la dependencia transitiva?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Repetir el nombre en otra columna."
+    },
+    {
+      "id": "b",
+      "texto": "Separar Sucursal y conservar idSucursal como referencia."
+    },
+    {
+      "id": "c",
+      "texto": "Eliminar idFactura."
+    },
+    {
+      "id": "d",
+      "texto": "Ordenar las filas por nombreSucursal."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "El nombre se determina mediante la sucursal, que a su vez se obtiene desde la factura. Guardarlo en Sucursal evita inconsistencias al cambiar el nombre.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p25",
+  "numero": 25,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "¿Qué instrucción cambia la estructura de la base de datos en lugar de insertar datos?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "CREATE TABLE Curso (id INT PRIMARY KEY)."
+    },
+    {
+      "id": "b",
+      "texto": "INSERT INTO Curso VALUES (1)."
+    },
+    {
+      "id": "c",
+      "texto": "UPDATE Curso SET id = 2 WHERE id = 1."
+    },
+    {
+      "id": "d",
+      "texto": "DELETE FROM Curso WHERE id = 1."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "CREATE TABLE define una estructura y pertenece a DDL. INSERT, UPDATE y DELETE operan sobre los datos y se clasifican como DML.",
+  "referencias": [
+    "A"
+  ]
+},
+{
+  "id": "s2-p26",
+  "numero": 26,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "El nombre O'Neil debe guardarse mediante JDBC. ¿Qué alternativa mantiene el valor separado de la instrucción SQL?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Eliminar todos los apóstrofos del nombre."
+    },
+    {
+      "id": "b",
+      "texto": "Concatenar directamente el nombre al SQL."
+    },
+    {
+      "id": "c",
+      "texto": "Usar un marcador ? y asignar el nombre con setString."
+    },
+    {
+      "id": "d",
+      "texto": "Ejecutar el nombre como una segunda consulta."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "PreparedStatement permite enlazar el nombre como dato. El apóstrofo forma parte del valor y no debe convertirse en delimitador de la sentencia.",
+  "referencias": [
+    "R11"
+  ]
+},
+{
+  "id": "s2-p27",
+  "numero": 27,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "La sentencia es UPDATE Producto SET precio = ? WHERE id = ?. Después de setBigDecimal(1, precio), ¿cómo se asigna id?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "setInt(0, id)."
+    },
+    {
+      "id": "b",
+      "texto": "setInt(1, id)."
+    },
+    {
+      "id": "c",
+      "texto": "setInt(3, id)."
+    },
+    {
+      "id": "d",
+      "texto": "setInt(2, id)."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "Los parámetros JDBC se numeran desde uno según su posición. El primer marcador corresponde al precio y el segundo al identificador.",
+  "referencias": [
+    "R11"
+  ]
+},
+{
+  "id": "s2-p28",
+  "numero": 28,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "DELETE FROM Producto WHERE id = ? termina sin excepción y executeUpdate devuelve 0. ¿Qué informa ese resultado?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "La conexión se cerró por un fallo."
+    },
+    {
+      "id": "b",
+      "texto": "Ninguna fila fue eliminada."
+    },
+    {
+      "id": "c",
+      "texto": "Se eliminaron todas las filas."
+    },
+    {
+      "id": "d",
+      "texto": "El motor insertó una fila nueva."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "El valor devuelto indica las filas afectadas. Cero permite informar que no se eliminó ningún registro; no equivale por sí solo a una excepción SQL.",
+  "referencias": [
+    "R10",
+    "R11"
+  ]
+},
+{
+  "id": "s2-p29",
+  "numero": 29,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Un ResultSet acaba de obtenerse de executeQuery. ¿Qué se debe hacer antes de leer la primera fila?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Llamar a next y comprobar que devuelve true."
+    },
+    {
+      "id": "b",
+      "texto": "Leer directamente porque ya está en la primera fila."
+    },
+    {
+      "id": "c",
+      "texto": "Llamar a close para habilitar la lectura."
+    },
+    {
+      "id": "d",
+      "texto": "Ejecutar otra consulta sobre el mismo objeto."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "El cursor comienza antes de la primera fila. next avanza y su resultado indica si existe una fila disponible para leer.",
+  "referencias": [
+    "R10"
+  ]
+},
+{
+  "id": "s2-p30",
+  "numero": 30,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "En un try-with-resources se declaran Connection, PreparedStatement y ResultSet, en ese orden. ¿En qué orden se cierran al salir?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Connection, ResultSet, PreparedStatement."
+    },
+    {
+      "id": "b",
+      "texto": "PreparedStatement, Connection, ResultSet."
+    },
+    {
+      "id": "c",
+      "texto": "ResultSet, PreparedStatement, Connection."
+    },
+    {
+      "id": "d",
+      "texto": "Solo se cierra Connection."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "Los recursos de try-with-resources se cierran en orden inverso al de declaración, incluso al salir por una excepción. Esto respeta las dependencias de esos recursos.",
+  "referencias": [
+    "R10"
+  ]
+},
+{
+  "id": "s2-p31",
+  "numero": 31,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Una aplicación obtiene una conexión lógica de un pool. ¿Por qué debe llamar a close al terminar?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Para eliminar permanentemente el pool."
+    },
+    {
+      "id": "b",
+      "texto": "Para borrar todas las consultas anteriores."
+    },
+    {
+      "id": "c",
+      "texto": "Para convertirla en una conexión nativa."
+    },
+    {
+      "id": "d",
+      "texto": "Para devolverla al pool según el contrato de la implementación."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "En un pool, cerrar la conexión lógica normalmente devuelve el recurso para reutilizarlo. Omitir el cierre puede agotar las conexiones disponibles.",
+  "referencias": [
+    "B"
+  ]
+},
+{
+  "id": "s2-p32",
+  "numero": 32,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Una aplicación usa un driver JDBC tipo 4 para la misma base de datos y cambia de sistema operativo. ¿Qué caracteriza a ese driver?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Requiere siempre un puente ODBC nativo."
+    },
+    {
+      "id": "b",
+      "texto": "Se implementa en Java y habla el protocolo de la base de datos."
+    },
+    {
+      "id": "c",
+      "texto": "Funciona sin configuración ni servidor accesible."
+    },
+    {
+      "id": "d",
+      "texto": "Convierte cualquier motor en el mismo producto."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "Un driver tipo 4 usa Java para comunicarse con el servidor. La portabilidad del driver no elimina la necesidad de una URL, credenciales y compatibilidad con el motor.",
+  "referencias": [
+    "R9"
+  ]
+},
+{
+  "id": "s2-p33",
+  "numero": 33,
+  "tema": "Bases de datos y persistencia",
+  "enunciado": "Un DAO recorre ResultSet y asigna manualmente cada columna a un DTO. ¿Cómo se describe ese trabajo?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Mapeo manual entre filas y objetos."
+    },
+    {
+      "id": "b",
+      "texto": "Uso obligatorio de un framework ORM."
+    },
+    {
+      "id": "c",
+      "texto": "Normalización automática a tercera forma normal."
+    },
+    {
+      "id": "d",
+      "texto": "Creación de un driver JDBC nuevo."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "Construir objetos desde columnas es un mapeo manual. Puede formar parte de un DAO sin que exista un framework de mapeo objeto-relacional.",
+  "referencias": [
+    "R8",
+    "R10"
+  ]
+},
+{
+  "id": "s2-p34",
+  "numero": 34,
+  "tema": "Hilos y comunicación",
+  "enunciado": "¿Qué ocurre al llamar directamente tarea.run() sobre un Thread, sin llamar a start?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Siempre se crea un hilo nuevo."
+    },
+    {
+      "id": "b",
+      "texto": "El hilo queda esperando un monitor."
+    },
+    {
+      "id": "c",
+      "texto": "run se ejecuta en el hilo que hizo la llamada."
+    },
+    {
+      "id": "d",
+      "texto": "La JVM prohíbe cualquier llamada directa."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "run es una llamada ordinaria cuando se invoca directamente. start es el método que inicia la ejecución en un nuevo hilo.",
+  "referencias": [
+    "R12"
+  ]
+},
+{
+  "id": "s2-p35",
+  "numero": 35,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Después de t.start() y t.join(), se vuelve a llamar t.start() sobre el mismo Thread. ¿Qué ocurre?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "El hilo reinicia desde el principio."
+    },
+    {
+      "id": "b",
+      "texto": "El segundo start no hace nada."
+    },
+    {
+      "id": "c",
+      "texto": "Se reutiliza automáticamente su tarea en un pool."
+    },
+    {
+      "id": "d",
+      "texto": "Se lanza IllegalThreadStateException."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "Un objeto Thread solo puede iniciarse una vez. Que su ejecución haya terminado no lo convierte en un hilo reutilizable.",
+  "referencias": [
+    "R12"
+  ]
+},
+{
+  "id": "s2-p36",
+  "numero": 36,
+  "tema": "Hilos y comunicación",
+  "enunciado": "El hilo principal necesita leer un resultado después de que termine trabajador. ¿Qué operación espera su finalización?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Thread.sleep(100), suponiendo que alcanza."
+    },
+    {
+      "id": "b",
+      "texto": "trabajador.join()."
+    },
+    {
+      "id": "c",
+      "texto": "trabajador.run(), después de haberlo iniciado."
+    },
+    {
+      "id": "d",
+      "texto": "Thread.yield(), que garantiza su término."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "join espera la terminación del hilo indicado. Una pausa de duración arbitraria no establece que el trabajo haya concluido.",
+  "referencias": [
+    "R12"
+  ]
+},
+{
+  "id": "s2-p37",
+  "numero": 37,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un hilo ejecuta Thread.sleep dentro de synchronized(lock). ¿Qué pasa con el monitor lock durante la pausa?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "El hilo conserva el monitor."
+    },
+    {
+      "id": "b",
+      "texto": "Se libera como si hubiera llamado a wait."
+    },
+    {
+      "id": "c",
+      "texto": "Otro hilo recibe automáticamente el monitor."
+    },
+    {
+      "id": "d",
+      "texto": "Se destruye el objeto lock."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "sleep pausa la ejecución, pero no libera los monitores que posee el hilo. Otros hilos que necesiten ese monitor deben seguir esperando.",
+  "referencias": [
+    "R12"
+  ]
+},
+{
+  "id": "s2-p38",
+  "numero": 38,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Dos instancias tienen un método de instancia synchronized que incrementa el mismo contador static. ¿Qué problema existe?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "synchronized vuelve local el contador."
+    },
+    {
+      "id": "b",
+      "texto": "Los métodos nunca pueden ejecutarse en paralelo."
+    },
+    {
+      "id": "c",
+      "texto": "Cada instancia bloquea un monitor diferente y no protege conjuntamente el contador."
+    },
+    {
+      "id": "d",
+      "texto": "Los campos static solo pueden leerse."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "El bloqueo de un método sincronizado de instancia corresponde a this. Dos instancias no comparten ese monitor; el estado compartido necesita una coordinación común.",
+  "referencias": [
+    "C",
+    "R14"
+  ]
+},
+{
+  "id": "s2-p39",
+  "numero": 39,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un trabajador debe terminar al ser interrumpido. Su espera lanza InterruptedException. ¿Qué respuesta respeta la cancelación?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Ignorar la excepción y repetir indefinidamente."
+    },
+    {
+      "id": "b",
+      "texto": "Usar Thread.stop sobre todos los hilos."
+    },
+    {
+      "id": "c",
+      "texto": "Reiniciar siempre la tarea desde cero."
+    },
+    {
+      "id": "d",
+      "texto": "Restaurar la marca de interrupción y salir realizando la limpieza necesaria."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "La interrupción es una solicitud cooperativa. Si no se propaga InterruptedException, restaurar la marca conserva la señal para el código superior y salir permite atender la cancelación.",
+  "referencias": [
+    "R12"
+  ]
+},
+{
+  "id": "s2-p40",
+  "numero": 40,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un consumidor usa wait hasta que haya datos. ¿Cómo debe comprobar la condición dentro del monitor?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Una sola vez antes de entrar al bloque sincronizado."
+    },
+    {
+      "id": "b",
+      "texto": "En un while que vuelva a comprobarla después de cada despertar."
+    },
+    {
+      "id": "c",
+      "texto": "Solo después de consumir un dato."
+    },
+    {
+      "id": "d",
+      "texto": "No necesita comprobarla si recibe notify."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "Despertar no garantiza que la condición siga siendo cierta: otro hilo puede consumir el dato y pueden ocurrir despertares espurios. El bucle comprueba de nuevo antes de continuar.",
+  "referencias": [
+    "R14"
+  ]
+},
+{
+  "id": "s2-p41",
+  "numero": 41,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Una BlockingQueue de capacidad uno ya contiene un elemento. ¿Qué hace put al intentar añadir otro?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Espera espacio o una interrupción."
+    },
+    {
+      "id": "b",
+      "texto": "Descarta siempre el elemento anterior."
+    },
+    {
+      "id": "c",
+      "texto": "Devuelve inmediatamente false."
+    },
+    {
+      "id": "d",
+      "texto": "Aumenta automáticamente la capacidad fija."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "put es una operación bloqueante: espera cuando no hay capacidad disponible. No tiene el comportamiento inmediato de offer ni sobrescribe un elemento existente.",
+  "referencias": [
+    "R15"
+  ]
+},
+{
+  "id": "s2-p42",
+  "numero": 42,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un hilo bloquea A y luego B; otro bloquea B y luego A. ¿Qué cambio reduce el riesgo de interbloqueo por este orden?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Añadir sleep después de tomar el primer bloqueo."
+    },
+    {
+      "id": "b",
+      "texto": "Aumentar la prioridad de ambos hilos."
+    },
+    {
+      "id": "c",
+      "texto": "Adquirir siempre esos bloqueos en el mismo orden global."
+    },
+    {
+      "id": "d",
+      "texto": "Convertir los nombres A y B en constantes."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "Un orden común evita que cada hilo retenga un recurso mientras espera el que tiene el otro por una adquisición inversa. Las pausas no resuelven ese ciclo de espera.",
+  "referencias": [
+    "C"
+  ]
+},
+{
+  "id": "s2-p43",
+  "numero": 43,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Una ventana Swing se congela durante una lectura de red hecha en su manejador de botón. ¿Cómo distribuir el trabajo?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Leer la red y actualizar la ventana siempre en cualquier hilo."
+    },
+    {
+      "id": "b",
+      "texto": "Repetir la lectura desde paintComponent."
+    },
+    {
+      "id": "c",
+      "texto": "Añadir sleep al hilo de eventos."
+    },
+    {
+      "id": "d",
+      "texto": "Hacer la lectura en un trabajador y publicar los cambios visuales en el hilo de eventos."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "Las tareas largas bloquean el procesamiento de eventos de Swing. El trabajo de red debe salir de ese hilo y las actualizaciones de interfaz deben volver al hilo de eventos.",
+  "referencias": [
+    "C"
+  ]
+},
+{
+  "id": "s2-p44",
+  "numero": 44,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un emisor TCP hace dos escrituras: AB y CD. ¿Qué debe asumir el receptor?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Que siempre recibirá exactamente dos lecturas de dos bytes."
+    },
+    {
+      "id": "b",
+      "texto": "Que recibe un flujo y necesita un protocolo para delimitar mensajes."
+    },
+    {
+      "id": "c",
+      "texto": "Que TCP añade un salto de línea a cada escritura."
+    },
+    {
+      "id": "d",
+      "texto": "Que una lectura equivale a una conexión completa."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "TCP entrega un flujo de bytes y no conserva las fronteras de las escrituras como mensajes de aplicación. El protocolo debe definir longitudes, delimitadores u otra forma de separación.",
+  "referencias": [
+    "R17",
+    "R21"
+  ]
+},
+{
+  "id": "s2-p45",
+  "numero": 45,
+  "tema": "Hilos y comunicación",
+  "enunciado": "BufferedReader.readLine llega al fin del flujo sin haber leído caracteres para otra línea. ¿Qué devuelve?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "null."
+    },
+    {
+      "id": "b",
+      "texto": "Una cadena que contiene EOF."
+    },
+    {
+      "id": "c",
+      "texto": "Siempre una excepción."
+    },
+    {
+      "id": "d",
+      "texto": "Una línea vacía obligatoria."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "readLine devuelve null cuando alcanza el fin del flujo sin leer caracteres. Una línea vacía es un resultado diferente y no debe confundirse con la terminación del flujo.",
+  "referencias": [
+    "R21"
+  ]
+},
+{
+  "id": "s2-p46",
+  "numero": 46,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Se necesita limitar tanto el establecimiento de conexión como las lecturas de un Socket. ¿Qué configuración corresponde?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Solo setSoTimeout, porque limita toda operación de red."
+    },
+    {
+      "id": "b",
+      "texto": "Solo sleep antes de conectar."
+    },
+    {
+      "id": "c",
+      "texto": "connect con un tiempo límite y setSoTimeout para lecturas."
+    },
+    {
+      "id": "d",
+      "texto": "setSoTimeout únicamente después de cerrar el socket."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "El tiempo límite de connect controla el establecimiento de conexión. SO_TIMEOUT limita la espera de lectura y no sustituye el parámetro de conexión.",
+  "referencias": [
+    "R19"
+  ]
+},
+{
+  "id": "s2-p47",
+  "numero": 47,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un cliente BufferedWriter escribe ESTADO y hace flush sin salto de línea. El servidor usa readLine y la conexión permanece abierta. ¿Qué falta en este protocolo por líneas?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Cerrar el servidor antes de escribir."
+    },
+    {
+      "id": "b",
+      "texto": "Abrir otro socket por cada carácter."
+    },
+    {
+      "id": "c",
+      "texto": "Eliminar flush para recibir antes."
+    },
+    {
+      "id": "d",
+      "texto": "Escribir el fin de línea antes de vaciar el búfer."
+    }
+  ],
+  "correcta": "d",
+  "explicacion": "flush envía los caracteres almacenados, pero no añade un delimitador. readLine necesita un final de línea o el fin del flujo para completar esa lectura.",
+  "referencias": [
+    "R21"
+  ]
+},
+{
+  "id": "s2-p48",
+  "numero": 48,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un cliente instalado en otro equipo intenta conectarse a localhost para llegar a un servidor remoto. ¿Qué debe corregir?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Usar localhost dos veces."
+    },
+    {
+      "id": "b",
+      "texto": "Usar una dirección o nombre accesible del servidor."
+    },
+    {
+      "id": "c",
+      "texto": "Cambiar TCP por una variable static."
+    },
+    {
+      "id": "d",
+      "texto": "Usar el puerto como dirección completa."
+    }
+  ],
+  "correcta": "b",
+  "explicacion": "localhost identifica al propio equipo donde se ejecuta el cliente. Para un servidor remoto se necesita su dirección alcanzable y el puerto del servicio.",
+  "referencias": [
+    "R17"
+  ]
+},
+{
+  "id": "s2-p49",
+  "numero": 49,
+  "tema": "Hilos y comunicación",
+  "enunciado": "Un servidor entrega sockets aceptados a un ThreadPoolExecutor saturado con AbortPolicy. execute rechaza la tarea. ¿Qué debe hacer el código que conserva ese socket?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Atender el rechazo y cerrar el socket que no se procesará."
+    },
+    {
+      "id": "b",
+      "texto": "Olvidar la referencia porque el recolector cierra inmediatamente toda conexión."
+    },
+    {
+      "id": "c",
+      "texto": "Suponer que la tarea fue ejecutada."
+    },
+    {
+      "id": "d",
+      "texto": "Seguir aceptando sin manejar el rechazo."
+    }
+  ],
+  "correcta": "a",
+  "explicacion": "AbortPolicy comunica el rechazo mediante RejectedExecutionException. El servidor debe gestionar el recurso aceptado que quedó sin trabajador para evitar conexiones abiertas sin atención.",
+  "referencias": [
+    "R16",
+    "R18"
+  ]
+},
+{
+  "id": "s2-p50",
+  "numero": 50,
+  "tema": "Hilos y comunicación",
+  "enunciado": "El servidor debe detenerse mientras un hilo está bloqueado en ServerSocket.accept. ¿Qué acción permite desbloquear esa espera de forma definida?",
+  "opciones": [
+    {
+      "id": "a",
+      "texto": "Solo cambiar una variable sin tocar el socket."
+    },
+    {
+      "id": "b",
+      "texto": "Solo llamar a shutdown en un pool ajeno al accept."
+    },
+    {
+      "id": "c",
+      "texto": "Cerrar el ServerSocket y tratar la excepción de cierre al salir."
+    },
+    {
+      "id": "d",
+      "texto": "Volver a llamar accept desde otro hilo."
+    }
+  ],
+  "correcta": "c",
+  "explicacion": "Cerrar el ServerSocket hace que el hilo bloqueado en accept reciba una SocketException. El cierre debe formar parte del procedimiento de parada y distinguirse de un fallo inesperado.",
+  "referencias": [
+    "R20"
+  ]
+}
+  ]
+}
