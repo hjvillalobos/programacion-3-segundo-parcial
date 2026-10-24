@@ -216,3 +216,12 @@ Delivery Gate:
 - Purpose-Gate: PASS. Dos acciones explícitas permiten elegir el banco. El verde conserva la jerarquía; no hay decoración nueva.
 - Liveliness: PASS. Diales conservados, foco principal en la práctica, separación entre instrucciones, pregunta y resultados; voz académica compartida.
 - Craftsmanship y Quality Locks: PASS. Corrección por IDs, explicaciones posteriores a la entrega, recuperación independiente y pruebas de ambos simulacros. Sin cambios en preguntas o claves anteriores.
+
+## Ampliación: explicaciones del Simulacro I, 24 de octubre de 2026
+
+Modo during y dirección de DESIGN.md conservados: ENERGY 1 / RHYTHM 2 / MOTION 1. Se añaden explicaciones académicas y fuentes a las 50 preguntas, usando la revisión existente. Los textos de instrucciones anuncian esa revisión. No hay cambios de estilo, colores, recursos visuales o navegación.
+
+- Hard Gate: PASS. Las explicaciones solo se renderizan tras la entrega. El banco original, excluidos los dos campos añadidos, coincide con su huella anterior; una prueba lo protege.
+- Purpose-Gate: PASS. Cada párrafo explica la respuesta y los matices necesarios, sin decoración nueva ni referencias a letras que cambian al mezclar.
+- Liveliness: PASS. La pregunta sigue encabezando cada desplegable; respuesta elegida, clave, explicación y fuentes conservan el orden de lectura. Se mantienen los diales y el acento verde existentes.
+- Craftsmanship y Quality Locks: PASS. npm run validate aprobó 28 archivos y 24 pruebas. En navegador se abrió una explicación mediante Enter, se recuperó tras recargar y no hubo desbordamiento a 320, 390, 768 y 1024 píxeles ni advertencias de consola. Contraste y foco reutilizan las reglas existentes, sin combinaciones nuevas.
