@@ -40,7 +40,7 @@ export function paginate(container, nodes, controls, { pageSize = 10, targetId =
       const currentButtons = show(page);
       onNavigate(nodes[(currentPage - 1) * pageSize]?.id);
       container.scrollIntoView();
-      currentButtons[controlIndex].focus({ preventScroll: true });
+      currentButtons[controlIndex].focus();
     });
     return button;
   }

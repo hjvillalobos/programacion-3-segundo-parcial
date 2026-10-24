@@ -36,15 +36,13 @@
     <p id="storage-notice" role="status" hidden>El navegador no permite guardar este intento. Mantén esta página abierta para conservar tus respuestas.</p>
 
     <section id="exam-setup" class="item" hidden>
-      <h2>Antes de comenzar</h2>
+      <h2>Antes de empezar</h2>
       <p id="exam-description"></p>
       <ul>
-        <li>Dispones de <strong id="exam-duration"></strong>. El tiempo empieza al pulsar Comenzar.</li>
-        <li>Las preguntas y sus opciones se mezclan en cada nuevo intento.</li>
-        <li>Puedes cambiar tus respuestas y moverte entre preguntas antes de entregar.</li>
-        <li>Al agotarse el tiempo, el intento se entrega automáticamente.</li>
-        <li>Las preguntas sin responder valen cero. La revisión aparece después de entregar.</li>
-        <li>El intento se conserva al recargar esta pestaña; el cronómetro sigue corriendo.</li>
+        <li>Tienes <strong id="exam-duration"></strong> desde que pulsas Comenzar simulacro. Al vencer el plazo, el intento se entrega automáticamente.</li>
+        <li>El orden de las preguntas y las opciones cambia en cada intento. Puedes revisar y cambiar tus selecciones antes de terminar.</li>
+        <li>Las preguntas sin responder valen cero. Verás la nota y las respuestas correctas al terminar.</li>
+        <li>Recargar esta pestaña conserva el intento y el tiempo restante.</li>
       </ul>
       <button id="start-exam" type="button" class="primary-button">Comenzar simulacro</button>
     </section>
@@ -57,7 +55,7 @@
       <p id="exam-announcement" role="status"></p>
       <details class="screenonly">
         <summary>Ir a una pregunta</summary>
-        <p>Las preguntas marcadas como respondidas ya tienen una opción seleccionada.</p>
+        <p>R significa respondida. Selecciona un número para ir a esa pregunta.</p>
         <div id="exam-map" class="exam-map" role="group" aria-label="Preguntas del intento"></div>
       </details>
       <form id="exam-form">

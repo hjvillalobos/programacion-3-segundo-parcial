@@ -61,6 +61,11 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     assert.equal(Object.keys(JSON.parse(memory.get(storageKey)).answers).length, 1);
     assert.equal(nodes['exam-results'].hidden, true);
     assert.equal(nodes['exam-review'].children.length, 0);
+    nodes['exam-form'].listeners.submit({ preventDefault() {} });
+    assert.equal(nodes['submit-confirmation'].hidden, false);
+    documentEvents.keydown({ key: 'Escape', preventDefault() {} });
+    assert.equal(nodes['submit-confirmation'].hidden, true);
+    assert.equal(JSON.parse(memory.get(storageKey)).deadline, active.deadline);
 
     now = active.deadline + 1000;
     documentEvents.visibilitychange();
@@ -102,6 +107,26 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     assert.equal(nodes['storage-notice'].hidden, false);
     nodes['start-exam'].listeners.click();
     assert.equal(nodes['exam-running'].hidden, false);
+
+    nodes['exam-running'].hidden = true;
+    nodes['exam-setup'].hidden = true;
+    globalThis.fetch = async () => ({ ok: false, status: 503 });
+    const originalError = console.error;
+    console.error = () => {};
+    try {
+      await import('../public/assets/js/exam-page.js?load-error');
+      await new Promise(setImmediate);
+    } finally {
+      console.error = originalError;
+    }
+    assert.equal(nodes['exam-load-status'].attributes.role, 'alert');
+    assert.equal(nodes['retry-exam-load'].hidden, false);
+    globalThis.fetch = async () => ({ ok: true, json: async () => ({ ...exam, preguntas: [] }) });
+    await nodes['retry-exam-load'].listeners.click();
+    assert.equal(nodes['exam-load-status'].attributes.role, 'status');
+    assert.match(nodes['exam-load-status'].textContent, /todavía no tiene preguntas/);
+    assert.equal(nodes['exam-setup'].hidden, true);
+    assert.equal(nodes['exam-running'].hidden, true);
   } finally {
     Date.now = originalNow;
     globalThis.setInterval = originalInterval;

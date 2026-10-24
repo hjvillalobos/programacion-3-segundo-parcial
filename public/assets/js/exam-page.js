@@ -22,11 +22,17 @@ function save() {
 }
 
 function readSavedAttempt() {
+  let stored;
   try {
-    const saved = JSON.parse(sessionStorage.getItem(storageKey));
-    return isValidAttempt(exam, saved) ? saved : null;
+    stored = sessionStorage.getItem(storageKey);
   } catch {
     persistenceError();
+    return null;
+  }
+  try {
+    const saved = JSON.parse(stored);
+    return isValidAttempt(exam, saved) ? saved : null;
+  } catch {
     return null;
   }
 }
@@ -77,7 +83,7 @@ function updateProgress() {
       class: selected ? 'question-number answered' : 'question-number',
       'aria-label': `Pregunta ${index + 1}, ${selected ? 'respondida' : 'sin responder'}`,
       ...(index === attempt.currentIndex ? { 'aria-current': 'step' } : {}),
-    }, [String(index + 1)]);
+    }, [`${index + 1}${selected ? ' R' : ''}`]);
     button.addEventListener('click', () => showQuestion(index, true));
     return button;
   }));
@@ -89,6 +95,7 @@ function tick() {
   if (checkExpiration()) return;
   if (!warned && remainingSeconds(attempt) <= 300) {
     warned = true;
+    $('#exam-timer').setAttribute('data-urgent', 'true');
     $('#exam-announcement').textContent = 'Quedan cinco minutos o menos para entregar.';
   }
 }
@@ -108,6 +115,8 @@ function startRunning() {
   $('#exam-running').hidden = false;
   $('#submit-confirmation').hidden = true;
   warned = false;
+  $('#exam-announcement').textContent = '';
+  $('#exam-timer').setAttribute('data-urgent', 'false');
   if (checkExpiration()) return;
   showQuestion(attempt.currentIndex);
   tick();
@@ -151,10 +160,22 @@ function showResults() {
 }
 
 async function initialize() {
+  const status = $('#exam-load-status');
+  const retry = $('#retry-exam-load');
+  status.hidden = false;
+  status.textContent = 'Cargando simulacro...';
+  status.setAttribute('role', 'status');
+  retry.hidden = true;
+  retry.disabled = true;
   try {
     const response = await fetch('data/simulacros/simulacro-1.json');
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    exam = validateExam(await response.json());
+    const data = await response.json();
+    if (Array.isArray(data.preguntas) && data.preguntas.length === 0) {
+      status.textContent = 'Este simulacro todavía no tiene preguntas. Puedes repasar con las tarjetas o el cuestionario mientras tanto.';
+      return;
+    }
+    exam = validateExam(data);
     $('#exam-description').textContent = exam.descripcion;
     $('#exam-duration').textContent = `${exam.duracionSegundos / 60} minutos`;
     $('#exam-load-status').hidden = true;
@@ -165,7 +186,10 @@ async function initialize() {
   } catch (error) {
     $('#exam-load-status').textContent = 'No se pudo cargar el simulacro. Comprueba tu conexión y recarga la página.';
     $('#exam-load-status').setAttribute('role', 'alert');
+    retry.hidden = false;
     console.error('Error al cargar el simulacro:', error);
+  } finally {
+    retry.disabled = false;
   }
 }
 
@@ -188,9 +212,17 @@ $('#exam-form').addEventListener('submit', (event) => {
   $('#confirm-submit').focus();
 });
 $('#confirm-submit').addEventListener('click', submit);
-$('#cancel-submit').addEventListener('click', () => {
+function cancelSubmission() {
   $('#submit-confirmation').hidden = true;
   if (!checkExpiration()) focusQuestion();
+}
+$('#cancel-submit').addEventListener('click', cancelSubmission);
+$('#retry-exam-load').addEventListener('click', initialize);
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !$('#submit-confirmation').hidden) {
+    event.preventDefault();
+    cancelSubmission();
+  }
 });
 $('#retry-exam').addEventListener('click', () => {
   attempt = null;

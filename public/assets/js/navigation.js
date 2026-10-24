@@ -9,6 +9,7 @@ document.querySelectorAll('.site-menu').forEach((menu) => {
   wideLayout.addEventListener('change', updateLayout);
   menu.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !wideLayout.matches && menu.open) {
+      event.stopPropagation();
       menu.open = false;
       summary.focus();
     }
