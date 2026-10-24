@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuestionario · Programación 3</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
+    <header>
+      <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
+      <h1>Cuestionario</h1>
+      <p>Preguntas y ejercicios para resolver sin límite de tiempo.</p>
+    </header>
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="tarjetas.html">Tarjetas</a>
+      <a href="cuestionario.html" aria-current="page">Cuestionario</a>
+      <a href="solucionario.html">Solucionario</a>
+      <a href="simulacro-1.html">Simulacro I</a>
+      <a href="simulacro-2.html">Simulacro II</a>
+      <a href="referencias.html">Referencias</a>
+      <a href="imprimir.html">Imprimir</a>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando preguntas...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
+    <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
+    <h2 id="cuestionario">Resuelve las preguntas</h2>
+    <p>Selecciona una opción o escribe tu respuesta. En verdadero o falso, añade una justificación.</p>
+    <p class="meta">Las respuestas se conservan al cambiar de grupo, pero se pierden al salir o recargar esta página.</p>
+    <p><a href="solucionario.html" target="_blank" rel="noopener noreferrer">Abrir solucionario en otra pestaña</a> para revisar sin salir del cuestionario.</p>
+    <form class="study-filters screenonly" role="search" aria-label="Buscar y filtrar preguntas" data-study-for="lista-preguntas" data-item-label="preguntas" hidden>
+      <div class="filter-fields">
+        <label for="study-query">Buscar en las preguntas
+          <input id="study-query" name="q" type="search" placeholder="Concepto, pregunta o código" aria-describedby="study-search-help" autocomplete="off" aria-controls="lista-preguntas">
+        </label>
+        <label for="study-topic">Tema
+          <select id="study-topic" name="topic" aria-controls="lista-preguntas"><option value="">Todos los temas</option></select>
+        </label>
+        <button type="button" data-clear-filters disabled>Limpiar filtros</button>
+      </div>
+      <p id="study-search-help" class="meta">Busca en los enunciados y sus opciones sin distinguir mayúsculas ni tildes. Puedes combinar varias palabras con un tema.</p>
+      <p role="status" aria-live="polite" aria-atomic="true" data-filter-count></p>
+      <p class="empty-state" data-filter-empty hidden>No hay coincidencias. Prueba otras palabras o limpia los filtros para volver a ver todas las preguntas.</p>
+    </form>
+    <nav class="screenonly pagination" aria-label="Páginas del material, arriba" data-pagination-for="lista-preguntas"></nav>
+    <div id="lista-preguntas"></div>
+    <nav class="screenonly pagination" aria-label="Páginas del material, abajo" data-pagination-for="lista-preguntas"></nav>
+    </main>
+  </div>
+</body>
+</html>

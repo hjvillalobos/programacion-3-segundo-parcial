@@ -1,0 +1,151 @@
+.exam-toolbar {
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: .5rem 1rem;
+  padding: .65rem .85rem;
+  border: 1px solid var(--control);
+  border-radius: 4px;
+  background: var(--paper);
+}
+
+.exam-toolbar p {
+  margin: 0;
+  font-size: .9rem;
+}
+
+#exam-progress {
+  text-align: right;
+}
+
+#exam-timer {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.2rem;
+}
+
+#exam-timer[data-urgent="true"] {
+  color: var(--error);
+}
+
+#exam-announcement:empty {
+  display: none;
+}
+
+.exam-fieldset {
+  min-width: 0;
+  border: 0;
+  padding: 0;
+}
+
+.exam-fieldset legend {
+  max-width: 100%;
+  margin-bottom: 1rem;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.exam-option {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  min-height: 2.75rem;
+  margin: .75rem 0;
+  padding: .85rem;
+  border: 1px solid var(--control);
+  border-radius: 4px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.exam-option > span {
+  min-width: 0;
+}
+
+.exam-option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--wash);
+}
+
+.exam-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: 1.25rem 0;
+}
+
+.exam-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+  gap: .65rem;
+}
+
+.question-number {
+  padding: .5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.question-number.answered {
+  color: white;
+  background: var(--accent);
+}
+
+.question-number[aria-current="step"] {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.exam-score {
+  display: block;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--accent);
+}
+
+.exam-review.correct {
+  border-left: 4px solid var(--accent);
+}
+
+.exam-review.incorrect {
+  border-left: 4px solid var(--error);
+}
+
+.exam-review.unanswered {
+  border-left: 4px solid var(--warning);
+}
+
+.exam-review details {
+  margin-top: 0;
+}
+
+#exam-question-title,
+#exam-results-title {
+  scroll-margin-top: 7rem;
+}
+
+#exam-question-title:focus,
+#exam-results-title:focus {
+  outline: 2px solid var(--focus);
+  outline-offset: .25rem;
+}
+
+@media (min-width: 40rem) {
+  .exam-toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 56rem) {
+  .exam-toolbar {
+    position: sticky;
+    top: 0;
+  }
+}
+
+@media print {
+  .exam-toolbar,
+  .exam-actions {
+    display: none;
+  }
+}

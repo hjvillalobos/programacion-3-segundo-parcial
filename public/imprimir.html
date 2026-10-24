@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Material completo · Programación 3</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
+    <header>
+      <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
+      <h1>Material completo</h1>
+      <p>Versión reunida para consultar o imprimir todo el material.</p>
+    </header>
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="tarjetas.html">Tarjetas</a>
+      <a href="cuestionario.html">Cuestionario</a>
+      <a href="solucionario.html">Solucionario</a>
+      <a href="simulacro-1.html">Simulacro I</a>
+      <a href="simulacro-2.html">Simulacro II</a>
+      <a href="referencias.html">Referencias</a>
+      <a href="imprimir.html" aria-current="page">Imprimir</a>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando el material completo...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
+    <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
+    <div class="pagination screenonly"><button type="button" data-print-answers="true" disabled>Imprimir con respuestas</button> <button type="button" data-print-answers="false" disabled>Imprimir sin respuestas</button></div>
+    <div id="introduccion"></div>
+<h2 id="tarjetas">1. Tarjetas didácticas</h2>
+<div id="lista-tarjetas"></div>
+<h2 id="cuestionario">2. Cuestionario sin respuestas</h2><p>Selecciona una opción o escribe tu respuesta. Justifica los enunciados de verdadero o falso.</p>
+<div id="lista-preguntas"></div>
+<h2 id="solucionario">3. Solucionario</h2><p>Abre cada respuesta después de intentarla. Los criterios de respuesta de las preguntas abiertas sirven para autoevaluarte.</p>
+<div id="lista-soluciones"></div>
+<h2 id="cobertura">4. Cobertura del temario</h2><div id="tabla-cobertura" class="tablewrap"></div>
+<h2 id="fuentes">Fuentes y procedencia</h2><p>A, B y C: PDF del profesor. R: investigación complementaria, consultada el 21 de octubre de 2026. Los casos y soluciones son elaboración original para practicar. Las fuentes respaldan los conceptos; no predicen las preguntas del examen.</p>
+<div id="lista-fuentes"></div>
+
+    </main>
+  </div>
+</body>
+</html>

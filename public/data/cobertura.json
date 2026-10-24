@@ -1,0 +1,507 @@
+[
+  {
+    "subtema": "Propósito y selección",
+    "tarjetas": [
+      "t1",
+      "t5",
+      "t15"
+    ],
+    "preguntas": [
+      "p21",
+      "p31"
+    ]
+  },
+  {
+    "subtema": "Clasificación",
+    "tarjetas": [
+      "t2",
+      "t15"
+    ],
+    "preguntas": [
+      "p1"
+    ]
+  },
+  {
+    "subtema": "Strategy",
+    "tarjetas": [
+      "t3"
+    ],
+    "preguntas": [
+      "p2",
+      "p31",
+      "p41"
+    ]
+  },
+  {
+    "subtema": "Observer",
+    "tarjetas": [
+      "t4",
+      "t5"
+    ],
+    "preguntas": [
+      "p2",
+      "p3",
+      "p42"
+    ]
+  },
+  {
+    "subtema": "Composite",
+    "tarjetas": [
+      "t6"
+    ],
+    "preguntas": [
+      "p3",
+      "p22",
+      "p43"
+    ]
+  },
+  {
+    "subtema": "Factory Method",
+    "tarjetas": [
+      "t7"
+    ],
+    "preguntas": [
+      "p4",
+      "p31",
+      "p32"
+    ]
+  },
+  {
+    "subtema": "Abstract Factory",
+    "tarjetas": [
+      "t7"
+    ],
+    "preguntas": [
+      "p4",
+      "p32"
+    ]
+  },
+  {
+    "subtema": "Singleton",
+    "tarjetas": [
+      "t8"
+    ],
+    "preguntas": [
+      "p21",
+      "p32"
+    ]
+  },
+  {
+    "subtema": "Builder",
+    "tarjetas": [
+      "t9"
+    ],
+    "preguntas": [
+      "p32"
+    ]
+  },
+  {
+    "subtema": "Adapter",
+    "tarjetas": [
+      "t10"
+    ],
+    "preguntas": [
+      "p5",
+      "p23"
+    ]
+  },
+  {
+    "subtema": "Decorator",
+    "tarjetas": [
+      "t11"
+    ],
+    "preguntas": [
+      "p5",
+      "p23",
+      "p33"
+    ]
+  },
+  {
+    "subtema": "Facade",
+    "tarjetas": [
+      "t12"
+    ],
+    "preguntas": [
+      "p5",
+      "p23",
+      "p33"
+    ]
+  },
+  {
+    "subtema": "Proxy",
+    "tarjetas": [
+      "t13"
+    ],
+    "preguntas": [
+      "p33"
+    ]
+  },
+  {
+    "subtema": "DAO y DTO",
+    "tarjetas": [
+      "t14",
+      "t33"
+    ],
+    "preguntas": [
+      "p6",
+      "p46"
+    ]
+  },
+  {
+    "subtema": "Arquitectura por capas",
+    "tarjetas": [
+      "t14",
+      "t33"
+    ],
+    "preguntas": [
+      "p6",
+      "p46"
+    ]
+  },
+  {
+    "subtema": "Modelo relacional",
+    "tarjetas": [
+      "t16"
+    ],
+    "preguntas": [
+      "p7"
+    ]
+  },
+  {
+    "subtema": "Claves e integridad",
+    "tarjetas": [
+      "t17",
+      "t18"
+    ],
+    "preguntas": [
+      "p8",
+      "p24",
+      "p44"
+    ]
+  },
+  {
+    "subtema": "Cardinalidades y AVI",
+    "tarjetas": [
+      "t19",
+      "t24"
+    ],
+    "preguntas": [
+      "p8",
+      "p34"
+    ]
+  },
+  {
+    "subtema": "Anomalías y normalización",
+    "tarjetas": [
+      "t20",
+      "t24"
+    ],
+    "preguntas": [
+      "p34",
+      "p35",
+      "p44"
+    ]
+  },
+  {
+    "subtema": "1FN",
+    "tarjetas": [
+      "t21"
+    ],
+    "preguntas": [
+      "p35",
+      "p44"
+    ]
+  },
+  {
+    "subtema": "2FN",
+    "tarjetas": [
+      "t22"
+    ],
+    "preguntas": [
+      "p9",
+      "p25",
+      "p35",
+      "p44"
+    ]
+  },
+  {
+    "subtema": "3FN",
+    "tarjetas": [
+      "t23"
+    ],
+    "preguntas": [
+      "p10",
+      "p25",
+      "p35",
+      "p44"
+    ]
+  },
+  {
+    "subtema": "Objetos y mapeo",
+    "tarjetas": [
+      "t25",
+      "t32"
+    ],
+    "preguntas": [
+      "p14",
+      "p36",
+      "p46"
+    ]
+  },
+  {
+    "subtema": "SQL y CRUD",
+    "tarjetas": [
+      "t26",
+      "t31"
+    ],
+    "preguntas": [
+      "p11",
+      "p45"
+    ]
+  },
+  {
+    "subtema": "Drivers JDBC ODBC",
+    "tarjetas": [
+      "t27"
+    ],
+    "preguntas": [
+      "p12",
+      "p26",
+      "p37"
+    ]
+  },
+  {
+    "subtema": "DSN y plataforma",
+    "tarjetas": [
+      "t27"
+    ],
+    "preguntas": [
+      "p12",
+      "p26",
+      "p37"
+    ]
+  },
+  {
+    "subtema": "Pool de conexiones",
+    "tarjetas": [
+      "t28"
+    ],
+    "preguntas": [
+      "p13",
+      "p37"
+    ]
+  },
+  {
+    "subtema": "Flujo JDBC",
+    "tarjetas": [
+      "t29",
+      "t31"
+    ],
+    "preguntas": [
+      "p14",
+      "p45"
+    ]
+  },
+  {
+    "subtema": "Cierre de recursos",
+    "tarjetas": [
+      "t29"
+    ],
+    "preguntas": [
+      "p13",
+      "p37",
+      "p45",
+      "p46"
+    ]
+  },
+  {
+    "subtema": "PreparedStatement",
+    "tarjetas": [
+      "t30"
+    ],
+    "preguntas": [
+      "p45",
+      "p46"
+    ]
+  },
+  {
+    "subtema": "Procesos e hilos",
+    "tarjetas": [
+      "t34"
+    ],
+    "preguntas": [
+      "p15",
+      "p38"
+    ]
+  },
+  {
+    "subtema": "Clases activas",
+    "tarjetas": [
+      "t34"
+    ],
+    "preguntas": [
+      "p15",
+      "p38"
+    ]
+  },
+  {
+    "subtema": "Concurrencia y paralelismo",
+    "tarjetas": [
+      "t35"
+    ],
+    "preguntas": [
+      "p27"
+    ]
+  },
+  {
+    "subtema": "Thread Runnable y estados",
+    "tarjetas": [
+      "t36"
+    ],
+    "preguntas": [
+      "p16",
+      "p38"
+    ]
+  },
+  {
+    "subtema": "sleep join isAlive",
+    "tarjetas": [
+      "t37"
+    ],
+    "preguntas": [
+      "p38",
+      "p47",
+      "p48"
+    ]
+  },
+  {
+    "subtema": "Interrupción y terminación",
+    "tarjetas": [
+      "t38"
+    ],
+    "preguntas": [
+      "p48"
+    ]
+  },
+  {
+    "subtema": "Carreras y sincronización",
+    "tarjetas": [
+      "t39"
+    ],
+    "preguntas": [
+      "p28",
+      "p47"
+    ]
+  },
+  {
+    "subtema": "wait notify notifyAll",
+    "tarjetas": [
+      "t40"
+    ],
+    "preguntas": [
+      "p17",
+      "p39"
+    ]
+  },
+  {
+    "subtema": "Mensajes locales y colas",
+    "tarjetas": [
+      "t41"
+    ],
+    "preguntas": [
+      "p39"
+    ]
+  },
+  {
+    "subtema": "Bloqueos y recursos",
+    "tarjetas": [
+      "t42"
+    ],
+    "preguntas": [
+      "p50"
+    ]
+  },
+  {
+    "subtema": "Sockets TCP y UDP",
+    "tarjetas": [
+      "t43"
+    ],
+    "preguntas": [
+      "p29",
+      "p40"
+    ]
+  },
+  {
+    "subtema": "Roles Socket ServerSocket",
+    "tarjetas": [
+      "t44"
+    ],
+    "preguntas": [
+      "p18",
+      "p49"
+    ]
+  },
+  {
+    "subtema": "Host puerto localhost",
+    "tarjetas": [
+      "t45"
+    ],
+    "preguntas": [
+      "p19",
+      "p40"
+    ]
+  },
+  {
+    "subtema": "Flujos y protocolo",
+    "tarjetas": [
+      "t46"
+    ],
+    "preguntas": [
+      "p20",
+      "p29",
+      "p49"
+    ]
+  },
+  {
+    "subtema": "Bloqueo y errores de red",
+    "tarjetas": [
+      "t47"
+    ],
+    "preguntas": [
+      "p20",
+      "p40",
+      "p49"
+    ]
+  },
+  {
+    "subtema": "Servidor concurrente",
+    "tarjetas": [
+      "t48"
+    ],
+    "preguntas": [
+      "p30",
+      "p50"
+    ]
+  },
+  {
+    "subtema": "Distribución y asincronía",
+    "tarjetas": [
+      "t49"
+    ],
+    "preguntas": [
+      "p39",
+      "p50"
+    ]
+  },
+  {
+    "subtema": "Cierre de red e integración",
+    "tarjetas": [
+      "t50"
+    ],
+    "preguntas": [
+      "p30",
+      "p40",
+      "p50"
+    ]
+  }
+]

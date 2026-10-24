@@ -1,0 +1,90 @@
+[
+  {
+    "tipo": "p",
+    "contenido": [
+      "Material de estudio para el segundo parcial de EIF206 Programación 3, preparado el 21 de octubre de 2026."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      "Incluye ",
+      {
+        "tipo": "strong",
+        "contenido": [
+          "50 tarjetas didácticas y 50 preguntas adicionales"
+        ]
+      },
+      ", con solucionario separado. Distribución en ambas partes: ",
+      {
+        "tipo": "strong",
+        "contenido": [
+          "15 de patrones, 18 de bases de datos y 17 de hilos/comunicación"
+        ]
+      },
+      ". El cuestionario contiene 20 de selección única, 10 de verdadero/falso, 10 de respuesta corta y 10 ejercicios de código o casos."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "Prioridad de estudio."
+        ]
+      },
+      " Los tres PDF del profesor son la base. Los patrones de diseño y el desarrollo de sockets remotos se completan con investigación. Observer, Composite y Strategy figuran en el programa previamente revisado; los otros patrones concretos son ejemplos complementarios para estudiar las tres familias, no una afirmación de que el profesor preguntará cada uno. PreparedStatement, DAO, detalles de la API de Thread, protocolos y manejo de errores son ampliaciones prácticas señaladas mediante referencias R."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "Cómo usarlo."
+        ]
+      },
+      " Responde las tarjetas antes de abrir su reverso. Después resuelve las 50 preguntas sin consultar el solucionario, situado tras la última pregunta. En selección única marca una alternativa; en verdadero/falso justifica siempre. En código explica también la razón de tu solución. La tabla final permite ubicar qué debes repasar."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "Convenciones."
+        ]
+      },
+      " Java con construcciones compatibles en general con Java 8 o superior; MySQL 8 o superior. Las referencias de API Java 25 se usan para verificar los contratos, sin exigir novedades de esa versión. Los fragmentos que se presentan como métodos van dentro de una clase y necesitan los imports indicados; los esquemas relacionales son notación de diseño, no scripts SQL ejecutables. El código de red es de demostración para el examen."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      {
+        "tipo": "strong",
+        "contenido": [
+          "Precisiones para evitar confusiones."
+        ]
+      },
+      " JDBC es una API; el driver la implementa. Ser específico de un motor no equivale a depender del sistema operativo. Una FK simple puede admitir NULL si no se declara NOT NULL. Concurrencia no implica paralelismo; RUNNING no es un estado separado de Thread.State. Un Thread termina al concluir run(): no se cierra con un método close() de Thread. La seguridad de una operación compuesta exige coordinación adecuada; ni sleep() ni Singleton la garantizan. En el curso SELECT se agrupa en DML, aunque otras clasificaciones usan DQL."
+    ]
+  },
+  {
+    "tipo": "p",
+    "contenido": [
+      {
+        "tipo": "small",
+        "contenido": [
+          "Puedes escribir respuestas en este documento mientras esté abierto. No se guardan al cerrar o recargar. Las respuestas del cuestionario están en la sección Solucionario."
+        ]
+      }
+    ],
+    "atributos": {
+      "class": "screenonly"
+    }
+  }
+]

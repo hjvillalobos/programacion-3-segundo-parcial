@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Referencias · Programación 3</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
+    <header>
+      <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
+      <h1>Referencias</h1>
+      <p>Ubica los temas que necesitas repasar y consulta sus fuentes.</p>
+    </header>
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="tarjetas.html">Tarjetas</a>
+      <a href="cuestionario.html">Cuestionario</a>
+      <a href="solucionario.html">Solucionario</a>
+      <a href="simulacro-1.html">Simulacro I</a>
+      <a href="simulacro-2.html">Simulacro II</a>
+      <a href="referencias.html" aria-current="page">Referencias</a>
+      <a href="imprimir.html">Imprimir</a>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando cobertura y fuentes...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
+    <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
+    <h2 id="cobertura">Cobertura del temario</h2>
+    <div id="tabla-cobertura" class="tablewrap" role="region" aria-label="Tabla de cobertura" tabindex="0"></div>
+    <h2 id="fuentes">Fuentes y procedencia</h2>
+    <p>A, B y C: PDF del profesor. R: investigación complementaria, consultada el 21 de octubre de 2026. Los casos y soluciones son elaboración original para practicar. Las fuentes respaldan los conceptos; no predicen las preguntas del examen.</p>
+    <div id="lista-fuentes"></div>
+    </main>
+  </div>
+</body>
+</html>

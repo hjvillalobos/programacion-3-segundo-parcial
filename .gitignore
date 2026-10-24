@@ -1,0 +1,17 @@
+# Dependencias y archivos generados
+node_modules/
+dist/
+coverage/
+*.log
+
+# Configuración local de editores
+.idea/
+.vscode/
+*.iml
+
+# Variables locales y archivos del sistema
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

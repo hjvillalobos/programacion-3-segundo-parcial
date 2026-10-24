@@ -1,0 +1,1718 @@
+[
+  {
+    "id": "p1",
+    "titulo": "P01. Selección única",
+    "meta": "Patrones de diseño · Básica · Base: R1",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Se necesita organizar objetos en una jerarquía parte-todo. ¿A qué familia corresponde la solución Composite?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Creacional."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Estructural."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " De comportamiento."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " De normalización."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "titulo": "P02. Selección única",
+    "meta": "Patrones de diseño · Intermedia · Base: R4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un servicio debe cambiar entre cálculo de tarifa normal y promocional durante la ejecución, manteniendo estable su cliente. ¿Qué patrón encaja mejor?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Observer."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Composite."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Strategy."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Adapter."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p3",
+    "titulo": "P03. Selección única",
+    "meta": "Patrones de diseño · Intermedia · Base: R3, R4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un historial cambia y varias vistas suscritas deben enterarse sin que el historial conozca sus clases concretas. ¿Qué estructura es la adecuada?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Un sujeto con registro de observadores mediante una interfaz."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Un sujeto con referencias obligatorias a cada clase de vista concreta."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Un árbol Composite sin mecanismo de notificación."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Un contexto Strategy sin suscriptores."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p4",
+    "titulo": "P04. Selección única",
+    "meta": "Patrones de diseño · Básica · Base: R2",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una interfaz ofrece crearBoton() y crearMenu(), con implementaciones para temas visuales compatibles. ¿Qué patrón representa?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Builder."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Singleton."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Observer."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Abstract Factory."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p5",
+    "titulo": "P05. Selección única",
+    "meta": "Patrones de diseño · Intermedia · Base: R6",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una biblioteca tiene enviarTexto(String), pero el sistema espera Notificador.notificar(String). Se quiere reutilizarla sin modificarla. ¿Qué patrón usar?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Decorator."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Adapter."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Facade."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Strategy."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p6",
+    "titulo": "P06. Selección única",
+    "meta": "Patrones de diseño · Básica · Base: R8, A",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "¿Dónde debe residir el SQL que consulta usuarios y convierte sus filas a objetos?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " En la vista."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " En un DTO dedicado solo a transportar datos."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " En la implementación del DAO."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " En el manejador de clic del controlador."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p7",
+    "titulo": "P07. Selección única",
+    "meta": "Bases de datos y persistencia · Básica · Base: A pp. 2-4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En USUARIOS, ¿qué identifica correctamente una tupla y un dominio?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Tupla: una fila; dominio: conjunto de valores válidos para un atributo."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Tupla: una columna; dominio: una fila."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Tupla: una clave foránea; dominio: toda la base de datos."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Tupla: el nombre de la tabla; dominio: el orden de las filas."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p8",
+    "titulo": "P08. Selección única",
+    "meta": "Bases de datos y persistencia · Básica · Base: A pp. 5-7",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "CONVERSACIONES.id_usuario es NOT NULL y FK a USUARIOS.id_usuario. ¿Qué exige la integridad referencial al insertar una conversación?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Que cada usuario tenga como máximo una conversación."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Que id_usuario pueda apuntar a cualquier entero inexistente."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Que los IDs de conversaciones sean consecutivos sin huecos."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Que exista el usuario cuyo ID se utiliza."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p9",
+    "titulo": "P09. Selección única",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: A p. 12",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "MATRICULA tiene PK(estudiante, curso), y estudiante → nombre_estudiante. No existen otras claves candidatas. ¿Cuál es el problema?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Violación de 1FN por tener necesariamente listas en las celdas."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Violación de 2FN por dependencia parcial."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Violación de 3FN únicamente por dependencia transitiva."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Ninguno: una clave compuesta garantiza normalización."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p10",
+    "titulo": "P10. Selección única",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: A p. 13",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "USUARIOS(id_usuario, id_tipo, nombre_tipo) tiene solo id_usuario como clave candidata e id_tipo → nombre_tipo. ¿Cuál es la corrección adecuada?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Quitar la PK de USUARIOS."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Añadir otra copia de nombre_tipo."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Crear TIPOS_USUARIO(id_tipo PK, nombre_tipo) y conservar id_tipo como FK en USUARIOS."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Guardar los usuarios como una lista en TIPOS_USUARIO."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p11",
+    "titulo": "P11. Selección única",
+    "meta": "Bases de datos y persistencia · Básica · Base: A p. 8; B p. 6",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En CRUD, la operación Create de un nuevo mensaje corresponde a:"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " INSERT INTO mensajes (...)."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " CREATE TABLE mensajes (...)."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " SELECT ... FROM mensajes."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " UPDATE mensajes SET ... WHERE ... ."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p12",
+    "titulo": "P12. Selección única",
+    "meta": "Bases de datos y persistencia · Básica · Base: B pp. 3-4; R9",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "¿Cuál afirmación distingue correctamente API, driver y configuración?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " JDBC es el motor que almacena las tablas."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Un DSN es una instrucción DELETE."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " JDBC y Hibernate son el mismo tipo de herramienta."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " JDBC es una API y Connector/J es un driver para MySQL."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p13",
+    "titulo": "P13. Selección única",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: B p. 5",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una aplicación obtiene una conexión lógica de un pool. ¿Qué debe hacer al terminar la operación?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Conservarla indefinidamente en cada controlador."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Cerrar la conexión lógica según el contrato del pool."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Ejecutar DROP TABLE para liberarla."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Cerrar todo el pool después de cada SELECT."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p14",
+    "titulo": "P14. Selección única",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: B p. 7; R10",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un SELECT devuelve varias filas. ¿Cómo se mapean con JDBC manual?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Leer getters antes de llamar next() y asumir que existe una fila."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Usar executeUpdate() para obtener una lista de DTO automáticamente."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Recorrer while(rs.next()) y crear objetos a partir de las columnas."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Convertir el nombre de la tabla a una clase con un cast."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p15",
+    "titulo": "P15. Selección única",
+    "meta": "Hilos y comunicación · Básica · Base: C pp. 2-4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Dos tareas pertenecen a hilos de un mismo proceso. ¿Qué propiedad es correcta?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Pueden compartir objetos del proceso y necesitar sincronización."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Cada una tiene necesariamente un espacio de memoria aislado."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Nunca pueden ejecutarse de forma concurrente."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Todo objeto del proceso posee automáticamente un hilo propio."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p16",
+    "titulo": "P16. Selección única",
+    "meta": "Hilos y comunicación · Básica · Base: C pp. 5-6; R12",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Dado Runnable tarea, ¿qué instrucción inicia un hilo nuevo que ejecuta esa tarea?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " tarea.run();"
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " new Thread(tarea).run();"
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Thread.sleep(100);"
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " new Thread(tarea).start();"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p17",
+    "titulo": "P17. Selección única",
+    "meta": "Hilos y comunicación · Intermedia · Base: C p. 8; R14",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un consumidor espera que una lista tenga elementos. ¿Qué estructura respeta el uso de wait()?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " while(lista.isEmpty()) monitor.wait(); sin sincronización."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " synchronized(monitor) { while(lista.isEmpty()) monitor.wait(); } con todos los accesos protegidos por ese monitor."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " synchronized(monitor) { if(lista.isEmpty()) monitor.wait(); } sin volver a comprobar."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " while(lista.isEmpty()) {} sin ninguna coordinación."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p18",
+    "titulo": "P18. Selección única",
+    "meta": "Hilos y comunicación · Básica · Base: R18, R20",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "¿Qué devuelve ServerSocket.accept() cuando acepta una conexión TCP?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Un ResultSet."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Otro ServerSocket para reemplazar obligatoriamente al anterior."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Un Socket conectado con ese cliente."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " El texto completo del primer mensaje."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p19",
+    "titulo": "P19. Selección única",
+    "meta": "Hilos y comunicación · Intermedia · Base: R19",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El servidor está en la computadora A y el cliente corre en B. Si el cliente usa localhost, ¿a dónde intenta conectarse?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " A la propia computadora B."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Automáticamente a A porque allí está el servidor."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " A cualquier computadora que tenga el mismo puerto."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " A una dirección pública elegida por Java."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p20",
+    "titulo": "P20. Selección única",
+    "meta": "Hilos y comunicación · Intermedia · Base: R21",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El servidor usa readLine(). El cliente usa BufferedWriter.write(\"HOLA\") sin salto de línea y sin flush(), y mantiene la conexión abierta. ¿Cuál es la corrección más directa para el protocolo por líneas?"
+        ]
+      }
+    ],
+    "opciones": [
+      {
+        "valor": "0",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "A."
+            ]
+          },
+          " Cambiar el puerto del cliente después de conectarse."
+        ]
+      },
+      {
+        "valor": "1",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "B."
+            ]
+          },
+          " Llamar únicamente flush(), sin enviar terminador ni cerrar salida."
+        ]
+      },
+      {
+        "valor": "2",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "C."
+            ]
+          },
+          " Agregar Thread.sleep(1000)."
+        ]
+      },
+      {
+        "valor": "3",
+        "contenido": [
+          {
+            "tipo": "strong",
+            "contenido": [
+              "D."
+            ]
+          },
+          " Llamar newLine() y flush() después de escribir."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p21",
+    "titulo": "P21. Verdadero o falso",
+    "meta": "Patrones de diseño · Avanzada · Base: R2",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un Singleton con una instancia construida correctamente hace que todos sus campos mutables sean seguros para acceso concurrente. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p22",
+    "titulo": "P22. Verdadero o falso",
+    "meta": "Patrones de diseño · Básica · Base: R3",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En Composite, hojas y compuestos pueden implementar el mismo contrato y el compuesto puede delegar recursivamente. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p23",
+    "titulo": "P23. Verdadero o falso",
+    "meta": "Patrones de diseño · Intermedia · Base: R6",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Si una clase envuelve otra, necesariamente implementa Decorator. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p24",
+    "titulo": "P24. Verdadero o falso",
+    "meta": "Bases de datos y persistencia · Básica · Base: A p. 5",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una FK declarada sin NOT NULL puede admitir NULL si las demás restricciones lo permiten. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p25",
+    "titulo": "P25. Verdadero o falso",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: A pp. 12-13",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Toda tabla cuya única clave candidata tiene un solo atributo está automáticamente en 3FN. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p26",
+    "titulo": "P26. Verdadero o falso",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: B pp. 3-4; R9",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un driver específico de MySQL debe, por esa sola razón, ser distinto en Windows y Linux. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p27",
+    "titulo": "P27. Verdadero o falso",
+    "meta": "Hilos y comunicación · Básica · Base: C pp. 4, 11-12",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Si dos hilos progresan concurrentemente, necesariamente se ejecutan al mismo instante en núcleos distintos. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p28",
+    "titulo": "P28. Verdadero o falso",
+    "meta": "Hilos y comunicación · Avanzada · Base: C p. 7",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Dos hilos protegen el mismo contador con synchronized, cada uno usando un objeto de bloqueo distinto. Eso garantiza exclusión mutua sobre el contador. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p29",
+    "titulo": "P29. Verdadero o falso",
+    "meta": "Hilos y comunicación · Intermedia · Base: R17, R19",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Si un emisor hace dos escrituras sobre TCP, el receptor obtendrá exactamente dos lecturas con las mismas fronteras. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p30",
+    "titulo": "P30. Verdadero o falso",
+    "meta": "Hilos y comunicación · Avanzada · Base: R20",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Cerrar el ServerSocket de escucha cierra automáticamente todos los Socket que accept() había devuelto antes. Justifica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p31",
+    "titulo": "P31. Respuesta corta",
+    "meta": "Patrones de diseño · Intermedia · Base: R1, R2, R4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un servicio exporta historiales en varios formatos y también debe construir el exportador adecuado. Explica qué responsabilidades corresponden a Strategy y cuáles a una fábrica."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p32",
+    "titulo": "P32. Respuesta corta",
+    "meta": "Patrones de diseño · Avanzada · Base: R2, R6, R22",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Propón una elección justificada para: a) construir una solicitud con muchas opciones; b) crear botón y menú compatibles por tema; c) definir una única configuración compartida. Señala un riesgo de c)."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p33",
+    "titulo": "P33. Respuesta corta",
+    "meta": "Patrones de diseño · Avanzada · Base: R6, R7",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Distingue tres necesidades: una entrada sencilla al subsistema de historial, una representación local de un servicio remoto y añadir auditoría conservando el contrato. ¿Qué patrón propones para cada una y qué limitación tiene?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p34",
+    "titulo": "P34. Respuesta corta",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: A pp. 6-7, 10, 14",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Modela USUARIOS, CONVERSACIONES y MENSAJES con PK, FK y cardinalidades. Explica qué pérdida evitas al no guardarlo todo en una tabla de mensajes."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p35",
+    "titulo": "P35. Respuesta corta",
+    "meta": "Bases de datos y persistencia · Avanzada · Base: A pp. 9-15",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Resume cómo evaluarías 1FN, 2FN y 3FN de una tabla. ¿Basta con observar unas cuantas filas? ¿Cuándo considerarías desnormalizar?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p36",
+    "titulo": "P36. Respuesta corta",
+    "meta": "Bases de datos y persistencia · Básica · Base: A pp. 16-17; B p. 7",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Compara identidad, relaciones, herencia y comportamiento en el modelo de objetos y en el relacional. Explica el papel de JDBC y de un ORM."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p37",
+    "titulo": "P37. Respuesta corta",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: B pp. 3-5; R9",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Compara una conexión JDBC a MySQL configurada por URL con una conexión que usa un DSN ODBC. Explica además qué problema resuelve un pool y cómo se libera una conexión prestada."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p38",
+    "titulo": "P38. Respuesta corta",
+    "meta": "Hilos y comunicación · Básica · Base: C pp. 2-6; R12, R13",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Una clase activa implementa Runnable. ¿Eso basta para iniciar su ejecución? Indica cómo lanzarla, cómo esperar su finalización, qué informa isAlive() y cuáles son los seis estados oficiales de Thread."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p39",
+    "titulo": "P39. Respuesta corta",
+    "meta": "Hilos y comunicación · Intermedia · Base: C pp. 8-9, 13; R15",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Diseña el intercambio entre un productor de mensajes y un consumidor local mediante una cola limitada. Compáralo con un evento síncrono y con un socket remoto."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p40",
+    "titulo": "P40. Respuesta corta",
+    "meta": "Hilos y comunicación · Avanzada · Base: R17, R19, R20, R23",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un cliente remoto no logra conversar con el servidor. Propón un diagnóstico ordenado que distinga conexión, protocolo y cierre. Incluye TCP frente a UDP, localhost, dos tipos de timeout y EOF."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p41",
+    "titulo": "P41. Código o caso",
+    "meta": "Patrones de diseño · Intermedia · Base: R4",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El siguiente método acumula condicionales al añadir formatos. Propón una refactorización mínima con Strategy. Debe permitir inyectar el algoritmo; no es necesario implementar serialización real de CSV/XML."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "String exportar(String formato, String texto) {\n    if (formato.equals(\"CSV\")) return \"CSV:\" + texto;\n    if (formato.equals(\"XML\")) return \"XML:\" + texto;\n    throw new IllegalArgumentException(\"Formato desconocido\");\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p42",
+    "titulo": "P42. Código o caso",
+    "meta": "Patrones de diseño · Avanzada · Base: R4, R5",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "En este caso el historial depende de vistas concretas. Refactoriza con Observer para admitir suscripciones y bajas. Supón que todo corre en un solo hilo y que los observadores no lanzan excepciones. Explica por qué el cambio no vuelve asíncronas las notificaciones."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "void agregar(String texto) {\n    mensajes.add(texto);\n    vistaHistorialConcreta.actualizar(texto);\n    contadorConcreto.actualizar(texto);\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p43",
+    "titulo": "P43. Código o caso",
+    "meta": "Patrones de diseño · Avanzada · Base: R3",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Diseña un menú con opciones individuales y submenús anidados. Todos deben responder a mostrar(). Escribe una interfaz, una hoja y un compuesto. Explica cómo impedirías ciclos en el árbol."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p44",
+    "titulo": "P44. Código o caso",
+    "meta": "Bases de datos y persistencia · Avanzada · Base: A pp. 9-15",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Normaliza la relación MATRICULA(estudiante, curso, nombre_estudiante, telefonos, nombre_curso, docente, nombre_docente, nota). Reglas: PK(estudiante,curso); estudiante determina nombre_estudiante; curso determina nombre_curso y docente; docente determina nombre_docente; cada estudiante puede tener varios teléfonos; no hay otras claves candidatas. Explica 1FN, 2FN y 3FN y escribe el esquema final con claves."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p45",
+    "titulo": "P45. Código o caso",
+    "meta": "Bases de datos y persistencia · Intermedia · Base: R10, R11",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El código concatena un nombre y un ID en un UPDATE. Sustitúyelo por un método int actualizarNombre(DataSource ds, int id, String nombre) que cierre los recursos que obtiene y retorne filas afectadas. Supón que DataSource ya está configurado y usuarios(id_usuario PK, nombre) existe."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "String sql = \"UPDATE usuarios SET nombre='\" + nombre\n           + \"' WHERE id_usuario=\" + id;\nConnection c = ds.getConnection();\nStatement st = c.createStatement();\nst.executeUpdate(sql);"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p46",
+    "titulo": "P46. Código o caso",
+    "meta": "Bases de datos y persistencia · Avanzada · Base: A pp. 16-18; R8, R10, R11",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Escribe List<UsuarioDTO> listarActivos(DataSource ds) para USUARIOS(id_usuario INT PK, nombre VARCHAR(100) NOT NULL, activo BOOLEAN NOT NULL). Devuelve lista vacía si no hay filas y cierra recursos. Puedes definir un DTO con constructor. Explica por qué el resultado no debe ser un ResultSet abierto entregado a la vista."
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p47",
+    "titulo": "P47. Código o caso",
+    "meta": "Hilos y comunicación · Avanzada · Base: C pp. 6-7",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Dos hilos comparten el siguiente Contador e incrementan 1000 veces cada uno. Tras join() de ambos, ¿está garantizado 2000? Corrige la clase y explica qué función cumple join(). No uses sleep como solución."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "class Contador {\n    int n = 0;\n    void incrementar() { n++; }\n    int valor() { return n; }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p48",
+    "titulo": "P48. Código o caso",
+    "meta": "Hilos y comunicación · Avanzada · Base: C pp. 6, 10; R12",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "La siguiente tarea ignora la interrupción. Reescríbela para terminar cooperativamente, restaurar el indicador cuando capture InterruptedException y ejecutar una limpieza. Supón que limpiar() y trabajar() terminan pronto y no lanzan excepciones."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "public void run() {\n    while (true) {\n        try { Thread.sleep(1000); }\n        catch (InterruptedException e) { /* ignorada */ }\n        trabajar();\n    }\n}"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p49",
+    "titulo": "P49. Código o caso",
+    "meta": "Hilos y comunicación · Avanzada · Base: R19, R21",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "Un servidor existente escucha en host y puerto. El protocolo es UTF-8 por líneas: el cliente envía PING y el servidor responde PONG. El cliente siguiente parece quedarse esperando. Explica las dos fallas de envío y escribe un método de cliente que limite conexión y lectura a 3 segundos y cierre los recursos."
+        ]
+      },
+      {
+        "tipo": "pre",
+        "contenido": [
+          {
+            "tipo": "code",
+            "contenido": [
+              "Socket s = new Socket(host, puerto);\nBufferedWriter out = new BufferedWriter(new OutputStreamWriter(s.getOutputStream()));\nBufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));\nout.write(\"PING\");\nString respuesta = in.readLine();"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "p50",
+    "titulo": "P50. Código o caso",
+    "meta": "Hilos y comunicación · Avanzada · Base: R18, R16, R20",
+    "enunciado": [
+      {
+        "tipo": "p",
+        "contenido": [
+          "El bucle while(true) { Socket s = servidor.accept(); atender(s); } procesa directamente cada cliente y uno lento retrasa a los demás. Propón un servidor de demostración con 4 trabajadores y cola máxima de 20 conexiones pendientes. Cada cliente envía una línea PING y recibe PONG; otro comando recibe ERROR. Incluye timeout de lectura, cierre por cliente y manejo de rechazo por saturación. Explica cómo añadirías servicio y DAO y cómo sería un apagado completo."
+        ]
+      }
+    ]
+  }
+]
