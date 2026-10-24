@@ -81,7 +81,7 @@ Consulta [docs/despliegue.md](docs/despliegue.md) para la configuración inicial
 
 ## Interfaz y mantenimiento
 
-`DESIGN.md` recoge la dirección visual aprobada: material académico, verde oscuro y fondo claro. `AGENTS.md` registra el uso de AntiSlop para futuras tareas. Las decisiones y las comprobaciones de interfaz, contraste y teclado están en [docs/anti-slop.md](docs/anti-slop.md).
+`DESIGN.md` recoge la dirección visual aprobada: material académico, verde oscuro y fondo claro, junto con los motivos de las decisiones de interfaz.
 
 ## Fuentes
 
