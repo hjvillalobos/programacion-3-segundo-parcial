@@ -16,7 +16,7 @@ test('las explicaciones completan el Simulacro I sin alterar su banco original',
     delete question.explicacion;
     delete question.referencias;
   }
-  assert.equal(createHash('sha256').update(JSON.stringify(original)).digest('hex'), 'b5a75ac967018aa7358697689b706df4643be4ef3281baa6292bfdf8844938f7');
+  assert.equal(createHash('sha256').update(JSON.stringify(original.preguntas)).digest('hex'), '79e1b19d957ea19e05a3d7517cae92118ae0472f74fbc067351317627bedd9d5');
 });
 function seededRandom() {
   let state = 12345;

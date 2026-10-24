@@ -3,8 +3,8 @@
   "version": 1,
   "titulo": "Simulacro I",
   "duracionSegundos": 5400,
-  "descripcion": "50 preguntas de selección única del examen anterior. Cada respuesta correcta vale un punto; la nota se calcula sobre 100.",
-  "origen": "Transcripción de un examen anterior. Las respuestas correctas corresponden a la clave visible en el material de referencia.",
+  "descripcion": "50 preguntas de selección única para practicar. Cada respuesta correcta vale un punto; la nota se calcula sobre 100.",
+  "origen": "Simulacro de práctica con respuestas explicadas y referencias del material de estudio.",
   "preguntas": [
     {
       "id": "s1-p01",
@@ -709,7 +709,7 @@
         }
       ],
       "correcta": "b",
-      "explicacion": "En el modelo de chat del examen, cada cliente tiene un hilo dedicado que puede esperar sus mensajes sin bloquear la atención a los demás. Es una arquitectura posible, no una obligación: también existen pools y diseños con entrada/salida no bloqueante.",
+      "explicacion": "En el modelo de chat planteado, cada cliente tiene un hilo dedicado que puede esperar sus mensajes sin bloquear la atención a los demás. Es una arquitectura posible, no una obligación: también existen pools y diseños con entrada/salida no bloqueante.",
       "referencias": [
         "R18"
       ]
@@ -1077,7 +1077,7 @@
         }
       ],
       "correcta": "d",
-      "explicacion": "Las columnas relacionadas por una clave foránea deben tener tipos compatibles conforme a las reglas del motor. Usar el mismo tipo es la regla práctica del examen; no es obligatorio que tengan el mismo nombre ni que la columna hija sea única.",
+      "explicacion": "Las columnas relacionadas por una clave foránea deben tener tipos compatibles conforme a las reglas del motor. Usar el mismo tipo es la regla práctica de esta pregunta; no es obligatorio que tengan el mismo nombre ni que la columna hija sea única.",
       "referencias": [
         "A"
       ]

@@ -149,8 +149,7 @@ function showResults() {
   const nodes = result.items.map(({ question, selected, outcome }, index) => {
     const selectedText = question.opciones.find((option) => option.id === selected)?.texto ?? 'Sin responder';
     const correctText = question.opciones.find((option) => option.id === question.correcta).texto;
-    const reference = question.numeroOriginal ? ` · Original ${question.numeroOriginal}`
-      : question.tema ? ` · ${question.tema}` : '';
+    const reference = question.tema ? ` · ${question.tema}` : '';
     return element('article', { class: `item exam-review ${outcome}`, id: `revision-${question.id}` }, [
       element('p', { class: 'meta' }, [`Pregunta ${index + 1} · ${labels[outcome]}${reference}`]),
       element('details', {}, [

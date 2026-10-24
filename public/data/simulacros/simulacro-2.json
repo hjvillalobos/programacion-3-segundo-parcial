@@ -4,7 +4,7 @@
   "titulo": "Simulacro II",
   "duracionSegundos": 5400,
   "descripcion": "50 preguntas nuevas de selección única: 15 de patrones, 18 de bases de datos y 17 de hilos y comunicación. Cada acierto vale un punto; la nota se calcula sobre 100.",
-  "origen": "Preguntas originales de práctica basadas en el temario del material de estudio. No corresponden a un examen oficial del profesor.",
+  "origen": "Simulacro de práctica basado en el temario del material de estudio.",
   "preguntas": [
     {
       "id": "s2-p01", "numero": 1, "tema": "Patrones de diseño",
