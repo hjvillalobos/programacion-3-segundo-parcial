@@ -29,6 +29,8 @@ Las tarjetas y las soluciones se despliegan al pulsarlas. Cambiar de grupo conse
 
 Cada página carga únicamente los JSON que necesita. Las direcciones directas, como `cuestionario.html#p41`, muestran automáticamente el grupo correspondiente. Las direcciones antiguas, como `index.html#p41`, redirigen a la nueva página.
 
+Tarjetas y Cuestionario incluyen búsqueda por texto y filtros por tema. La búsqueda ignora mayúsculas y tildes, muestra cuántos resultados coinciden y conserva las respuestas al cambiar de filtro. Consulta [docs/busqueda.md](docs/busqueda.md) para el alcance de la búsqueda y el comportamiento de los enlaces.
+
 El **Simulacro I** es independiente del cuestionario de estudio: mezcla las preguntas y sus opciones en cada intento. Al entregar o vencer los 90 minutos, muestra la nota sobre 100 y la revisión de correctas, incorrectas y sin responder. El intento y su reloj se recuperan al recargar la misma pestaña. Consulta [docs/simulacro-1.md](docs/simulacro-1.md) para los detalles y la procedencia del banco.
 
 `docs/material-estudio.md` contiene una versión de texto editable.

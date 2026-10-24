@@ -164,3 +164,33 @@ Los estados siguientes corresponden al código y las comprobaciones descritas en
 | R-30, originalidad | PASS | No se tomó como plantilla otro producto. |
 
 Los cambios de comentarios se limitaron a quitar una narración redundante antes del control de impresión. Se conservaron las notas que explican plazos, orden estable, seguridad del renderizado y conservación de nodos.
+
+## Ampliación: búsqueda y filtros, 24 de octubre de 2026
+
+Se mantiene el modo `during` elegido para esta sesión y la dirección de `DESIGN.md`: material académico, verde oscuro, fondo claro y diales ENERGY 1 / RHYTHM 2 / MOTION 1.
+
+La búsqueda y el selector de tema comparten un formulario con etiquetas visibles. Los controles se apilan en móvil, pasan a dos columnas en el ancho intermedio y a una fila en escritorio. Se reutilizan los colores, los bordes y los indicadores de foco del sitio. No se añadieron recursos visuales ni se cambiaron los bancos.
+
+| Control o condición | Comprobación |
+| --- | --- |
+| Búsqueda combinada | JDBC más Bases de datos y persistencia mostró 3 de 50 tarjetas y 4 de 50 preguntas. |
+| Tildes y mayúsculas | NORMALIZACIÓN y normalizacion encontraron la misma tarjeta T20 con ese tema. |
+| Enter | Aplicó el formulario sin navegar ni recargar la página. |
+| Sin coincidencias | Se mostraron cero resultados y un mensaje; la paginación quedó oculta. |
+| Limpiar filtros | Restauró los 50 elementos y el foco volvió al buscador. |
+| Paginación filtrada | El tema de bases de datos mostró 18 preguntas; Siguiente presentó de la 11 a la 18, con 8 elementos visibles. |
+| Respuestas conservadas | Una opción de P1 y el texto de P31 se conservaron al buscar, cambiar de tema, limpiar y volver al grupo. |
+| Enlace directo | Con Observer y Patrones seleccionados, el enlace a P49 limpió los filtros, mostró el grupo correspondiente y conservó lo escrito. |
+| Teclado | Tab pasó del buscador al selector de tema; se observó un contorno de foco de 3 píxeles. |
+| Reflujo | A 320, 390, 640, 768, 896 y 1024 píxeles no hubo desbordamiento horizontal ni controles de filtro menores de 44 por 44 píxeles. |
+| Consola | Sin errores en el recorrido de búsqueda y filtros. |
+| Verificación automatizada | `npm run validate`: 26 archivos del sitio y 20 pruebas aprobadas. |
+
+Se midieron también los colores de los campos sobre blanco: texto principal 13.50:1, texto de ayuda y placeholder 6.04:1 y borde de control 4.53:1. El texto supera 4.5:1 y el borde supera el mínimo de 3:1 para controles.
+
+Delivery Gate para esta ampliación:
+
+- Hard Gate: PASS. Estados vacío y cargado, teclado, foco, contraste y reflujo comprobados; los errores de carga conservan su reintento.
+- Purpose-Gate: PASS. Los campos reutilizan el sistema existente y resuelven la búsqueda del material, sin decoración nueva.
+- Liveliness: PASS. Se conservan los diales y la jerarquía entre filtros y preguntas.
+- Craftsmanship y Quality Locks: PASS. Datos sin cambios, enlaces directos accesibles, respuestas conservadas y 20 pruebas aprobadas.

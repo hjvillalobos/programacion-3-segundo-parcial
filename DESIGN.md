@@ -17,6 +17,7 @@ Esta lectura aplica la dirección aprobada: presentación tranquila, jerarquía 
 | Monoespaciada únicamente en código y cifras del reloj | Distinguir los ejemplos y evitar saltos visuales en la cuenta atrás. |
 | Simulacro destacado y material de estudio en una lista | Separar el intento cronometrado de la consulta libre, en lugar de presentar todo como tarjetas idénticas. |
 | Navegación plegable en pantallas estrechas | Dejar espacio para la pregunta y conservar todos los destinos existentes. |
+| Búsqueda y tema al inicio del material de estudio | Encontrar contenido sin recorrer todos los grupos, con campos apilados en móvil y alineados en escritorio. |
 | Verde para acción y selección; texto explícito para resultados | La nota y el estado deben poder entenderse sin distinguir colores. |
 | Borde visible en controles y foco separado | Reconocer dónde se puede actuar y qué elemento está seleccionado con el teclado. |
 | Márgenes por sección, más ajustados en móvil | Separar preguntas y explicaciones sin añadir desplazamiento vacío. |
