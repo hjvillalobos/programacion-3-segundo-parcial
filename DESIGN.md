@@ -2,7 +2,7 @@
 
 Dirección confirmada por el usuario: conservar el aspecto de material académico, el verde oscuro y el fondo claro.
 
-El producto es una guía de estudio para Programación 3 con tarjetas, cuestionario, solucionario y un simulacro de 90 minutos. La tarea principal es estudiar o resolver un intento, con el contenido por delante de los elementos de navegación.
+El producto es una guía de estudio para Programación 3 con tarjetas, cuestionario, solucionario y dos simulacros de 90 minutos. La tarea principal es estudiar o resolver un intento, con el contenido por delante de los elementos de navegación.
 
 Lectura de diseño: herramienta de estudio para estudiantes de Programación 3, con lenguaje de material académico. ENERGY 1 / RHYTHM 2 / MOTION 1.
 

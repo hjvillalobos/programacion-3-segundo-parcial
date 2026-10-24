@@ -194,3 +194,25 @@ Delivery Gate para esta ampliación:
 - Purpose-Gate: PASS. Los campos reutilizan el sistema existente y resuelven la búsqueda del material, sin decoración nueva.
 - Liveliness: PASS. Se conservan los diales y la jerarquía entre filtros y preguntas.
 - Craftsmanship y Quality Locks: PASS. Datos sin cambios, enlaces directos accesibles, respuestas conservadas y 20 pruebas aprobadas.
+
+## Ampliación: Simulacro II, 24 de octubre de 2026
+
+Modo during, por elección de esta sesión. Se conserva la dirección académica de DESIGN.md y ENERGY 1 / RHYTHM 2 / MOTION 1. La portada reúne los dos intentos en una sección: el acceso al II es la acción principal y el I conserva su enlace. No se añadieron imágenes, iconos ni fuentes.
+
+Se agregó un banco original de 50 preguntas autorizado por el usuario, con explicaciones al entregar. Los bancos anteriores permanecen sin cambios. Cada simulacro identifica su banco y su almacenamiento; el motor comprueba que la página y el banco coincidan.
+
+Verificaciones realizadas:
+
+- Navegador: una correcta, una incorrecta y 48 omitidas dieron 2/100. La revisión mostró explicación y enlace R7; recargar conservó la nota.
+- Reiniciar permitió comenzar con 90:00. Comenzar mediante Enter funcionó. Al visitar el I y volver al II se recuperó su intento con el tiempo transcurrido.
+- Portada y revisión sin desbordamiento horizontal a 320, 390, 768 y 1024 píxeles. Los dos accesos de portada midieron 44 píxeles de alto.
+- Se conservaron los colores y reglas de foco existentes. El botón principal usa blanco sobre #0c695b; no se introdujeron combinaciones nuevas. Se inspeccionaron la portada y el estado anterior al comienzo mediante capturas.
+- Sin advertencias ni errores de consola durante el recorrido. Los fallos de carga y almacenamiento se cubren mediante las pruebas de pantalla de ambos bancos.
+- npm run validate: 28 archivos publicables y 23 pruebas aprobadas, incluida la conservación de la clave del otro simulacro al reiniciar.
+
+Delivery Gate:
+
+- Hard Gate: PASS. Contenido identificado como práctica original, navegación funcional, etiquetas existentes, contraste conservado, teclado y reflujo revisados.
+- Purpose-Gate: PASS. Dos acciones explícitas permiten elegir el banco. El verde conserva la jerarquía; no hay decoración nueva.
+- Liveliness: PASS. Diales conservados, foco principal en la práctica, separación entre instrucciones, pregunta y resultados; voz académica compartida.
+- Craftsmanship y Quality Locks: PASS. Corrección por IDs, explicaciones posteriores a la entrega, recuperación independiente y pruebas de ambos simulacros. Sin cambios en preguntas o claves anteriores.

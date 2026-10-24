@@ -11,6 +11,7 @@ Los archivos de `public/data/` son la fuente del contenido del sitio. `docs/mate
 | `cobertura.json` | `subtema` y listas de IDs de `tarjetas` y `preguntas` |
 | `fuentes.json` | `id` y bloques de `contenido` de cada fuente |
 | `simulacros/simulacro-1.json` | Banco independiente del Simulacro I, duración y clave de respuestas |
+| `simulacros/simulacro-2.json` | 50 preguntas originales, explicaciones, referencias y duración del Simulacro II |
 
 ## Texto con formato
 

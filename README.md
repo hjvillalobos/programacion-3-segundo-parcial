@@ -22,6 +22,7 @@ Visita el sitio de GitHub Pages de este repositorio o inicia un servidor local c
 | `cuestionario.html` | Preguntas en grupos de 10 |
 | `solucionario.html` | Respuestas explicadas en grupos de 10 |
 | `simulacro-1.html` | 50 preguntas del examen anterior, 90 minutos y calificación automática |
+| `simulacro-2.html` | 50 preguntas nuevas del temario, 90 minutos y revisión explicada |
 | `referencias.html` | Cobertura del temario y fuentes |
 | `imprimir.html` | Todo el material, con impresión con o sin respuestas |
 
@@ -34,6 +35,8 @@ Tarjetas y Cuestionario incluyen búsqueda por texto y filtros por tema. La bús
 El **Simulacro I** es independiente del cuestionario de estudio: mezcla las preguntas y sus opciones en cada intento. Al entregar o vencer los 90 minutos, muestra la nota sobre 100 y la revisión de correctas, incorrectas y sin responder. El intento y su reloj se recuperan al recargar la misma pestaña. Consulta [docs/simulacro-1.md](docs/simulacro-1.md) para los detalles y la procedencia del banco.
 
 `docs/material-estudio.md` contiene una versión de texto editable.
+
+El **Simulacro II** usa preguntas originales de práctica, con la distribución de 15 de patrones, 18 de bases de datos y 17 de hilos y comunicación. Comparte las funciones del primero y mantiene su propio intento. Al entregar, cada pregunta incluye explicación y referencias. Consulta [docs/simulacro-2.md](docs/simulacro-2.md).
 
 ## Estructura y desarrollo
 
