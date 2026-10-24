@@ -39,6 +39,7 @@ body {
   margin-inline: auto;
   padding: 1.25rem 1rem 3rem;
   background: var(--paper);
+  overflow-wrap: anywhere;
 }
 
 main {
@@ -96,6 +97,14 @@ small {
 
 .meta {
   margin: .5rem 0 1rem;
+}
+
+.item .meta a,
+#lista-fuentes a,
+main > p > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
 }
 
 :is(a, button, summary, input, textarea, select):focus-visible {
