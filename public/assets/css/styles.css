@@ -583,3 +583,8 @@ td a {
     text-decoration: none;
   }
 }
+.practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}

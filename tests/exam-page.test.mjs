@@ -3,9 +3,6 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { createAttempt } from '../public/assets/js/exam.js';
 
-const exam = JSON.parse(readFileSync(new URL('../public/data/simulacros/simulacro-1.json', import.meta.url), 'utf8'));
-const html = readFileSync(new URL('../public/simulacro-1.html', import.meta.url), 'utf8');
-const storageKey = 'progra3:simulacro-1:intento:v1';
 class Node {
   constructor(tag = '', text = '') {
     this.tag = tag; this.text = text; this.children = []; this.attributes = {}; this.listeners = {};
@@ -23,7 +20,11 @@ class Node {
 }
 function descendants(nodes) { return nodes.flatMap((node) => [node, ...descendants(node.children)]); }
 
-test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin tiempo heredado', async () => {
+for (const examId of ['simulacro-1', 'simulacro-2']) {
+test(`${examId}: entrega al vencer, conserva resultados y permite reiniciar`, async () => {
+  const exam = JSON.parse(readFileSync(new URL(`../public/data/simulacros/${examId}.json`, import.meta.url), 'utf8'));
+  const html = readFileSync(new URL(`../public/${examId}.html`, import.meta.url), 'utf8');
+  const storageKey = `progra3:${examId}:intento:v1`;
   const originalNow = Date.now;
   const originalInterval = globalThis.setInterval;
   const originalClear = globalThis.clearInterval;
@@ -32,6 +33,8 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
   const documentEvents = {};
   const windowEvents = {};
   const memory = new Map();
+  const otherKey = `progra3:${examId === 'simulacro-1' ? 'simulacro-2' : 'simulacro-1'}:intento:v1`;
+  memory.set(otherKey, 'intento independiente');
   const nodes = Object.fromEntries([...html.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => [id, new Node()]));
   nodes.contenido.dataset = { examId: exam.id };
   globalThis.document = {
@@ -51,7 +54,7 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
   globalThis.setInterval = (callback) => { interval = callback; return 1; };
   globalThis.clearInterval = () => { interval = null; };
   try {
-    await import('../public/assets/js/exam-page.js?expiry');
+    await import(`../public/assets/js/exam-page.js?${examId}-expiry`);
     await new Promise(setImmediate);
     assert.equal(nodes['exam-setup'].hidden, false);
     nodes['start-exam'].listeners.click();
@@ -87,12 +90,13 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     nodes['confirm-submit'].listeners.click();
     assert.equal(nodes['exam-score'].textContent, finalScore);
 
-    await import('../public/assets/js/exam-page.js?finished-reload');
+    await import(`../public/assets/js/exam-page.js?${examId}-finished-reload`);
     await new Promise(setImmediate);
     assert.equal(nodes['exam-score'].textContent, finalScore);
     assert.equal(nodes['exam-running'].hidden, true);
     nodes['retry-exam'].listeners.click();
     assert.equal(memory.has(storageKey), false);
+    assert.equal(memory.get(otherKey), 'intento independiente');
     nodes['start-exam'].listeners.click();
     const retry = JSON.parse(memory.get(storageKey));
     assert.equal(retry.deadline - now, 5400000);
@@ -102,7 +106,7 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
 
     // Una pestaña que se recarga después de vencer entrega antes de mostrar preguntas.
     memory.set(storageKey, JSON.stringify(createAttempt(exam, 1_000_000)));
-    await import('../public/assets/js/exam-page.js?expired-reload');
+    await import(`../public/assets/js/exam-page.js?${examId}-expired-reload`);
     await new Promise(setImmediate);
     assert.equal(JSON.parse(memory.get(storageKey)).status, 'finished');
     assert.equal(nodes['exam-running'].hidden, true);
@@ -110,7 +114,7 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     // El intento funciona sin almacenamiento, avisando que no podrá recuperarse.
     globalThis.sessionStorage.getItem = () => { throw new Error('Storage unavailable'); };
     globalThis.sessionStorage.setItem = () => { throw new Error('Storage unavailable'); };
-    await import('../public/assets/js/exam-page.js?no-storage');
+    await import(`../public/assets/js/exam-page.js?${examId}-no-storage`);
     await new Promise(setImmediate);
     assert.equal(nodes['storage-notice'].hidden, false);
     nodes['start-exam'].listeners.click();
@@ -122,7 +126,7 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     const originalError = console.error;
     console.error = () => {};
     try {
-      await import('../public/assets/js/exam-page.js?load-error');
+      await import(`../public/assets/js/exam-page.js?${examId}-load-error`);
       await new Promise(setImmediate);
     } finally {
       console.error = originalError;
@@ -141,3 +145,4 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     globalThis.clearInterval = originalClear;
   }
 });
+}
