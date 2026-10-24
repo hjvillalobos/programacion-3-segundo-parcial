@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Material completo · Programación 3</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
     <header>
       <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
       <h1>Material completo</h1>
       <p>Versión reunida para consultar o imprimir todo el material.</p>
     </header>
-    <nav aria-label="Navegación principal">
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="tarjetas.html">Tarjetas</a>
       <a href="cuestionario.html">Cuestionario</a>
@@ -22,10 +26,13 @@
       <a href="simulacro-1.html">Simulacro I</a>
       <a href="referencias.html">Referencias</a>
       <a href="imprimir.html" aria-current="page">Imprimir</a>
-    </nav>
-    <p id="estado-carga" role="status">Cargando material de estudio...</p>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando el material completo...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
     <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
-    <p class="screenonly"><button type="button" data-print-answers="true" disabled>Imprimir con respuestas</button> <button type="button" data-print-answers="false" disabled>Imprimir sin respuestas</button></p>
+    <div class="pagination screenonly"><button type="button" data-print-answers="true" disabled>Imprimir con respuestas</button> <button type="button" data-print-answers="false" disabled>Imprimir sin respuestas</button></div>
     <div id="introduccion"></div>
 <h2 id="tarjetas">1. Tarjetas didácticas</h2>
 <div id="lista-tarjetas"></div>
@@ -37,6 +44,7 @@
 <h2 id="fuentes">Fuentes y procedencia</h2><p>A, B y C: PDF del profesor. R: investigación complementaria, consultada el 21 de octubre de 2026. Los casos y soluciones son elaboración original para practicar. Las fuentes respaldan los conceptos; no predicen las preguntas del examen.</p>
 <div id="lista-fuentes"></div>
 
-  </main>
+    </main>
+  </div>
 </body>
 </html>

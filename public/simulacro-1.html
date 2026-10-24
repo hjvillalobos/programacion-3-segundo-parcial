@@ -6,16 +6,20 @@
   <title>Simulacro I · Programación 3</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/exam.css">
+  <script type="module" src="assets/js/navigation.js"></script>
   <script type="module" src="assets/js/exam-page.js"></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
     <header>
       <span class="stamp">EIF206 · Examen anterior · Práctica cronometrada</span>
       <h1>Simulacro I</h1>
-      <p>Practica, entrega y revisa tu resultado.</p>
+      <p>50 preguntas del examen anterior. 90 minutos para responder.</p>
     </header>
-    <nav aria-label="Navegación principal">
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="tarjetas.html">Tarjetas</a>
       <a href="cuestionario.html">Cuestionario</a>
@@ -23,8 +27,11 @@
       <a href="simulacro-1.html" aria-current="page">Simulacro I</a>
       <a href="referencias.html">Referencias</a>
       <a href="imprimir.html">Imprimir</a>
-    </nav>
-    <p id="exam-load-status" role="status">Cargando simulacro...</p>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="exam-load-status" class="load-state" role="status">Cargando simulacro...</p>
+    <button id="retry-exam-load" type="button" hidden>Reintentar carga del simulacro</button>
     <noscript>Activa JavaScript para realizar el simulacro.</noscript>
     <p id="storage-notice" role="status" hidden>El navegador no permite guardar este intento. Mantén esta página abierta para conservar tus respuestas.</p>
 
@@ -84,6 +91,7 @@
       <div id="exam-review"></div>
       <nav id="review-bottom" class="pagination screenonly" aria-label="Páginas de revisión, abajo"></nav>
     </section>
-  </main>
+    </main>
+  </div>
 </body>
 </html>

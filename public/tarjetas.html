@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tarjetas · Programación 3</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
     <header>
       <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
       <h1>Tarjetas</h1>
-      <p>Responde antes de descubrir el reverso.</p>
+      <p>Responde cada pregunta antes de abrir su reverso.</p>
     </header>
-    <nav aria-label="Navegación principal">
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="tarjetas.html" aria-current="page">Tarjetas</a>
       <a href="cuestionario.html">Cuestionario</a>
@@ -22,14 +26,17 @@
       <a href="simulacro-1.html">Simulacro I</a>
       <a href="referencias.html">Referencias</a>
       <a href="imprimir.html">Imprimir</a>
-    </nav>
-    <p id="estado-carga" role="status">Cargando material de estudio...</p>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando tarjetas...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
     <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
-    <h2 id="tarjetas">Tarjetas</h2>
-    
+    <h2 id="tarjetas">Repaso con tarjetas</h2>
     <nav class="screenonly pagination" aria-label="Páginas del material, arriba" data-pagination-for="lista-tarjetas"></nav>
     <div id="lista-tarjetas"></div>
     <nav class="screenonly pagination" aria-label="Páginas del material, abajo" data-pagination-for="lista-tarjetas"></nav>
-  </main>
+    </main>
+  </div>
 </body>
 </html>

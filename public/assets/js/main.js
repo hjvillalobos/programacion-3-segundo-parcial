@@ -1,6 +1,8 @@
-import { renderCards, renderQuestions, renderSolutions, renderSources, renderCoverage, richContent } from './render.js';
+import { element, renderCards, renderQuestions, renderSolutions, renderSources, renderCoverage, richContent } from './render.js';
 import { pageForId } from './routes.js';
 import { paginate } from './pagination.js';
+
+const loadingMessage = document.querySelector('#estado-carga')?.textContent || 'Cargando material de estudio...';
 
 function currentTargetId() {
   try {
@@ -12,6 +14,14 @@ function currentTargetId() {
 
 async function loadMaterial() {
   const status = document.querySelector('#estado-carga');
+  const retry = document.querySelector('#retry-material');
+  status.hidden = false;
+  status.textContent = loadingMessage;
+  status.setAttribute('role', 'status');
+  if (retry) {
+    retry.hidden = true;
+    retry.disabled = true;
+  }
   try {
     const sections = [
       ['introduccion', '#introduccion', richContent],
@@ -24,13 +34,19 @@ async function loadMaterial() {
     const loaded = await Promise.all(sections.map(async ([file, selector, render]) => {
       const response = await fetch(`data/${file}.json`);
       if (!response.ok) throw new Error(`${file}: HTTP ${response.status}`);
-      return [selector, render(await response.json())];
+      const items = await response.json();
+      if (!Array.isArray(items)) throw new Error(`${file}: formato no válido`);
+      const nodes = items.length ? render(items) : [element('p', { class: 'empty-state', role: 'status' }, [
+        'Todavía no hay contenido en esta sección. Puedes repasar con el material de las otras secciones.',
+      ])];
+      return [selector, nodes, items.length > 0];
     }));
-    loaded.forEach(([selector, nodes]) => {
+    loaded.forEach(([selector, nodes, hasContent]) => {
       const container = document.querySelector(selector);
       container.replaceChildren(...nodes);
       const controls = document.querySelectorAll(`[data-pagination-for="${selector.slice(1)}"]`);
-      if (controls.length) {
+      controls.forEach((control) => { control.hidden = !hasContent; });
+      if (controls.length && hasContent) {
         const pages = paginate(container, nodes, controls, {
           targetId: currentTargetId(),
           onNavigate: (id) => history.replaceState(null, '', `#${id}`),
@@ -43,12 +59,15 @@ async function loadMaterial() {
     });
     status.hidden = true;
     document.querySelectorAll('[data-print-answers]').forEach((button) => {
-      button.disabled = false;
+      button.disabled = !loaded.some(([, , hasContent]) => hasContent);
     });
   } catch (error) {
     status.textContent = 'No se pudo cargar el material. Comprueba tu conexión y recarga la página.';
     status.setAttribute('role', 'alert');
+    if (retry) retry.hidden = false;
     console.error('Error al cargar el material:', error);
+  } finally {
+    if (retry) retry.disabled = false;
   }
 }
 
@@ -74,12 +93,15 @@ loadMaterial().then(() => {
   else window.addEventListener('load', scrollToInitialTarget, { once: true });
 });
 
-// Preparar las tarjetas y soluciones antes de abrir la impresión.
+document.querySelector('#retry-material')?.addEventListener('click', () => {
+  loadMaterial().then(scrollToInitialTarget);
+});
+
 document.querySelectorAll('[data-print-answers]').forEach((button) => {
   button.addEventListener('click', () => {
     const showAnswers = button.dataset.printAnswers === 'true';
 
-    document.querySelectorAll('details').forEach((details) => {
+    document.querySelectorAll('main details').forEach((details) => {
       details.open = showAnswers;
     });
 

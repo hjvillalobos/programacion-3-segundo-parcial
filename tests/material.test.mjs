@@ -23,6 +23,7 @@ class Node {
   addEventListener(name, callback) { this.listeners[name] = callback; }
   get id() { return this.attributes.id; }
   scrollIntoView() { this.scrolled = true; }
+  focus() { this.focused = true; }
   get textContent() { return this.text + this.children.map((node) => node.textContent).join(''); }
   set textContent(value) { this.text = value; this.children = []; }
 }
@@ -96,6 +97,7 @@ test('paginación de diez elementos conserva respuestas y revela enlaces directo
   assert.deepEqual(navigations, ['p31']);
   assert.equal(container.scrolled, true);
   assert.equal(questions.filter((node) => !node.hidden).length, 10);
+  assert.equal(controls[1].children.find((node) => node.attributes['aria-current'] === 'page').focused, true);
   pages.reveal('p41');
   assert.equal(answer.value, 'Mi respuesta escrita');
   assert.equal(questions[40].hidden, false);
@@ -120,7 +122,7 @@ test('cada enlace de cobertura apunta a la página que contiene su destino', () 
 });
 
 test('carga relativa para GitHub Pages, impresión y fallo de carga', async () => {
-  const selectors = ['#estado-carga', '#introduccion', '#lista-tarjetas', '#lista-preguntas', '#lista-soluciones', '#tabla-cobertura', '#lista-fuentes'];
+  const selectors = ['#estado-carga', '#retry-material', '#introduccion', '#lista-tarjetas', '#lista-preguntas', '#lista-soluciones', '#tabla-cobertura', '#lista-fuentes'];
   const containers = Object.fromEntries(selectors.map((selector) => [selector, new Node()]));
   const buttons = ['true', 'false'].map((value) => Object.assign(new Node('button'), {
     dataset: { printAnswers: value }, disabled: true,
@@ -129,7 +131,7 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
     readyState: 'complete',
     querySelector: (selector) => containers[selector],
     querySelectorAll: (selector) => selector === '[data-print-answers]' ? buttons
-      : selector === 'details' ? descendants(Object.values(containers)).filter((node) => node.tag === 'details') : [],
+      : selector === 'main details' ? descendants(Object.values(containers)).filter((node) => node.tag === 'details') : [],
     getElementById: () => null,
   });
   globalThis.location = { hash: '#p41', pathname: '/repo/imprimir.html' };
@@ -148,9 +150,9 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
   assert.equal(containers['#estado-carga'].hidden, true);
   assert.ok(buttons.every((button) => !button.disabled));
   buttons[0].listeners.click();
-  assert.ok(document.querySelectorAll('details').every((node) => node.open));
+  assert.ok(document.querySelectorAll('main details').every((node) => node.open));
   buttons[1].listeners.click();
-  assert.ok(document.querySelectorAll('details').every((node) => !node.open));
+  assert.ok(document.querySelectorAll('main details').every((node) => !node.open));
   assert.equal(prints, 2);
 
   Object.values(containers).forEach((container) => { container.replaceChildren(); container.hidden = false; });
@@ -166,8 +168,17 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
   }
   assert.equal(containers['#estado-carga'].attributes.role, 'alert');
   assert.match(containers['#estado-carga'].textContent, /No se pudo cargar/);
+  assert.equal(containers['#retry-material'].hidden, false);
   assert.ok(buttons.every((button) => button.disabled));
   assert.equal(containers['#lista-tarjetas'].children.length, 0);
+
+  globalThis.fetch = async () => ({ ok: true, json: async () => [] });
+  containers['#retry-material'].listeners.click();
+  await new Promise(setImmediate);
+  assert.match(containers['#lista-tarjetas'].textContent, /Todavía no hay contenido/);
+  assert.equal(containers['#estado-carga'].hidden, true);
+  assert.equal(containers['#retry-material'].hidden, true);
+  assert.ok(buttons.every((button) => button.disabled));
 
   // Una página de práctica carga únicamente su archivo, bajo una subruta de Pages.
   requested.length = 0;

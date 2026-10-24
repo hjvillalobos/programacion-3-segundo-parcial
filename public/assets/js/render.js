@@ -49,9 +49,9 @@ export function renderCards(items) {
 export function renderQuestions(items) {
   return items.map((item) => {
     const answer = item.opciones
-      ? item.opciones.map((option) => element('p', {}, [element('label', {}, [
+      ? item.opciones.map((option) => element('p', {}, [element('label', { class: 'answer-option' }, [
         element('input', { type: 'radio', name: item.id, value: option.valor }),
-        ...richContent(option.contenido),
+        element('span', {}, richContent(option.contenido)),
       ])]))
       : [element('label', { class: 'answerbox' }, [
         'Mi respuesta',

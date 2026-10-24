@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Segundo parcial · Programación 3</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
     <header>
       <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
       <h1>Programación 3</h1>
-      <p>Prepara el segundo parcial a tu ritmo, una sección a la vez.</p>
+      <p>Segundo parcial: patrones de diseño, bases de datos, hilos y sockets.</p>
     </header>
-    <nav aria-label="Navegación principal">
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
       <a href="index.html" aria-current="page">Inicio</a>
       <a href="tarjetas.html">Tarjetas</a>
       <a href="cuestionario.html">Cuestionario</a>
@@ -22,20 +26,34 @@
       <a href="simulacro-1.html">Simulacro I</a>
       <a href="referencias.html">Referencias</a>
       <a href="imprimir.html">Imprimir</a>
-    </nav>
-    <div class="study-grid">
-      <a class="study-link" href="simulacro-1.html"><h2>Simulacro I</h2><p>50 preguntas del examen anterior, 90 minutos y calificación al entregar.</p></a>
-      <a class="study-link" href="tarjetas.html"><h2>Tarjetas</h2><p>Repasa conceptos y descubre cada respuesta cuando estés listo.</p></a>
-      <a class="study-link" href="cuestionario.html"><h2>Cuestionario</h2><p>Pon a prueba lo que sabes con preguntas y ejercicios.</p></a>
-      <a class="study-link" href="solucionario.html"><h2>Solucionario</h2><p>Comprueba tus respuestas y revisa las explicaciones.</p></a>
-      <a class="study-link" href="referencias.html"><h2>Referencias</h2><p>Consulta la cobertura del temario y las fuentes del material.</p></a>
-    </div>
-    <details>
-      <summary>Acerca del material y cómo utilizarlo</summary>
-    <p id="estado-carga" role="status">Cargando material de estudio...</p>
-    <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
-      <div id="introduccion"></div>
+      </nav>
     </details>
-  </main>
+    <main id="contenido">
+      <section class="practice-panel" aria-labelledby="simulacro-titulo">
+        <div>
+          <p class="meta">Práctica cronometrada</p>
+          <h2 id="simulacro-titulo">Simulacro I</h2>
+          <p>50 preguntas del examen anterior. Tienes 90 minutos y recibes la nota al terminar.</p>
+        </div>
+        <a class="button-link primary-button" href="simulacro-1.html">Preparar simulacro</a>
+      </section>
+      <section aria-labelledby="material-titulo">
+        <h2 id="material-titulo">Material de estudio</h2>
+        <ul class="study-index">
+          <li><a href="tarjetas.html">Tarjetas</a><p>Responde cada pregunta antes de abrir su reverso.</p></li>
+          <li><a href="cuestionario.html">Cuestionario</a><p>Resuelve las preguntas y los ejercicios sin límite de tiempo.</p></li>
+          <li><a href="solucionario.html">Solucionario</a><p>Consulta las respuestas explicadas del cuestionario.</p></li>
+          <li><a href="referencias.html">Referencias</a><p>Busca un tema en la tabla de cobertura y consulta las fuentes.</p></li>
+        </ul>
+      </section>
+      <p id="estado-carga" class="load-state" role="status">Cargando la introducción del material...</p>
+      <button id="retry-material" type="button" hidden>Reintentar carga</button>
+      <noscript>Activa JavaScript para cargar la introducción. Puedes usar los enlaces de las secciones.</noscript>
+      <details>
+        <summary>Acerca del material y cómo utilizarlo</summary>
+        <div id="introduccion"></div>
+      </details>
+    </main>
+  </div>
 </body>
 </html>

@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cuestionario · Programación 3</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="assets/js/navigation.js"></script>
   <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-  <main>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="page-shell">
     <header>
       <span class="stamp">EIF206 · Examen 2 · Guía de práctica</span>
       <h1>Cuestionario</h1>
-      <p>Practica sin consultar las soluciones.</p>
+      <p>Preguntas y ejercicios para resolver sin límite de tiempo.</p>
     </header>
-    <nav aria-label="Navegación principal">
+    <details class="site-menu" open>
+      <summary>Secciones</summary>
+      <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="tarjetas.html">Tarjetas</a>
       <a href="cuestionario.html" aria-current="page">Cuestionario</a>
@@ -22,14 +26,20 @@
       <a href="simulacro-1.html">Simulacro I</a>
       <a href="referencias.html">Referencias</a>
       <a href="imprimir.html">Imprimir</a>
-    </nav>
-    <p id="estado-carga" role="status">Cargando material de estudio...</p>
+      </nav>
+    </details>
+    <main id="contenido">
+    <p id="estado-carga" class="load-state" role="status">Cargando preguntas...</p>
+    <button id="retry-material" type="button" hidden>Reintentar carga</button>
     <noscript>Activa JavaScript para cargar el material de estudio.</noscript>
-    <h2 id="cuestionario">Cuestionario</h2>
-    <p>Selecciona una opción o escribe tu respuesta. Justifica los enunciados de verdadero o falso. Las respuestas no se guardan al cerrar, recargar o salir de esta página.</p><p><a href="solucionario.html" target="_blank" rel="noopener noreferrer">Abrir solucionario en otra pestaña</a> para conservar tus respuestas mientras las revisas.</p>
+    <h2 id="cuestionario">Resuelve las preguntas</h2>
+    <p>Selecciona una opción o escribe tu respuesta. En verdadero o falso, añade una justificación.</p>
+    <p class="meta">Las respuestas se conservan al cambiar de grupo, pero se pierden al salir o recargar esta página.</p>
+    <p><a href="solucionario.html" target="_blank" rel="noopener noreferrer">Abrir solucionario en otra pestaña</a> para revisar sin salir del cuestionario.</p>
     <nav class="screenonly pagination" aria-label="Páginas del material, arriba" data-pagination-for="lista-preguntas"></nav>
     <div id="lista-preguntas"></div>
     <nav class="screenonly pagination" aria-label="Páginas del material, abajo" data-pagination-for="lista-preguntas"></nav>
-  </main>
+    </main>
+  </div>
 </body>
 </html>
