@@ -3,11 +3,12 @@ import { paginate } from './pagination.js';
 import { validateExam, createAttempt, answerQuestion, finishAttempt, gradeAttempt, isValidAttempt, remainingSeconds, formatTime } from './exam.js';
 
 const $ = (selector) => document.querySelector(selector);
+const examId = $('#contenido')?.dataset?.examId;
 let exam;
 let attempt = null;
 let clock;
 let warned = false;
-const storageKey = 'progra3:simulacro-1:intento:v1';
+const storageKey = `progra3:${examId}:intento:v1`;
 
 function persistenceError() {
   $('#storage-notice').hidden = false;
@@ -64,7 +65,9 @@ function showQuestion(index, focus = false) {
   $('#exam-question').replaceChildren(
     element('h2', { id: 'exam-question-title', tabindex: '-1' }, [`Pregunta ${index + 1} de ${exam.preguntas.length}`]),
     element('fieldset', { class: 'exam-fieldset' }, [
-      element('legend', {}, [question.enunciado]), ...options,
+      element('legend', {}, [question.enunciado]),
+      ...(question.codigo ? [element('pre', {}, [element('code', {}, [question.codigo])])] : []),
+      ...options,
     ]),
   );
   $('#previous-question').disabled = index === 0;
@@ -138,6 +141,7 @@ function showResults() {
   $('#submit-confirmation').hidden = true;
   $('#exam-results').hidden = false;
   const result = gradeAttempt(exam, attempt);
+  $('#exam-results-title').textContent = `Resultado del ${exam.titulo}`;
   $('#exam-score').textContent = `${result.score.toLocaleString('es', { maximumFractionDigits: 2 })} / 100`;
   $('#exam-result-summary').textContent = `${result.correct} ${result.correct === 1 ? 'correcta' : 'correctas'} · ${result.incorrect} ${result.incorrect === 1 ? 'incorrecta' : 'incorrectas'} · ${result.unanswered} sin responder`;
   $('#exam-result-time').textContent = `${attempt.reason === 'expired' ? 'Tiempo agotado: entrega automática.' : 'Intento entregado.'} Tiempo empleado: ${formatTime(result.elapsedSeconds)}.`;
@@ -145,12 +149,22 @@ function showResults() {
   const nodes = result.items.map(({ question, selected, outcome }, index) => {
     const selectedText = question.opciones.find((option) => option.id === selected)?.texto ?? 'Sin responder';
     const correctText = question.opciones.find((option) => option.id === question.correcta).texto;
+    const reference = question.numeroOriginal ? ` · Original ${question.numeroOriginal}`
+      : question.tema ? ` · ${question.tema}` : '';
     return element('article', { class: `item exam-review ${outcome}`, id: `revision-${question.id}` }, [
-      element('p', { class: 'meta' }, [`Pregunta ${index + 1} · ${labels[outcome]} · Original ${question.numeroOriginal}`]),
+      element('p', { class: 'meta' }, [`Pregunta ${index + 1} · ${labels[outcome]}${reference}`]),
       element('details', {}, [
         element('summary', {}, [question.enunciado]),
+        ...(question.codigo ? [element('pre', {}, [element('code', {}, [question.codigo])])] : []),
         element('p', {}, [element('strong', {}, ['Tu respuesta: ']), selectedText]),
         element('p', {}, [element('strong', {}, ['Respuesta correcta: ']), correctText]),
+        ...(question.explicacion ? [element('p', {}, [question.explicacion])] : []),
+        ...(question.referencias?.length ? [element('p', { class: 'meta' }, [
+          'Fuentes: ', ...question.referencias.flatMap((id, position) => [
+            ...(position ? [', '] : []),
+            element('a', { href: `referencias.html#fuente-${id}` }, [id]),
+          ]),
+        ])] : []),
       ]),
     ]);
   });
@@ -168,7 +182,8 @@ async function initialize() {
   retry.hidden = true;
   retry.disabled = true;
   try {
-    const response = await fetch('data/simulacros/simulacro-1.json');
+    if (!/^simulacro-[1-9]\d*$/.test(examId ?? '')) throw new Error('Identificador de simulacro no válido');
+    const response = await fetch(`data/simulacros/${examId}.json`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
     if (Array.isArray(data.preguntas) && data.preguntas.length === 0) {
@@ -176,6 +191,7 @@ async function initialize() {
       return;
     }
     exam = validateExam(data);
+    if (exam.id !== examId) throw new Error('El banco no corresponde a esta página');
     $('#exam-description').textContent = exam.descripcion;
     $('#exam-duration').textContent = `${exam.duracionSegundos / 60} minutos`;
     $('#exam-load-status').hidden = true;

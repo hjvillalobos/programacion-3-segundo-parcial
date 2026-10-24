@@ -33,6 +33,7 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
   const windowEvents = {};
   const memory = new Map();
   const nodes = Object.fromEntries([...html.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => [id, new Node()]));
+  nodes.contenido.dataset = { examId: exam.id };
   globalThis.document = {
     createElement: (tag) => new Node(tag),
     createTextNode: (text) => new Node('', text),
