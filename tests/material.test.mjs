@@ -124,6 +124,7 @@ test('cada enlace de cobertura apunta a la página que contiene su destino', () 
 test('carga relativa para GitHub Pages, impresión y fallo de carga', async () => {
   const selectors = ['#estado-carga', '#retry-material', '#introduccion', '#lista-tarjetas', '#lista-preguntas', '#lista-soluciones', '#tabla-cobertura', '#lista-fuentes'];
   const containers = Object.fromEntries(selectors.map((selector) => [selector, new Node()]));
+  const navigation = Object.assign(new Node('details'), { open: true });
   const buttons = ['true', 'false'].map((value) => Object.assign(new Node('button'), {
     dataset: { printAnswers: value }, disabled: true,
   }));
@@ -131,7 +132,8 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
     readyState: 'complete',
     querySelector: (selector) => containers[selector],
     querySelectorAll: (selector) => selector === '[data-print-answers]' ? buttons
-      : selector === 'main details' ? descendants(Object.values(containers)).filter((node) => node.tag === 'details') : [],
+      : selector === 'main details' ? descendants(Object.values(containers)).filter((node) => node.tag === 'details')
+        : selector === 'details' ? [navigation, ...descendants(Object.values(containers)).filter((node) => node.tag === 'details')] : [],
     getElementById: () => null,
   });
   globalThis.location = { hash: '#p41', pathname: '/repo/imprimir.html' };
@@ -153,6 +155,7 @@ test('carga relativa para GitHub Pages, impresión y fallo de carga', async () =
   assert.ok(document.querySelectorAll('main details').every((node) => node.open));
   buttons[1].listeners.click();
   assert.ok(document.querySelectorAll('main details').every((node) => !node.open));
+  assert.equal(navigation.open, true);
   assert.equal(prints, 2);
 
   Object.values(containers).forEach((container) => { container.replaceChildren(); container.hidden = false; });

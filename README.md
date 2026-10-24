@@ -74,6 +74,10 @@ El workflow [pages.yml](.github/workflows/pages.yml) valida los pushes de cualqu
 
 Consulta [docs/despliegue.md](docs/despliegue.md) para la configuración inicial y la comprobación del despliegue.
 
+## Interfaz y mantenimiento
+
+`DESIGN.md` recoge la dirección visual aprobada: material académico, verde oscuro y fondo claro. `AGENTS.md` registra el uso de AntiSlop para futuras tareas. Las decisiones y las comprobaciones de interfaz, contraste y teclado están en [docs/anti-slop.md](docs/anti-slop.md).
+
 ## Fuentes
 
 El material toma como base las clases 7, 8, 9, 10 y 11 del curso aportadas por el estudiante, y amplía patrones de diseño y sockets con documentación técnica. Las referencias completas y la distinción entre materia de las clases y contenido complementario están dentro del material. Los PDF originales no se incluyen en este repositorio.

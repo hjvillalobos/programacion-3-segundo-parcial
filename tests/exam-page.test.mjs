@@ -67,6 +67,11 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     assert.equal(nodes['submit-confirmation'].hidden, true);
     assert.equal(JSON.parse(memory.get(storageKey)).deadline, active.deadline);
 
+    now = active.deadline - 299000;
+    interval();
+    assert.equal(nodes['exam-timer'].attributes['data-urgent'], 'true');
+    assert.match(nodes['exam-announcement'].textContent, /cinco minutos/);
+
     now = active.deadline + 1000;
     documentEvents.visibilitychange();
     const finished = JSON.parse(memory.get(storageKey));
@@ -91,6 +96,8 @@ test('la pantalla entrega al vencer, conserva resultados y permite reiniciar sin
     const retry = JSON.parse(memory.get(storageKey));
     assert.equal(retry.deadline - now, 5400000);
     assert.deepEqual(retry.answers, {});
+    assert.equal(nodes['exam-announcement'].textContent, '');
+    assert.equal(nodes['exam-timer'].attributes['data-urgent'], 'false');
 
     // Una pestaña que se recarga después de vencer entrega antes de mostrar preguntas.
     memory.set(storageKey, JSON.stringify(createAttempt(exam, 1_000_000)));
