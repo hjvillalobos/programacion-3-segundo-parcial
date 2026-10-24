@@ -21,7 +21,7 @@ Visita el sitio de GitHub Pages de este repositorio o inicia un servidor local c
 | `tarjetas.html` | Tarjetas en grupos de 10 |
 | `cuestionario.html` | Preguntas en grupos de 10 |
 | `solucionario.html` | Respuestas explicadas en grupos de 10 |
-| `simulacro-1.html` | 50 preguntas del examen anterior, 90 minutos y calificación automática |
+| `simulacro-1.html` | 50 preguntas, 90 minutos y calificación con explicaciones |
 | `simulacro-2.html` | 50 preguntas nuevas del temario, 90 minutos y revisión explicada |
 | `referencias.html` | Cobertura del temario y fuentes |
 | `imprimir.html` | Todo el material, con impresión con o sin respuestas |
@@ -67,7 +67,7 @@ npm run validate
 
 `npm run check` verifica los archivos publicables, el JSON, la sintaxis de JavaScript y las rutas locales, simulando una subcarpeta de Pages. `npm test` comprueba el contenido, la paginación, los enlaces, la carga, la impresión y el simulacro cronometrado. `npm run validate` ejecuta ambos comandos. `npm ci` prepara el proyecto según el lockfile; actualmente no hay paquetes externos que descargar.
 
-La rama `eliseo` contiene esta reorganización. Trabaja con commits pequeños, cada uno dedicado a un cambio concreto. Antes de cada commit, revisa `git diff --check` y ejecuta `npm run validate`. Comprueba también la página, las tarjetas y ambos botones de impresión en el navegador. Node solo se usa para verificar el proyecto; el sitio publicado no necesita un servidor Node.
+Trabaja con commits pequeños, cada uno dedicado a un cambio concreto. Antes de cada commit, revisa `git diff --check` y ejecuta `npm run validate`. Comprueba también la página, las tarjetas y ambos botones de impresión en el navegador. Node solo se usa para verificar el proyecto; el sitio publicado no necesita un servidor Node.
 
 `.editorconfig` define el formato y `.gitattributes` mantiene finales de línea LF. `.gitignore` excluye configuración local del editor, dependencias, archivos generados y variables de entorno.
 
@@ -75,7 +75,7 @@ La rama `eliseo` contiene esta reorganización. Trabaja con commits pequeños, c
 
 La carpeta publicable es `public/`: contiene todos los archivos necesarios para el sitio. Los documentos, las pruebas y la configuración de desarrollo quedan fuera de ella.
 
-El workflow [pages.yml](.github/workflows/pages.yml) valida los pushes de cualquier rama y los pull requests dirigidos a `main`. Solo publica desde `main`, después de pasar las verificaciones, y también permite una ejecución manual desde Actions. Para activarlo, selecciona **Settings → Pages → Build and deployment → Source → GitHub Actions** e integra los commits de `eliseo` en `main`.
+El workflow [pages.yml](.github/workflows/pages.yml) valida los pushes de cualquier rama y los pull requests dirigidos a `main`. Solo publica desde `main`, después de pasar las verificaciones, y también permite una ejecución manual desde Actions. Para activarlo, selecciona **Settings → Pages → Build and deployment → Source → GitHub Actions** e integra los cambios en `main`.
 
 Consulta [docs/despliegue.md](docs/despliegue.md) para la configuración inicial y la comprobación del despliegue.
 

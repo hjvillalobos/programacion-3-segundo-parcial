@@ -1,6 +1,6 @@
 # Aplicación de AntiSlop
 
-Fecha: 23 de octubre de 2026. Rama: `prograEliseo`.
+Fecha: 23 de octubre de 2026.
 
 Modo `during`, elegido por el usuario para esta sesión. Dirección confirmada: material académico, verde oscuro y fondo claro. La configuración para futuras tareas queda en `AGENTS.md`; no se cambió ninguna preferencia global. La lectura de diseño y los motivos de las decisiones están en `DESIGN.md`.
 
@@ -225,3 +225,12 @@ Modo during y dirección de DESIGN.md conservados: ENERGY 1 / RHYTHM 2 / MOTION 
 - Purpose-Gate: PASS. Cada párrafo explica la respuesta y los matices necesarios, sin decoración nueva ni referencias a letras que cambian al mezclar.
 - Liveliness: PASS. La pregunta sigue encabezando cada desplegable; respuesta elegida, clave, explicación y fuentes conservan el orden de lectura. Se mantienen los diales y el acento verde existentes.
 - Craftsmanship y Quality Locks: PASS. npm run validate aprobó 28 archivos y 24 pruebas. En navegador se abrió una explicación mediante Enter, se recuperó tras recargar y no hubo desbordamiento a 320, 390, 768 y 1024 píxeles ni advertencias de consola. Contraste y foco reutilizan las reglas existentes, sin combinaciones nuevas.
+
+## Ajuste de presentación, 24 de octubre de 2026
+
+Modo during y dirección académica conservados, ENERGY 1 / RHYTHM 2 / MOTION 1. Se presenta cada banco como simulacro, con instrucciones de duración, corrección y revisión. La documentación de desarrollo se refiere a la rama de trabajo sin nombres particulares.
+
+- Hard Gate: PASS. Preguntas, IDs, opciones y claves conservados; la huella de las preguntas sigue coincidiendo. Navegación y entrega verificadas en navegador.
+- Purpose-Gate: PASS. Se simplifica la presentación y se elimina la etiqueta de numeración de procedencia de la revisión.
+- Liveliness: PASS. Jerarquía académica y acento verde conservados, sin cambios de estilo.
+- Craftsmanship y Quality Locks: PASS. 24 pruebas aprobadas, inicio mediante Enter y revisión comprobados, sin desbordamiento a 320 píxeles. Colores y reglas de foco sin cambios.

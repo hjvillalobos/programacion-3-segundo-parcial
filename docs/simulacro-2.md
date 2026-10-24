@@ -1,6 +1,6 @@
 # Simulacro II
 
-Banco original de práctica basado en el temario existente. No es una transcripción de un examen oficial ni sustituye el banco del Simulacro I.
+Banco de práctica basado en el temario existente, independiente del Simulacro I.
 
 Contiene 50 preguntas de selección única, con cuatro opciones por pregunta: 15 de patrones, 18 de bases de datos y persistencia, y 17 de hilos y comunicación. Dura 90 minutos. Cada acierto aporta 2 puntos a la nota sobre 100; las incorrectas y las omitidas aportan cero.
 

@@ -1,18 +1,18 @@
 # Simulacro I
 
-El banco `public/data/simulacros/simulacro-1.json` contiene las 50 preguntas de selección única transcritas de un examen anterior. Se conservan los enunciados, las cuatro opciones y la clave de respuesta visible en el material de referencia. Las imágenes originales no se publican.
+El banco `public/data/simulacros/simulacro-1.json` contiene 50 preguntas de selección única, con cuatro opciones, una respuesta correcta y una explicación por pregunta.
 
-`numeroOriginal` permite contrastar cada pregunta con las capturas. `id` identifica la pregunta y cada opción tiene su propio `id`; `correcta` referencia uno de estos identificadores, nunca la posición visual de una opción.
+`numeroOriginal` conserva la numeración interna del banco. `id` identifica la pregunta y cada opción tiene su propio `id`; `correcta` referencia uno de estos identificadores, nunca la posición visual de una opción.
 
 La duración acordada es de **90 minutos**. Cada pregunta vale un punto. La nota sobre 100 es `aciertos / 50 × 100`; los errores y las preguntas sin responder no suman puntos ni generan penalizaciones adicionales.
 
-La clave reproduce el examen de origen, incluidas sus formulaciones simplificadas. No es una revisión técnica ni una sustitución de esas preguntas por las del material de estudio.
+Las explicaciones aclaran las formulaciones simplificadas y las condiciones de cada respuesta.
 
-Las 50 preguntas incluyen ahora una explicación y referencias del catálogo de estudio, visibles después de entregar. Estos campos complementan la transcripción: no cambian IDs, enunciados, opciones ni claves. La versión permanece en 1 porque los intentos existentes siguen siendo compatibles.
+Las 50 preguntas incluyen ahora una explicación y referencias del catálogo de estudio, visibles después de entregar. Estos campos complementan las preguntas: no cambian IDs, enunciados, opciones ni claves. La versión permanece en 1 porque los intentos existentes siguen siendo compatibles.
 
 Las explicaciones aclaran los límites de formulaciones simplificadas: las sobrecargas de getConnection (22), el modelo de hilo por cliente (25), la coordinación de lista y salidas durante broadcast (26), las distintas señales de fin de flujo (40) y el papel de main y EDT durante el arranque de Swing (49).
 
-Se contrastaron esos casos con [DriverManager](https://docs.oracle.com/javase/8/docs/api/java/sql/DriverManager.html), [ObjectInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html), [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) y [los hilos iniciales de Swing](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/initial.html). Las aclaraciones describen el contrato técnico sin sustituir la respuesta del examen.
+Se contrastaron esos casos con [DriverManager](https://docs.oracle.com/javase/8/docs/api/java/sql/DriverManager.html), [ObjectInputStream](https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html), [InputStream](https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html) y [los hilos iniciales de Swing](https://docs.oracle.com/javase/tutorial/uiswing/concurrency/initial.html). Las aclaraciones describen el contrato técnico sin sustituir la respuesta del simulacro.
 
 ## Funcionamiento
 

@@ -4,7 +4,7 @@ El sitio se sirve directamente desde los archivos de `public/`. No necesita comp
 
 ## Configuración inicial
 
-1. Sube los commits de la rama `eliseo` al repositorio y revisa las verificaciones de Actions.
+1. Sube los commits de tu rama de trabajo al repositorio y revisa las verificaciones de Actions.
 2. En GitHub, abre **Settings → Pages → Build and deployment** y selecciona **GitHub Actions** como **Source**. La opción anterior de publicar directamente desde una rama ya no sirve para esta distribución, porque el sitio vive en `public/`.
 3. Integra los cambios en `main`. El workflow se ejecutará y publicará cuando pase la validación.
 4. Revisa la ejecución **Validar y publicar en GitHub Pages** en la pestaña **Actions**. El trabajo **Publicar sitio** muestra la dirección del sitio en el entorno `github-pages`.
@@ -15,7 +15,7 @@ Si el entorno `github-pages` tiene reglas de protección, debe permitir desplega
 
 | Evento | Validación | Publicación |
 | --- | --- | --- |
-| Push a `eliseo` o cualquier otra rama distinta de `main` | Sí | No |
+| Push a una rama distinta de `main` | Sí | No |
 | Pull request dirigido a `main` | Sí | No |
 | Push a `main` | Sí | Sí, si pasa la validación |
 | Ejecución manual desde Actions sobre `main` | Sí | Sí, si pasa la validación |
