@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 290" width="250" height="290" role="img">
+<title>Grafo no dirigido con vértices A a G</title>
+<defs><marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#19332f"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<path d="M144.4 45.3 L190.6 69.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M125 57 L125 113" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M105.6 45.3 L59.4 69.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M188 80 L62 80" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M191.5 92 L143.5 123" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M205.7 101.6 L192.3 168.4" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M106.5 123 L58.5 92" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M141.6 149.5 L171.4 175.5" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M108.4 149.5 L78.6 175.5" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M44.3 101.6 L57.7 168.4" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M166 190 L84 190" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M172.1 205.2 L140.9 234.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M77.9 205.2 L109.1 234.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<g><circle cx="125" cy="35" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="125" y="35" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">A</text></g>
+<g><circle cx="40" cy="80" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="40" y="80" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">D</text></g>
+<g><circle cx="210" cy="80" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="210" y="80" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">B</text></g>
+<g><circle cx="125" cy="135" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="125" y="135" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">C</text></g>
+<g><circle cx="62" cy="190" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="62" y="190" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">F</text></g>
+<g><circle cx="188" cy="190" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="188" y="190" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">E</text></g>
+<g><circle cx="125" cy="250" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="125" y="250" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">G</text></g>
+</svg>

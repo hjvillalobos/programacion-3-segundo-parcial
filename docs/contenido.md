@@ -12,6 +12,7 @@ Los archivos de `public/data/` son la fuente del contenido del sitio. `docs/mate
 | `fuentes.json` | `id` y bloques de `contenido` de cada fuente |
 | `simulacros/simulacro-1.json` | Banco independiente del Simulacro I, duración y clave de respuestas |
 | `simulacros/simulacro-2.json` | 50 preguntas originales, explicaciones, referencias y duración del Simulacro II |
+| `simulacros/simulacro-3.json` | Simulacro III de EIF205 Estructuras de Datos: 31 preguntas con tipos `unica`, `multiple` y `campos`; consulta `docs/simulacro-3.md` |
 
 ## Texto con formato
 

@@ -1,0 +1,1282 @@
+{
+  "id": "simulacro-3",
+  "version": 1,
+  "curso": "EIF205 Estructuras de Datos",
+  "titulo": "Simulacro III · Estructuras de Datos",
+  "duracionSegundos": 5400,
+  "descripcion": "31 preguntas de EIF205 Estructuras de Datos sobre grafos, árboles AVL y Red-Black, hashing y backtracking. Incluye selección única, verdadero o falso, selección múltiple y respuestas por campos. Las preguntas por campos dan crédito parcial; la nota se calcula sobre 100.",
+  "origen": "Examen de práctica de EIF205 Estructuras de Datos, con respuestas verificadas paso a paso.",
+  "preguntas": [
+    {
+      "id": "s3-p01",
+      "numero": 1,
+      "tema": "Grafos y recorridos",
+      "tipo": "campos",
+      "enunciado": "Proporcione el recorrido DFS del grafo dirigido comenzando en el vértice 35. Los vecinos se procesan de menor a mayor.",
+      "indicacion": "Escribe la respuesta con el formato 1-2-3: números separados por guiones, sin espacios.",
+      "figura": {
+        "src": "assets/img/simulacro-3/dfs-35.svg",
+        "alt": "Grafo dirigido con las aristas 10→14, 10→22, 14→31, 31→47, 47→22, 47→50, 22→14, 22→35, 35→31, 35→58, 58→50 y 50→35."
+      },
+      "campos": [
+        {
+          "id": "recorrido",
+          "etiqueta": "Recorrido DFS",
+          "tipo": "texto",
+          "respuestas": [
+            "35-31-47-22-14-50-58"
+          ]
+        }
+      ],
+      "explicacion": "Desde 35 solo salen aristas hacia 31 y 58. Se visita 31 → 47 → 22 → 14; luego 47 continúa con 50, y al volver a 35 queda 58. La arista entre 22 y 35 va de 22 hacia 35, y ninguna arista llega a 10, por lo que 10 no es alcanzable."
+    },
+    {
+      "id": "s3-p02",
+      "numero": 2,
+      "tema": "Árboles binarios",
+      "tipo": "campos",
+      "enunciado": "Analice la función misterio. a) ¿Qué calcula? b) Si se construye un BST insertando en orden 50, 30, 70, 20, 40, 60, 80, 10, 45, 65, 90, 85, ¿qué valor retorna misterio(raiz)?",
+      "codigo": "class Nodo:\n    def __init__(self, valor):\n        self.valor = valor\n        self.izq = None\n        self.der = None\n\ndef misterio(nodo):\n    if nodo is None:\n        return 0\n    if (nodo.izq is None) != (nodo.der is None):\n        return 1 + misterio(nodo.izq) + misterio(nodo.der)\n    return misterio(nodo.izq) + misterio(nodo.der)",
+      "campos": [
+        {
+          "id": "calcula",
+          "etiqueta": "a) ¿Qué calcula la función?",
+          "tipo": "lista",
+          "opciones": [
+            "La cantidad de nodos con dos hijos",
+            "La altura del árbol",
+            "La cantidad total de nodos internos",
+            "La cantidad de hojas del árbol",
+            "La cantidad de nodos que tienen exactamente un hijo"
+          ],
+          "respuestas": [
+            "La cantidad de nodos que tienen exactamente un hijo"
+          ]
+        },
+        {
+          "id": "valor",
+          "etiqueta": "b) Valor de misterio(raiz)",
+          "tipo": "texto",
+          "respuestas": [
+            "5"
+          ]
+        }
+      ],
+      "explicacion": "La condición (izq is None) != (der is None) solo es verdadera cuando falta exactamente uno de los dos hijos. En el BST, los nodos con un único hijo son 20, 40, 60, 80 y 90."
+    },
+    {
+      "id": "s3-p03",
+      "numero": 3,
+      "tema": "Grafos y recorridos",
+      "enunciado": "En el BFS siguiente, ¿dónde se debe marcar v como visto y asignar su predecesor para evitar duplicados en la cola y conservar el primer descubrimiento?",
+      "codigo": "vistos = {s}; cola = [s]\nmientras cola no esté vacía:\n    u = desencolar(cola)\n    para v en adj[u]:\n        si v no está en vistos:\n            # completar aquí\n            encolar(cola, v)",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Después de procesar todos los vecinos de v, aunque ya haya sido encolado."
+        },
+        {
+          "id": "b",
+          "texto": "Solo cuando v no tiene vecinos salientes."
+        },
+        {
+          "id": "c",
+          "texto": "Dentro del si, inmediatamente antes de encolar v."
+        },
+        {
+          "id": "d",
+          "texto": "Al desencolar v, conservando como predecesor al último vértice que lo encoló."
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "Marcar v al descubrirlo impide que otro vértice lo vuelva a encolar, y fija como predecesor a quien lo descubrió primero. Si se marca al desencolar, v puede entrar varias veces en la cola."
+    },
+    {
+      "id": "s3-p04",
+      "numero": 4,
+      "tema": "Backtracking",
+      "tipo": "campos",
+      "enunciado": "Se colorean los vértices de modo que dos adyacentes no tengan el mismo color, usando backtracking: los vértices se procesan en orden alfabético y los colores se prueban en el orden 1, 2, 3, …, m. a) ¿Cuál es el menor m con el que el algoritmo encuentra solución? b) ¿Qué color recibe E en la primera solución? c) ¿Y G?",
+      "figura": {
+        "src": "assets/img/simulacro-3/coloreo.svg",
+        "alt": "Grafo no dirigido con las aristas A-B, A-C, A-D, B-C, B-D, B-E, C-D, C-E, C-F, D-F, E-F, E-G y F-G."
+      },
+      "campos": [
+        {
+          "id": "m",
+          "etiqueta": "a) Menor m",
+          "tipo": "texto",
+          "respuestas": [
+            "4"
+          ]
+        },
+        {
+          "id": "e",
+          "etiqueta": "b) Color de E",
+          "tipo": "texto",
+          "respuestas": [
+            "1"
+          ]
+        },
+        {
+          "id": "g",
+          "etiqueta": "c) Color de G",
+          "tipo": "texto",
+          "respuestas": [
+            "3"
+          ]
+        }
+      ],
+      "explicacion": "A, B, C y D son mutuamente adyacentes, así que se necesitan 4 colores. Con m = 4 la primera solución es A=1, B=2, C=3, D=4, E=1, F=2 y G=3, sin retroceder."
+    },
+    {
+      "id": "s3-p05",
+      "numero": 5,
+      "tema": "Árboles AVL",
+      "tipo": "campos",
+      "enunciado": "Complete la función que realiza una rotación simple a la derecha sobre el nodo y de un árbol AVL y retorna la nueva raíz del subárbol. Además, ¿en qué orden deben actualizarse las alturas?",
+      "codigo": "def rotar_derecha(y):\n    x = y.izq\n    T2 = ____(1)____\n\n    x.der = ____(2)____\n    y.izq = ____(3)____\n\n    y.altura = 1 + max(altura(y.izq), altura(y.der))\n    x.altura = 1 + max(altura(x.izq), altura(x.der))\n\n    return ____(4)____",
+      "campos": [
+        {
+          "id": "t2",
+          "etiqueta": "(1) T2 =",
+          "tipo": "lista",
+          "opciones": [
+            "T2",
+            "x",
+            "x.izq",
+            "y.der",
+            "None",
+            "y",
+            "x.der"
+          ],
+          "respuestas": [
+            "x.der"
+          ]
+        },
+        {
+          "id": "xder",
+          "etiqueta": "(2) x.der =",
+          "tipo": "lista",
+          "opciones": [
+            "T2",
+            "x",
+            "x.izq",
+            "y.der",
+            "None",
+            "y",
+            "x.der"
+          ],
+          "respuestas": [
+            "y"
+          ]
+        },
+        {
+          "id": "yizq",
+          "etiqueta": "(3) y.izq =",
+          "tipo": "lista",
+          "opciones": [
+            "T2",
+            "x",
+            "x.izq",
+            "y.der",
+            "None",
+            "y",
+            "x.der"
+          ],
+          "respuestas": [
+            "T2"
+          ]
+        },
+        {
+          "id": "ret",
+          "etiqueta": "(4) return",
+          "tipo": "lista",
+          "opciones": [
+            "T2",
+            "x",
+            "x.izq",
+            "y.der",
+            "None",
+            "y",
+            "x.der"
+          ],
+          "respuestas": [
+            "x"
+          ]
+        },
+        {
+          "id": "orden",
+          "etiqueta": "Orden de actualización de alturas",
+          "tipo": "lista",
+          "opciones": [
+            "El orden no importa",
+            "Primero x, luego y, porque x es el nodo que sube",
+            "Primero y, luego x, porque x pasa a ser el padre de y"
+          ],
+          "respuestas": [
+            "Primero y, luego x, porque x pasa a ser el padre de y"
+          ]
+        }
+      ],
+      "explicacion": "Se guarda T2 = x.der, luego x.der = y e y.izq = T2, y se retorna x. La altura de y se actualiza primero porque, tras la rotación, y es hijo de x y la altura de x depende de la de y."
+    },
+    {
+      "id": "s3-p06",
+      "numero": 6,
+      "tema": "Árboles AVL",
+      "tipo": "campos",
+      "enunciado": "En el árbol AVL mostrado se inserta la llave 45. a) ¿Qué operación restaura el balance? b) ¿Cuál es la nueva raíz? c) ¿Cuál es el recorrido preorden después de la inserción?",
+      "figura": {
+        "src": "assets/img/simulacro-3/avl-45.svg",
+        "alt": "Árbol AVL: 50 con hijos 25 y 75; 25 con hijos 10 y 35; 75 con hijos 60 y 90; 10 con hijo izquierdo 5; 35 con hijos 30 y 40."
+      },
+      "campos": [
+        {
+          "id": "op",
+          "etiqueta": "a) Operación",
+          "tipo": "lista",
+          "opciones": [
+            "No requiere rotación",
+            "Rotación simple a la izquierda en 25",
+            "Rotación doble derecha-izquierda: derecha en 40 y luego izquierda en 35",
+            "Rotación simple a la izquierda en 35",
+            "Rotación doble izquierda-derecha: izquierda en 25 y luego derecha en 50",
+            "Rotación simple a la derecha en 50"
+          ],
+          "respuestas": [
+            "Rotación doble izquierda-derecha: izquierda en 25 y luego derecha en 50"
+          ]
+        },
+        {
+          "id": "raiz",
+          "etiqueta": "b) Nueva raíz",
+          "tipo": "texto",
+          "respuestas": [
+            "35"
+          ]
+        },
+        {
+          "id": "pre",
+          "etiqueta": "c) Preorden (formato 1-2-3)",
+          "tipo": "texto",
+          "respuestas": [
+            "35-25-10-5-30-50-40-45-75-60-90"
+          ]
+        }
+      ],
+      "explicacion": "45 queda como hijo derecho de 40. El primer nodo desbalanceado es 50 (+2), y su hijo 25 está cargado a la derecha (−1): caso izquierda-derecha. Tras rotar a la izquierda en 25 y a la derecha en 50, la raíz es 35."
+    },
+    {
+      "id": "s3-p07",
+      "numero": 7,
+      "tema": "Backtracking",
+      "enunciado": "En el peor caso, un algoritmo de backtracking puede explorar el mismo número de estados que la búsqueda por fuerza bruta, por lo que su complejidad asintótica en el peor caso suele seguir siendo exponencial (o factorial).",
+      "opciones": [
+        {
+          "id": "v",
+          "texto": "Verdadero"
+        },
+        {
+          "id": "f",
+          "texto": "Falso"
+        }
+      ],
+      "mezclarOpciones": false,
+      "correcta": "v",
+      "explicacion": "La poda mejora el caso promedio, pero no garantiza descartar ramas: si las restricciones fallan tarde, se recorre casi todo el árbol de estados. N-reinas es O(n!), coloreo O(mⁿ) y suma de subconjuntos O(2ⁿ)."
+    },
+    {
+      "id": "s3-p08",
+      "numero": 8,
+      "tema": "Árboles Red-Black",
+      "enunciado": "En un Red-Black, la raíz 30 es negra y tiene hijos 15 y 50, ambos rojos y sin hijos internos. Se inserta 10 como rojo y se aplica la reparación estándar. ¿Cuál es el resultado?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "15 y 50 negros; 30 rojo; 10 rojo; cero rotaciones"
+        },
+        {
+          "id": "b",
+          "texto": "15 y 50 negros; 30 negro; 10 rojo; cero rotaciones"
+        },
+        {
+          "id": "c",
+          "texto": "15 negro pasa a ser raíz por rotación derecha; 30 rojo"
+        },
+        {
+          "id": "d",
+          "texto": "15 negro y 50 rojo; 30 negro; 10 rojo; cero rotaciones"
+        }
+      ],
+      "correcta": "b",
+      "explicacion": "El tío de 10 (50) es rojo: solo se recolorea. 15 y 50 pasan a negro y 30 a rojo, pero 30 es la raíz y vuelve a negro. No hay rotaciones."
+    },
+    {
+      "id": "s3-p09",
+      "numero": 9,
+      "tema": "Representación de grafos",
+      "enunciado": "Usted modela la red de vuelos directos entre los 300 aeropuertos de una alianza. Prácticamente todos los aeropuertos tienen vuelos directos con casi todos los demás. La operación más frecuente, ejecutada millones de veces por hora, es: \"¿existe un vuelo directo de A a B y cuál es su costo?\". Los recorridos completos son poco frecuentes. ¿Cuál representación es la más adecuada?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Árbol AVL"
+        },
+        {
+          "id": "b",
+          "texto": "Grafo dirigido con pesos - Lista de adyacencia"
+        },
+        {
+          "id": "c",
+          "texto": "Grafo dirigido con pesos - Matriz de adyacencia"
+        },
+        {
+          "id": "d",
+          "texto": "Grafo no dirigido sin pesos - Lista de adyacencia"
+        },
+        {
+          "id": "e",
+          "texto": "Grafo dirigido acíclico"
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "Los vuelos tienen sentido y costo: grafo dirigido con pesos. Como el grafo es denso y la consulta clave es M[A][B], la matriz responde en O(1) y ocupa solo 300 × 300 celdas casi todas útiles."
+    },
+    {
+      "id": "s3-p10",
+      "numero": 10,
+      "tema": "Hashing",
+      "enunciado": "Una tabla hash de 64 posiciones utiliza h(k) = k % 64. Las llaves siempre son múltiplos de 8 (8, 16, 24, …). Independientemente de cuántas llaves se inserten, ¿cuántas posiciones distintas pueden llegar a ocuparse como posición inicial (sin colisiones)?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "8"
+        },
+        {
+          "id": "b",
+          "texto": "1"
+        },
+        {
+          "id": "c",
+          "texto": "16"
+        },
+        {
+          "id": "d",
+          "texto": "32"
+        },
+        {
+          "id": "e",
+          "texto": "64"
+        }
+      ],
+      "correcta": "a",
+      "explicacion": "Si k es múltiplo de 8, k % 64 también lo es: solo 0, 8, 16, …, 56. Son 64 / mcd(8, 64) = 8 posiciones. Por eso conviene que el tamaño sea primo."
+    },
+    {
+      "id": "s3-p11",
+      "numero": 11,
+      "tema": "Backtracking",
+      "tipo": "multiple",
+      "enunciado": "¿Cuáles de las siguientes afirmaciones sobre backtracking son verdaderas?",
+      "seleccionar": 3,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "La poda descarta una solución parcial tan pronto se determina que no puede conducir a una solución válida"
+        },
+        {
+          "id": "b",
+          "texto": "Garantiza una complejidad polinomial si se implementa con poda"
+        },
+        {
+          "id": "c",
+          "texto": "Explora el árbol de estados nivel por nivel, como BFS"
+        },
+        {
+          "id": "d",
+          "texto": "Explora el espacio de soluciones como un recorrido en profundidad (DFS) sobre un árbol de estados implícito"
+        },
+        {
+          "id": "e",
+          "texto": "Al retroceder, se debe deshacer la última decisión para restaurar el estado anterior"
+        },
+        {
+          "id": "f",
+          "texto": "Construye siempre explícitamente el árbol de estados completo en memoria antes de evaluarlo"
+        }
+      ],
+      "correctas": [
+        "a",
+        "d",
+        "e"
+      ],
+      "explicacion": "Backtracking es un DFS sobre un árbol de estados implícito: poda en cuanto una solución parcial no puede ser válida y deshace la última decisión al retroceder. No garantiza complejidad polinomial ni construye el árbol completo en memoria."
+    },
+    {
+      "id": "s3-p12",
+      "numero": 12,
+      "tema": "Grafos y recorridos",
+      "tipo": "campos",
+      "enunciado": "Proporcione el recorrido BFS del grafo no dirigido comenzando en el vértice 7. Los vértices se procesan de menor a mayor.",
+      "indicacion": "Escribe la respuesta con el formato 1-2-3: números separados por guiones, sin espacios.",
+      "figura": {
+        "src": "assets/img/simulacro-3/bfs-7.svg",
+        "alt": "Grafo no dirigido con las aristas 1-2, 1-4, 2-3, 2-5, 3-5, 3-6, 4-5, 4-7, 5-6, 5-8, 6-9, 7-8 y 8-9."
+      },
+      "campos": [
+        {
+          "id": "recorrido",
+          "etiqueta": "Recorrido BFS",
+          "tipo": "texto",
+          "respuestas": [
+            "7-4-8-1-5-9-2-3-6"
+          ]
+        }
+      ],
+      "explicacion": "Desde 7 se encolan 4 y 8. 4 encola 1 y 5; 8 encola 9; 1 encola 2; 5 encola 3 y 6. Los demás vecinos ya están en la cola."
+    },
+    {
+      "id": "s3-p13",
+      "numero": 13,
+      "tema": "Grafos y recorridos",
+      "enunciado": "En el grafo dirigido dado, BFS parte de A y examina vecinos en el orden mostrado. Marca cada vértice al encolarlo. ¿Cuál es el camino a F al seguir los predecesores de BFS?",
+      "codigo": "A: B, C\nB: D\nC: E, D\nD: F\nE: F\nF: ∅",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "A → B → D → F"
+        },
+        {
+          "id": "b",
+          "texto": "A → C → E → F"
+        },
+        {
+          "id": "c",
+          "texto": "A → B → F"
+        },
+        {
+          "id": "d",
+          "texto": "A → C → D → F"
+        }
+      ],
+      "correcta": "a",
+      "explicacion": "A encola B y C. B encola D (pred. B). C encola E; D ya estaba marcado. D encola F (pred. D). Siguiendo predecesores: F ← D ← B ← A."
+    },
+    {
+      "id": "s3-p14",
+      "numero": 14,
+      "tema": "Grafos y recorridos",
+      "enunciado": "Ejecute DFS sobre el DAG dado. Recorra vértices iniciales en orden alfabético y vecinos en el orden mostrado. Agregue cada vértice al finalizar e invierta la lista. ¿Qué orden resulta?",
+      "codigo": "A: C\nB: C, E\nC: D\nD: ∅\nE: D",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "B, E, A, C, D"
+        },
+        {
+          "id": "b",
+          "texto": "A, B, C, E, D"
+        },
+        {
+          "id": "c",
+          "texto": "B, A, E, D, C"
+        },
+        {
+          "id": "d",
+          "texto": "D, C, A, E, B"
+        }
+      ],
+      "correcta": "a",
+      "explicacion": "Desde A: A → C → D; terminan D, C, A. Desde B: C ya está visitado, E termina y luego B. Lista de terminados: D, C, A, E, B. Invertida: B, E, A, C, D."
+    },
+    {
+      "id": "s3-p15",
+      "numero": 15,
+      "tema": "Hashing",
+      "tipo": "campos",
+      "enunciado": "Con MAX_TAM = 13, h(k) = k % 13 y dh(k) = 7 − k % 7, la posición del intento i es (h(k) + i · dh(k)) % 13. Inserte en orden 18, 41, 22, 44, 59, 32, 31, 73 con double hashing y muestre la tabla. En las posiciones vacías escriba un guion \"-\".",
+      "codigo": "#define MAX_TAM 13\n#define DH 7\nint v[MAX_TAM];\n\nint h(int k){\n    return k % MAX_TAM;\n}\n\nint dh(int k){\n    return DH - k % DH;\n}",
+      "campos": [
+        {
+          "id": "pos0",
+          "etiqueta": "Posición 0",
+          "tipo": "texto",
+          "respuestas": [
+            "31"
+          ]
+        },
+        {
+          "id": "pos1",
+          "etiqueta": "Posición 1",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos2",
+          "etiqueta": "Posición 2",
+          "tipo": "texto",
+          "respuestas": [
+            "41"
+          ]
+        },
+        {
+          "id": "pos3",
+          "etiqueta": "Posición 3",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos4",
+          "etiqueta": "Posición 4",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos5",
+          "etiqueta": "Posición 5",
+          "tipo": "texto",
+          "respuestas": [
+            "18"
+          ]
+        },
+        {
+          "id": "pos6",
+          "etiqueta": "Posición 6",
+          "tipo": "texto",
+          "respuestas": [
+            "32"
+          ]
+        },
+        {
+          "id": "pos7",
+          "etiqueta": "Posición 7",
+          "tipo": "texto",
+          "respuestas": [
+            "59"
+          ]
+        },
+        {
+          "id": "pos8",
+          "etiqueta": "Posición 8",
+          "tipo": "texto",
+          "respuestas": [
+            "73"
+          ]
+        },
+        {
+          "id": "pos9",
+          "etiqueta": "Posición 9",
+          "tipo": "texto",
+          "respuestas": [
+            "22"
+          ]
+        },
+        {
+          "id": "pos10",
+          "etiqueta": "Posición 10",
+          "tipo": "texto",
+          "respuestas": [
+            "44"
+          ]
+        },
+        {
+          "id": "pos11",
+          "etiqueta": "Posición 11",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos12",
+          "etiqueta": "Posición 12",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        }
+      ],
+      "explicacion": "44 choca en 5 y pasa a 10 (dh = 5). 31 choca en 5 y en 9 y queda en 0 (dh = 4). Las demás llaves entran en su posición inicial."
+    },
+    {
+      "id": "s3-p16",
+      "numero": 16,
+      "tema": "Árboles Red-Black",
+      "enunciado": "Observe los árboles A, B y C (las hojas NIL no se dibujan y se consideran negras). ¿Cuál es un árbol Red-Black válido?",
+      "figura": {
+        "src": "assets/img/simulacro-3/red-black.svg",
+        "alt": "Tres árboles con la misma forma: 38 con hijos 19 y 45; 19 con hijos 12 y 31; 45 con hijos 41 y 50; 12 con hijo izquierdo 8; 50 con hijos 47 y 55. Rojos en A: 19, 45, 12, 8, 47 y 55. Rojos en B: 19, 45, 47 y 55. Rojos en C: 19, 45, 8, 47 y 55. Los demás nodos son negros."
+      },
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Árbol A"
+        },
+        {
+          "id": "b",
+          "texto": "Árbol B"
+        },
+        {
+          "id": "c",
+          "texto": "Árbol C"
+        },
+        {
+          "id": "d",
+          "texto": "Ninguno de los tres"
+        },
+        {
+          "id": "e",
+          "texto": "Los tres son válidos"
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "A tiene rojos consecutivos (19-12 y 12-8). En B el camino 38-19-12-8-NIL tiene 3 negros y 38-19-12-NIL solo 2. C cumple todas las reglas: raíz negra, sin rojos seguidos y 2 negros en cada camino."
+    },
+    {
+      "id": "s3-p17",
+      "numero": 17,
+      "tema": "Hashing",
+      "tipo": "campos",
+      "enunciado": "Con MAX_TAM = 11 y h(k) = k % 11, inserte 3, 14, 25, 36, 8, 19, 47, 5, 16 con quadratic probing (h(k) + i²) % 11. Muestre la tabla (guion \"-\" en las vacías) e indique cuántas llaves sufrieron al menos una colisión.",
+      "codigo": "#define MAX_TAM 11\nint v[MAX_TAM];\n\nint h(int k){\n    return k % MAX_TAM;\n}",
+      "campos": [
+        {
+          "id": "pos0",
+          "etiqueta": "Posición 0",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos1",
+          "etiqueta": "Posición 1",
+          "tipo": "texto",
+          "respuestas": [
+            "36"
+          ]
+        },
+        {
+          "id": "pos2",
+          "etiqueta": "Posición 2",
+          "tipo": "texto",
+          "respuestas": [
+            "-"
+          ]
+        },
+        {
+          "id": "pos3",
+          "etiqueta": "Posición 3",
+          "tipo": "texto",
+          "respuestas": [
+            "3"
+          ]
+        },
+        {
+          "id": "pos4",
+          "etiqueta": "Posición 4",
+          "tipo": "texto",
+          "respuestas": [
+            "14"
+          ]
+        },
+        {
+          "id": "pos5",
+          "etiqueta": "Posición 5",
+          "tipo": "texto",
+          "respuestas": [
+            "5"
+          ]
+        },
+        {
+          "id": "pos6",
+          "etiqueta": "Posición 6",
+          "tipo": "texto",
+          "respuestas": [
+            "47"
+          ]
+        },
+        {
+          "id": "pos7",
+          "etiqueta": "Posición 7",
+          "tipo": "texto",
+          "respuestas": [
+            "25"
+          ]
+        },
+        {
+          "id": "pos8",
+          "etiqueta": "Posición 8",
+          "tipo": "texto",
+          "respuestas": [
+            "8"
+          ]
+        },
+        {
+          "id": "pos9",
+          "etiqueta": "Posición 9",
+          "tipo": "texto",
+          "respuestas": [
+            "19"
+          ]
+        },
+        {
+          "id": "pos10",
+          "etiqueta": "Posición 10",
+          "tipo": "texto",
+          "respuestas": [
+            "16"
+          ]
+        },
+        {
+          "id": "colisiones",
+          "etiqueta": "Llaves con al menos una colisión",
+          "tipo": "texto",
+          "respuestas": [
+            "6"
+          ]
+        }
+      ],
+      "explicacion": "14, 25, 36 y 47 tienen h = 3; 19 tiene h = 8; 16 tiene h = 5. 36 queda en 1 (3+9 = 12), 47 en 6 (3+25 = 28) y 16 en 10 (5+16 = 21). Solo 3, 8 y 5 entran al primer intento: 6 llaves colisionaron."
+    },
+    {
+      "id": "s3-p18",
+      "numero": 18,
+      "tema": "Hashing",
+      "enunciado": "En una tabla hash que utiliza hashing cerrado (direccionamiento abierto), el factor de carga α = n/m nunca puede ser mayor que 1, mientras que con hashing abierto (encadenamiento) sí puede serlo.",
+      "opciones": [
+        {
+          "id": "v",
+          "texto": "Verdadero"
+        },
+        {
+          "id": "f",
+          "texto": "Falso"
+        }
+      ],
+      "mezclarOpciones": false,
+      "correcta": "v",
+      "explicacion": "En direccionamiento abierto cada llave ocupa una celda propia, así que n ≤ m. Con encadenamiento las listas crecen sin límite: 30 llaves en 10 posiciones dan α = 3."
+    },
+    {
+      "id": "s3-p19",
+      "numero": 19,
+      "tema": "Representación de grafos",
+      "tipo": "campos",
+      "enunciado": "La matriz de adyacencia representa un grafo dirigido (fila = origen, columna = destino). a) Recorrido BFS desde 0, de menor a mayor. b) Grado de entrada del vértice 4. c) Cantidad de aristas. d) Celdas que se revisan en total para obtener los vecinos de todos los vértices durante un recorrido completo.",
+      "codigo": "    0 1 2 3 4 5 6 7\n0 [ 0 0 0 1 0 1 0 0 ]\n1 [ 1 0 0 0 0 0 1 0 ]\n2 [ 0 1 0 0 0 0 0 0 ]\n3 [ 0 0 0 0 1 0 0 1 ]\n4 [ 0 0 1 0 0 0 0 0 ]\n5 [ 0 0 0 0 0 0 0 1 ]\n6 [ 0 0 0 0 1 0 0 0 ]\n7 [ 0 0 1 0 0 0 1 0 ]",
+      "campos": [
+        {
+          "id": "bfs",
+          "etiqueta": "a) BFS desde 0 (formato 1-2-3)",
+          "tipo": "texto",
+          "respuestas": [
+            "0-3-5-4-7-2-6-1"
+          ]
+        },
+        {
+          "id": "entrada",
+          "etiqueta": "b) Grado de entrada de 4",
+          "tipo": "texto",
+          "respuestas": [
+            "2"
+          ]
+        },
+        {
+          "id": "aristas",
+          "etiqueta": "c) Cantidad de aristas",
+          "tipo": "texto",
+          "respuestas": [
+            "12"
+          ]
+        },
+        {
+          "id": "celdas",
+          "etiqueta": "d) Celdas revisadas",
+          "tipo": "texto",
+          "respuestas": [
+            "64"
+          ]
+        }
+      ],
+      "explicacion": "Vecinos: 0→3,5; 1→0,6; 2→1; 3→4,7; 4→2; 5→7; 6→4; 7→2,6. La columna 4 tiene dos 1 (filas 3 y 6). Hay 12 unos en total. Con matriz, cada vértice revisa su fila de 8 celdas: 8 × 8 = 64, es decir, O(V²)."
+    },
+    {
+      "id": "s3-p20",
+      "numero": 20,
+      "tema": "Árboles AVL",
+      "tipo": "campos",
+      "enunciado": "Se insertan en orden 14, 17, 11, 7, 53, 4, 13, 12, 8, 60, 19, 16, 20 en un AVL vacío. Una rotación doble cuenta como una sola, y la altura de una hoja es 0. a) Raíz final. b) Rotaciones simples. c) Rotaciones dobles. d) Altura final. e) Recorrido preorden.",
+      "campos": [
+        {
+          "id": "raiz",
+          "etiqueta": "a) Raíz final",
+          "tipo": "texto",
+          "respuestas": [
+            "14"
+          ]
+        },
+        {
+          "id": "simples",
+          "etiqueta": "b) Rotaciones simples",
+          "tipo": "texto",
+          "respuestas": [
+            "2"
+          ]
+        },
+        {
+          "id": "dobles",
+          "etiqueta": "c) Rotaciones dobles",
+          "tipo": "texto",
+          "respuestas": [
+            "3"
+          ]
+        },
+        {
+          "id": "altura",
+          "etiqueta": "d) Altura final",
+          "tipo": "texto",
+          "respuestas": [
+            "3"
+          ]
+        },
+        {
+          "id": "pre",
+          "etiqueta": "e) Preorden (formato 1-2-3)",
+          "tipo": "texto",
+          "respuestas": [
+            "14-11-7-4-8-12-13-19-17-16-53-20-60"
+          ]
+        }
+      ],
+      "explicacion": "Rotaciones: simple derecha en 11 (al insertar 4), doble derecha-izquierda en 11 (12), doble derecha-izquierda en 7 (8), simple izquierda en 17 (60) y doble izquierda-derecha en 53 (20). Raíz final 14, altura 3."
+    },
+    {
+      "id": "s3-p21",
+      "numero": 21,
+      "tema": "Hashing",
+      "enunciado": "Una tabla hash con encadenamiento usa listas enlazadas. Un atacante logra que las n llaves produzcan el mismo hash. ¿Cuál es la complejidad de buscar una llave, y cuál sería si cada cubeta fuera un árbol Red-Black?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "O(log n) con listas y O(1) con árboles Red-Black"
+        },
+        {
+          "id": "b",
+          "texto": "O(1) en ambos casos"
+        },
+        {
+          "id": "c",
+          "texto": "O(n) con listas y O(log n) con árboles Red-Black"
+        },
+        {
+          "id": "d",
+          "texto": "O(n) en ambos casos"
+        },
+        {
+          "id": "e",
+          "texto": "O(n²) con listas y O(n) con árboles Red-Black"
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "Todas las llaves caen en la misma cubeta. Una lista se recorre en O(n); un Red-Black mantiene altura O(log n). Java convierte cubetas grandes de HashMap en árboles por este motivo."
+    },
+    {
+      "id": "s3-p22",
+      "numero": 22,
+      "tema": "Árboles Red-Black",
+      "enunciado": "En un árbol Red-Black con n nodos, una inserción realiza como máximo dos rotaciones, aunque puede requerir recoloraciones que se propaguen hasta la raíz.",
+      "opciones": [
+        {
+          "id": "v",
+          "texto": "Verdadero"
+        },
+        {
+          "id": "f",
+          "texto": "Falso"
+        }
+      ],
+      "mezclarOpciones": false,
+      "correcta": "v",
+      "explicacion": "El caso de tío rojo solo recolorea y puede subir hasta la raíz. Los casos de tío negro usan como máximo dos rotaciones y terminan la reparación."
+    },
+    {
+      "id": "s3-p23",
+      "numero": 23,
+      "tema": "Backtracking",
+      "tipo": "campos",
+      "enunciado": "Complete la función de backtracking que imprime todas las permutaciones de una lista de elementos distintos. Si la lista tiene n elementos, ¿cuántas hojas tiene el árbol de estados?",
+      "codigo": "def permutar(elementos, actual, usados):\n    if ____(1)____:\n        print(actual)\n        return\n    for i in range(len(elementos)):\n        if ____(2)____:\n            usados[i] = True\n            actual.append(elementos[i])\n            permutar(elementos, actual, usados)\n            ____(3)____\n            ____(4)____",
+      "campos": [
+        {
+          "id": "base",
+          "etiqueta": "(1) Caso base",
+          "tipo": "lista",
+          "opciones": [
+            "not usados[i]",
+            "return",
+            "usados[i] = False",
+            "len(actual) == 0",
+            "usados[i]",
+            "len(actual) == len(elementos)",
+            "actual.pop()"
+          ],
+          "respuestas": [
+            "len(actual) == len(elementos)"
+          ]
+        },
+        {
+          "id": "poda",
+          "etiqueta": "(2) Condición",
+          "tipo": "lista",
+          "opciones": [
+            "not usados[i]",
+            "return",
+            "usados[i] = False",
+            "len(actual) == 0",
+            "usados[i]",
+            "len(actual) == len(elementos)",
+            "actual.pop()"
+          ],
+          "respuestas": [
+            "not usados[i]"
+          ]
+        },
+        {
+          "id": "deshacer1",
+          "etiqueta": "(3) Primera línea al retroceder",
+          "tipo": "lista",
+          "opciones": [
+            "not usados[i]",
+            "return",
+            "usados[i] = False",
+            "len(actual) == 0",
+            "usados[i]",
+            "len(actual) == len(elementos)",
+            "actual.pop()"
+          ],
+          "respuestas": [
+            "actual.pop()"
+          ]
+        },
+        {
+          "id": "deshacer2",
+          "etiqueta": "(4) Segunda línea al retroceder",
+          "tipo": "lista",
+          "opciones": [
+            "not usados[i]",
+            "return",
+            "usados[i] = False",
+            "len(actual) == 0",
+            "usados[i]",
+            "len(actual) == len(elementos)",
+            "actual.pop()"
+          ],
+          "respuestas": [
+            "usados[i] = False"
+          ]
+        },
+        {
+          "id": "hojas",
+          "etiqueta": "Cantidad de hojas del árbol de estados",
+          "tipo": "lista",
+          "opciones": [
+            "2ⁿ",
+            "n²",
+            "n!"
+          ],
+          "respuestas": [
+            "n!"
+          ]
+        }
+      ],
+      "alternativas": [
+        {
+          "deshacer1": [
+            "usados[i] = False"
+          ],
+          "deshacer2": [
+            "actual.pop()"
+          ]
+        }
+      ],
+      "explicacion": "El caso base es len(actual) == len(elementos); solo se eligen elementos con not usados[i]; al retroceder se deshace con actual.pop() y usados[i] = False (en cualquier orden). Hay n · (n−1) · … · 1 = n! hojas."
+    },
+    {
+      "id": "s3-p24",
+      "numero": 24,
+      "tema": "Árboles AVL",
+      "enunciado": "En un AVL vacío se insertan 40, 20, 60, 10, 30 y 25 en ese orden. ¿Qué rotaciones corrigen el primer desequilibrio de la última inserción?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Izquierda en 20, luego derecha en 40"
+        },
+        {
+          "id": "b",
+          "texto": "Solo derecha en 40"
+        },
+        {
+          "id": "c",
+          "texto": "Derecha en 40, luego izquierda en 20"
+        },
+        {
+          "id": "d",
+          "texto": "Izquierda en 30, luego derecha en 40"
+        }
+      ],
+      "correcta": "a",
+      "explicacion": "25 queda como hijo izquierdo de 30. 40 queda con balance +2 y su hijo 20 con −1: caso izquierda-derecha. Se rota a la izquierda en 20 y luego a la derecha en 40, y 30 queda como raíz."
+    },
+    {
+      "id": "s3-p25",
+      "numero": 25,
+      "tema": "Árboles AVL",
+      "tipo": "campos",
+      "enunciado": "Se insertan en orden 40, 20, 10, 25, 30, 22, 50, 60, 55, 45 en un AVL vacío, aplicando las rotaciones necesarias después de cada inserción. Proporcione el recorrido preorden del árbol resultante.",
+      "indicacion": "Escribe la respuesta con el formato 1-2-3: números separados por guiones, sin espacios.",
+      "campos": [
+        {
+          "id": "pre",
+          "etiqueta": "Preorden",
+          "tipo": "texto",
+          "respuestas": [
+            "25-20-10-22-50-40-30-45-55-60"
+          ]
+        }
+      ],
+      "explicacion": "Rotaciones: simple derecha en 40 (10), doble izquierda-derecha en 40 (30), doble derecha-izquierda en 20 (22), simple izquierda en 30 (50), doble derecha-izquierda en 50 (55) y doble derecha-izquierda en 40 (45). La raíz final es 25."
+    },
+    {
+      "id": "s3-p26",
+      "numero": 26,
+      "tema": "Representación de grafos",
+      "tipo": "multiple",
+      "enunciado": "Para un grafo con V vértices y E aristas, ¿cuáles de las siguientes afirmaciones son verdaderas?",
+      "seleccionar": 3,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Verificar si existe la arista (u, v) es O(1) con matriz de adyacencia"
+        },
+        {
+          "id": "b",
+          "texto": "Un recorrido DFS con matriz de adyacencia es O(V + E)"
+        },
+        {
+          "id": "c",
+          "texto": "El espacio de una lista de adyacencia de un grafo no dirigido es O(V + E)"
+        },
+        {
+          "id": "d",
+          "texto": "El ordenamiento topológico basado en DFS es O(V²) sin importar la representación"
+        },
+        {
+          "id": "e",
+          "texto": "Recorrer todos los vecinos de un vértice es O(1) con listas de adyacencia"
+        },
+        {
+          "id": "f",
+          "texto": "Un recorrido BFS con listas de adyacencia es O(V + E)"
+        }
+      ],
+      "correctas": [
+        "a",
+        "c",
+        "f"
+      ],
+      "explicacion": "La matriz responde si existe (u, v) en O(1). Las listas de un grafo no dirigido ocupan O(V + E) y BFS con listas es O(V + E). DFS con matriz es O(V²), el orden topológico depende de la representación y recorrer vecinos con listas cuesta O(grado)."
+    },
+    {
+      "id": "s3-p27",
+      "numero": 27,
+      "tema": "Árboles binarios",
+      "enunciado": "En un árbol binario de claves distintas, el preorden es M, F, C, H, T, R y el inorden es C, F, H, M, R, T. ¿Cuál es su postorden?",
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "C, H, F, T, R, M"
+        },
+        {
+          "id": "b",
+          "texto": "F, C, H, T, R, M"
+        },
+        {
+          "id": "c",
+          "texto": "C, H, F, R, T, M"
+        },
+        {
+          "id": "d",
+          "texto": "R, T, C, H, F, M"
+        }
+      ],
+      "correcta": "c",
+      "explicacion": "M es la raíz. A la izquierda quedan C, F, H con raíz F (hijos C y H); a la derecha R, T con raíz T y R como hijo izquierdo. Postorden: C, H, F, R, T, M."
+    },
+    {
+      "id": "s3-p28",
+      "numero": 28,
+      "tema": "Árboles binarios",
+      "tipo": "campos",
+      "enunciado": "Los recorridos de un árbol binario (no necesariamente BST, llaves distintas) son: preorden 7-3-12-1-11-6-9-8-2-4-5 e inorden 12-3-11-1-6-7-8-2-9-5-4. Reconstruya el árbol y proporcione su postorden.",
+      "indicacion": "Escribe la respuesta con el formato 1-2-3: números separados por guiones, sin espacios.",
+      "campos": [
+        {
+          "id": "post",
+          "etiqueta": "Postorden",
+          "tipo": "texto",
+          "respuestas": [
+            "12-11-6-1-3-2-8-5-4-9-7"
+          ]
+        }
+      ],
+      "explicacion": "La raíz es 7. Izquierda: 3 con hijo izquierdo 12 y derecho 1 (hijos 11 y 6). Derecha: 9 con hijo izquierdo 8 (hijo derecho 2) e hijo derecho 4 (hijo izquierdo 5)."
+    },
+    {
+      "id": "s3-p29",
+      "numero": 29,
+      "tema": "Grafos y recorridos",
+      "tipo": "campos",
+      "enunciado": "Se ejecuta un DFS que inicia en el vértice 0 y procesa los vecinos de menor a mayor. Cada arista se clasifica como de árbol (llega a un vértice no visitado), de retroceso (llega a un ancestro que aún está en la pila), de avance (llega a un descendiente ya terminado) o cruzada (cualquier otro caso). Indique cuántas hay de cada tipo y si existe un ordenamiento topológico.",
+      "figura": {
+        "src": "assets/img/simulacro-3/aristas-dfs.svg",
+        "alt": "Grafo dirigido con las aristas 0→1, 0→2, 0→4, 1→3, 2→1, 2→6, 3→0, 3→4, 4→5, 5→3 y 6→5."
+      },
+      "campos": [
+        {
+          "id": "arbol",
+          "etiqueta": "a) Aristas de árbol",
+          "tipo": "texto",
+          "respuestas": [
+            "6"
+          ]
+        },
+        {
+          "id": "retroceso",
+          "etiqueta": "b) Aristas de retroceso",
+          "tipo": "texto",
+          "respuestas": [
+            "2"
+          ]
+        },
+        {
+          "id": "avance",
+          "etiqueta": "c) Aristas de avance",
+          "tipo": "texto",
+          "respuestas": [
+            "1"
+          ]
+        },
+        {
+          "id": "cruzadas",
+          "etiqueta": "d) Aristas cruzadas",
+          "tipo": "texto",
+          "respuestas": [
+            "2"
+          ]
+        },
+        {
+          "id": "topologico",
+          "etiqueta": "e) ¿Se puede obtener un ordenamiento topológico?",
+          "tipo": "lista",
+          "opciones": [
+            "No, porque existen aristas cruzadas",
+            "Sí, siempre que se inicie el DFS en el vértice 0",
+            "No, porque el DFS encontró al menos una arista de retroceso (existe un ciclo)",
+            "Sí, porque es un grafo dirigido"
+          ],
+          "respuestas": [
+            "No, porque el DFS encontró al menos una arista de retroceso (existe un ciclo)"
+          ]
+        }
+      ],
+      "explicacion": "Árbol: 0→1, 1→3, 3→4, 4→5, 0→2, 2→6. Retroceso: 3→0 y 5→3. Avance: 0→4. Cruzadas: 2→1 y 6→5. Las aristas de retroceso indican ciclos, así que no hay orden topológico."
+    },
+    {
+      "id": "s3-p30",
+      "numero": 30,
+      "tema": "Árboles binarios",
+      "tipo": "multiple",
+      "enunciado": "¿Cuáles de las siguientes afirmaciones sobre la complejidad de las operaciones en árboles son verdaderas?",
+      "seleccionar": 3,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "En un árbol Red-Black, la inserción puede requerir O(log n) rotaciones en el peor caso"
+        },
+        {
+          "id": "b",
+          "texto": "Un recorrido inorden de un BST balanceado es O(log n)"
+        },
+        {
+          "id": "c",
+          "texto": "Calcular la altura de un árbol binario con un recorrido recursivo es O(n), sin importar si el árbol está balanceado"
+        },
+        {
+          "id": "d",
+          "texto": "En un árbol AVL, la búsqueda, inserción y borrado son O(log n) en el peor caso"
+        },
+        {
+          "id": "e",
+          "texto": "Insertar las llaves 1, 2, 3, ..., n en ese orden en un BST sin balanceo produce búsquedas O(n) en el peor caso"
+        },
+        {
+          "id": "f",
+          "texto": "Construir un AVL insertando n llaves una por una tiene complejidad O(n)"
+        }
+      ],
+      "correctas": [
+        "c",
+        "d",
+        "e"
+      ],
+      "explicacion": "Calcular la altura visita todos los nodos: O(n). Un AVL garantiza O(log n) en búsqueda, inserción y borrado. Insertar 1, 2, …, n en un BST sin balanceo produce una cadena con búsquedas O(n). Red-Black usa como máximo 2 rotaciones por inserción, inorden es O(n) y construir un AVL es O(n log n)."
+    },
+    {
+      "id": "s3-p31",
+      "numero": 31,
+      "tema": "Hashing",
+      "tipo": "multiple",
+      "enunciado": "¿En cuáles de los siguientes problemas el uso de una función o tabla hash es la solución más adecuada?",
+      "seleccionar": 3,
+      "opciones": [
+        {
+          "id": "a",
+          "texto": "Detectar si un elemento ya fue visto en un flujo de millones de identificadores"
+        },
+        {
+          "id": "b",
+          "texto": "Almacenar resultados ya calculados de una función recursiva (memoización)"
+        },
+        {
+          "id": "c",
+          "texto": "Recorrer un conjunto de llaves en orden ascendente"
+        },
+        {
+          "id": "d",
+          "texto": "Verificar si un archivo descargado fue alterado comparando su resumen (checksum/digest)"
+        },
+        {
+          "id": "e",
+          "texto": "Encontrar el camino con menos aristas entre dos vértices de un grafo"
+        },
+        {
+          "id": "f",
+          "texto": "Obtener todos los empleados con salario entre 500 000 y 900 000"
+        }
+      ],
+      "correctas": [
+        "a",
+        "b",
+        "d"
+      ],
+      "explicacion": "Hash da pertenencia en O(1) promedio, sirve de caché para memoización y resume archivos para verificar su integridad. No conserva orden: los recorridos ordenados y los rangos piden árboles balanceados, y el camino con menos aristas se obtiene con BFS."
+    }
+  ]
+}

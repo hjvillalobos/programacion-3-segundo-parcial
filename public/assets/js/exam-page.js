@@ -1,6 +1,6 @@
 import { element } from './render.js';
 import { paginate } from './pagination.js';
-import { validateExam, createAttempt, answerQuestion, finishAttempt, gradeAttempt, isValidAttempt, remainingSeconds, formatTime } from './exam.js';
+import { validateExam, createAttempt, answerQuestion, finishAttempt, gradeAttempt, isValidAttempt, remainingSeconds, formatTime, questionType } from './exam.js';
 
 const $ = (selector) => document.querySelector(selector);
 const examId = $('#contenido')?.dataset?.examId;
@@ -48,32 +48,93 @@ function showQuestion(index, focus = false) {
   save();
   const id = attempt.questionOrder[index];
   const question = exam.preguntas.find((item) => item.id === id);
+  const type = questionType(question);
+  const record = (value) => {
+    attempt = answerQuestion(exam, attempt, id, value);
+    save();
+    if (attempt.status === 'finished') showResults();
+    else updateProgress();
+  };
   const options = attempt.optionOrder[id].map((optionId, position) => {
     const option = question.opciones.find((item) => item.id === optionId);
-    const input = element('input', { type: 'radio', name: 'exam-answer', value: option.id });
-    input.checked = attempt.answers[id] === option.id;
+    const multiple = type === 'multiple';
+    const input = element('input', { type: multiple ? 'checkbox' : 'radio', name: 'exam-answer', value: option.id });
+    input.checked = multiple ? (attempt.answers[id] ?? []).includes(option.id) : attempt.answers[id] === option.id;
     input.addEventListener('change', () => {
-      attempt = answerQuestion(exam, attempt, id, option.id);
-      save();
-      if (attempt.status === 'finished') showResults();
-      else updateProgress();
+      if (!multiple) return record(option.id);
+      const current = attempt.answers[id] ?? [];
+      return record(input.checked ? [...current, option.id] : current.filter((item) => item !== option.id));
     });
     return element('label', { class: 'exam-option' }, [input,
       element('span', {}, [`${String.fromCharCode(65 + position)}. ${option.texto}`]),
     ]);
   });
+  const fields = (question.campos ?? []).map((field) => {
+    const saved = attempt.answers[id]?.[field.id] ?? '';
+    const control = (field.tipo ?? 'texto') === 'lista'
+      ? element('select', { name: field.id }, [
+        element('option', { value: '' }, ['Selecciona una opción']),
+        ...field.opciones.map((text) => element('option', { value: text }, [text])),
+      ])
+      : element('input', { type: 'text', name: field.id, autocomplete: 'off', spellcheck: 'false', maxlength: '200' });
+    control.value = saved;
+    control.addEventListener((field.tipo ?? 'texto') === 'lista' ? 'change' : 'input', () => {
+      record({ ...(attempt.answers[id] ?? {}), [field.id]: control.value });
+    });
+    return element('label', { class: 'exam-field' }, [element('span', {}, [field.etiqueta]), control]);
+  });
+  const hint = type === 'multiple' ? [element('p', { class: 'meta' }, [
+    `Selecciona ${question.seleccionar ? `${question.seleccionar} opciones` : 'todas las opciones correctas'}.`,
+  ])] : [];
   $('#exam-question').replaceChildren(
     element('h2', { id: 'exam-question-title', tabindex: '-1' }, [`Pregunta ${index + 1} de ${exam.preguntas.length}`]),
     element('fieldset', { class: 'exam-fieldset' }, [
       element('legend', {}, [question.enunciado]),
-      ...(question.codigo ? [element('pre', {}, [element('code', {}, [question.codigo])])] : []),
+      ...questionMedia(question),
+      ...hint,
       ...options,
+      ...(fields.length ? [element('div', { class: question.campos.length > 6 ? 'exam-fields compact' : 'exam-fields' }, fields)] : []),
     ]),
   );
   $('#previous-question').disabled = index === 0;
   $('#next-question').disabled = index === exam.preguntas.length - 1;
   updateProgress();
   if (focus) focusQuestion();
+}
+
+function questionMedia(question) {
+  return [
+    ...(question.figura ? [element('figure', { class: 'exam-figure' }, [
+      element('img', { src: question.figura.src, alt: question.figura.alt }),
+    ])] : []),
+    ...(question.codigo ? [element('pre', {}, [element('code', {}, [question.codigo])])] : []),
+    ...(question.indicacion ? [element('p', { class: 'meta' }, [question.indicacion])] : []),
+  ];
+}
+
+function optionText(question, ids) {
+  return ids.map((id) => question.opciones.find((option) => option.id === id).texto).join(' · ');
+}
+
+function answerReview(question, selected) {
+  const type = questionType(question);
+  if (type !== 'campos') {
+    const yours = selected === null ? 'Sin responder' : optionText(question, [selected].flat());
+    const correct = optionText(question, type === 'multiple' ? question.correctas : [question.correcta]);
+    return [
+      element('p', {}, [element('strong', {}, ['Tu respuesta: ']), yours]),
+      element('p', {}, [element('strong', {}, [type === 'multiple' ? 'Respuestas correctas: ' : 'Respuesta correcta: ']), correct]),
+    ];
+  }
+  return [element('table', { class: 'exam-field-review' }, [
+    element('thead', {}, [element('tr', {}, ['Campo', 'Tu respuesta', 'Respuesta correcta']
+      .map((title) => element('th', { scope: 'col' }, [title])))]),
+    element('tbody', {}, question.campos.map((field) => element('tr', {}, [
+      element('th', { scope: 'row' }, [field.etiqueta]),
+      element('td', {}, [selected?.[field.id] ?? 'Sin responder']),
+      element('td', {}, [field.respuestas[0]]),
+    ]))),
+  ])];
 }
 
 function updateProgress() {
@@ -143,20 +204,19 @@ function showResults() {
   const result = gradeAttempt(exam, attempt);
   $('#exam-results-title').textContent = `Resultado del ${exam.titulo}`;
   $('#exam-score').textContent = `${result.score.toLocaleString('es', { maximumFractionDigits: 2 })} / 100`;
-  $('#exam-result-summary').textContent = `${result.correct} ${result.correct === 1 ? 'correcta' : 'correctas'} · ${result.incorrect} ${result.incorrect === 1 ? 'incorrecta' : 'incorrectas'} · ${result.unanswered} sin responder`;
+  const partial = result.partial ? ` · ${result.partial} ${result.partial === 1 ? 'parcial' : 'parciales'}` : '';
+  $('#exam-result-summary').textContent = `${result.correct} ${result.correct === 1 ? 'correcta' : 'correctas'}${partial} · ${result.incorrect} ${result.incorrect === 1 ? 'incorrecta' : 'incorrectas'} · ${result.unanswered} sin responder`;
   $('#exam-result-time').textContent = `${attempt.reason === 'expired' ? 'Tiempo agotado: entrega automática.' : 'Intento entregado.'} Tiempo empleado: ${formatTime(result.elapsedSeconds)}.`;
-  const labels = { correct: 'Correcta', incorrect: 'Incorrecta', unanswered: 'Sin responder' };
-  const nodes = result.items.map(({ question, selected, outcome }, index) => {
-    const selectedText = question.opciones.find((option) => option.id === selected)?.texto ?? 'Sin responder';
-    const correctText = question.opciones.find((option) => option.id === question.correcta).texto;
+  const labels = { correct: 'Correcta', partial: 'Parcialmente correcta', incorrect: 'Incorrecta', unanswered: 'Sin responder' };
+  const nodes = result.items.map(({ question, selected, points, outcome }, index) => {
     const reference = question.tema ? ` · ${question.tema}` : '';
+    const partial = outcome === 'partial' ? ` (${Math.round(points * 100)} %)` : '';
     return element('article', { class: `item exam-review ${outcome}`, id: `revision-${question.id}` }, [
-      element('p', { class: 'meta' }, [`Pregunta ${index + 1} · ${labels[outcome]}${reference}`]),
+      element('p', { class: 'meta' }, [`Pregunta ${index + 1} · ${labels[outcome]}${partial}${reference}`]),
       element('details', {}, [
         element('summary', {}, [question.enunciado]),
-        ...(question.codigo ? [element('pre', {}, [element('code', {}, [question.codigo])])] : []),
-        element('p', {}, [element('strong', {}, ['Tu respuesta: ']), selectedText]),
-        element('p', {}, [element('strong', {}, ['Respuesta correcta: ']), correctText]),
+        ...questionMedia(question),
+        ...answerReview(question, selected),
         ...(question.explicacion ? [element('p', {}, [question.explicacion])] : []),
         ...(question.referencias?.length ? [element('p', { class: 'meta' }, [
           'Fuentes: ', ...question.referencias.flatMap((id, position) => [

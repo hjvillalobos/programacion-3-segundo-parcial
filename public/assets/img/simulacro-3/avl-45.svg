@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 340" width="430" height="340" role="img">
+<title>Árbol AVL con raíz 50</title>
+<defs><marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#19332f"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<path d="M247.2 57.9 L215.8 102.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M272.2 58.3 L300.8 101.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M187 135.1 L134 184.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M208.8 141.2 L219.2 178.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M307.2 141.2 L296.8 178.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M328.2 135.9 L373.8 184.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M102.7 215.9 L56.3 264.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M219.9 221.4 L211.1 258.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M240.4 215.8 L287.6 264.2" fill="none" stroke="#19332f" stroke-width="2"/>
+<g><circle cx="41" cy="280" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="41" y="280" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">5</text></g>
+<g><circle cx="118" cy="200" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="118" y="200" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">10</text></g>
+<g><circle cx="203" cy="120" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="203" y="120" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">25</text></g>
+<g><circle cx="206" cy="280" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="206" y="280" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">30</text></g>
+<g><circle cx="225" cy="200" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="225" y="200" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">35</text></g>
+<g><circle cx="303" cy="280" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="303" y="280" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">40</text></g>
+<g><circle cx="260" cy="40" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="260" y="40" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">50</text></g>
+<g><circle cx="291" cy="200" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="291" y="200" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">60</text></g>
+<g><circle cx="313" cy="120" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="313" y="120" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">75</text></g>
+<g><circle cx="389" cy="200" r="22" fill="#e5eee6" stroke="#19332f" stroke-width="1.5"/><text x="389" y="200" fill="#19332f" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">90</text></g>
+</svg>

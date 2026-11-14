@@ -224,6 +224,10 @@ button:disabled {
   border-radius: 6px;
 }
 
+.practice-panel + .practice-panel {
+  margin-top: 1rem;
+}
+
 .practice-panel h2 {
   margin: 0 0 .75rem;
   font-size: clamp(1.7rem, 3vw, 2.1rem);
