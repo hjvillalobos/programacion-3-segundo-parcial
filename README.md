@@ -23,6 +23,7 @@ Visita el sitio de GitHub Pages de este repositorio o inicia un servidor local c
 | `solucionario.html` | Respuestas explicadas en grupos de 10 |
 | `simulacro-1.html` | 50 preguntas, 90 minutos y calificación con explicaciones |
 | `simulacro-2.html` | 50 preguntas nuevas del temario, 90 minutos y revisión explicada |
+| `simulacro-3.html` | **EIF205 Estructuras de Datos**: 31 preguntas, 90 minutos y revisión explicada |
 | `referencias.html` | Cobertura del temario y fuentes |
 | `imprimir.html` | Todo el material, con impresión con o sin respuestas |
 
@@ -38,6 +39,10 @@ El **Simulacro I** es independiente del cuestionario de estudio: mezcla las preg
 
 El **Simulacro II** usa preguntas originales de práctica, con la distribución de 15 de patrones, 18 de bases de datos y 17 de hilos y comunicación. Comparte las funciones del primero y mantiene su propio intento. Al entregar, cada pregunta incluye explicación y referencias. Consulta [docs/simulacro-2.md](docs/simulacro-2.md).
 
+### Simulacro III · EIF205 Estructuras de Datos
+
+El **Simulacro III** pertenece a otro curso, **EIF205 Estructuras de Datos**, y no forma parte del temario de Programación 3. Sus 31 preguntas cubren grafos y recorridos, árboles binarios, AVL y Red-Black, hashing y backtracking. Además de la selección única, incluye verdadero o falso, selección múltiple y respuestas por campos, como recorridos, tablas hash o código para completar. Las preguntas por campos dan crédito parcial. Las figuras se generan como SVG y las claves se recalculan en las pruebas. Consulta [docs/simulacro-3.md](docs/simulacro-3.md).
+
 ## Estructura y desarrollo
 
 ```text
@@ -47,7 +52,7 @@ public/                    Archivos que se publican en GitHub Pages
   assets/js/               Carga, renderizado, rutas y paginación
   data/                    Material de estudio en JSON
 docs/                      Guía del contenido y versión de texto del material
-scripts/                   Verificación de archivos y rutas del sitio
+scripts/                   Verificación del sitio y generación de figuras del Simulacro III
 tests/                     Pruebas automatizadas
   fixtures/                Huellas del contenido original
 .github/workflows/         Validación y publicación en GitHub Pages

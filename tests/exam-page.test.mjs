@@ -20,7 +20,7 @@ class Node {
 }
 function descendants(nodes) { return nodes.flatMap((node) => [node, ...descendants(node.children)]); }
 
-for (const examId of ['simulacro-1', 'simulacro-2']) {
+for (const examId of ['simulacro-1', 'simulacro-2', 'simulacro-3']) {
 test(`${examId}: entrega al vencer, conserva resultados y permite reiniciar`, async () => {
   const exam = JSON.parse(readFileSync(new URL(`../public/data/simulacros/${examId}.json`, import.meta.url), 'utf8'));
   const html = readFileSync(new URL(`../public/${examId}.html`, import.meta.url), 'utf8');
@@ -60,8 +60,11 @@ test(`${examId}: entrega al vencer, conserva resultados y permite reiniciar`, as
     nodes['start-exam'].listeners.click();
     assert.equal(nodes['exam-timer'].textContent, '90:00');
     const active = JSON.parse(memory.get(storageKey));
-    const options = descendants(nodes['exam-question'].children).filter((node) => node.tag === 'input');
-    options[0].listeners.change();
+    // Avanza hasta una pregunta de selección única para responderla con un clic.
+    const radios = () => descendants(nodes['exam-question'].children)
+      .filter((node) => node.tag === 'input' && node.attributes.type === 'radio');
+    while (!radios().length) nodes['next-question'].listeners.click();
+    radios()[0].listeners.change();
     assert.equal(Object.keys(JSON.parse(memory.get(storageKey)).answers).length, 1);
     assert.equal(nodes['exam-results'].hidden, true);
     assert.equal(nodes['exam-review'].children.length, 0);
