@@ -68,6 +68,66 @@
   background: var(--wash);
 }
 
+.exam-figure {
+  margin: 0 0 1rem;
+  overflow-x: auto;
+}
+
+.exam-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+}
+
+.exam-fields {
+  display: grid;
+  gap: .75rem;
+  margin: 1rem 0;
+}
+
+.exam-fields.compact {
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+}
+
+.exam-field {
+  display: grid;
+  gap: .35rem;
+  font-weight: 600;
+}
+
+.exam-field input,
+.exam-field select {
+  min-height: 2.75rem;
+  padding: .5rem .65rem;
+  border: 1px solid var(--control);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+}
+
+.exam-field input {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.exam-field-review {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .75rem 0;
+}
+
+.exam-field-review th,
+.exam-field-review td {
+  padding: .4rem .55rem;
+  border: 1px solid var(--line);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
 .exam-actions {
   display: flex;
   flex-wrap: wrap;
@@ -108,6 +168,10 @@
 
 .exam-review.incorrect {
   border-left: 4px solid var(--error);
+}
+
+.exam-review.partial {
+  border-left: 4px dashed var(--accent);
 }
 
 .exam-review.unanswered {
