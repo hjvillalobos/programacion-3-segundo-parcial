@@ -78,7 +78,7 @@ function showQuestion(index, focus = false) {
       ])
       : element('input', { type: 'text', name: field.id, autocomplete: 'off', spellcheck: 'false', maxlength: '200' });
     control.value = saved;
-    control.addEventListener(control.tagName === 'SELECT' ? 'change' : 'input', () => {
+    control.addEventListener((field.tipo ?? 'texto') === 'lista' ? 'change' : 'input', () => {
       record({ ...(attempt.answers[id] ?? {}), [field.id]: control.value });
     });
     return element('label', { class: 'exam-field' }, [element('span', {}, [field.etiqueta]), control]);

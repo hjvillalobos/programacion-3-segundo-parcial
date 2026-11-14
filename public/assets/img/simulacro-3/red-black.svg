@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 960" width="420" height="960" role="img">
+<title>Árboles Red-Black A, B y C</title>
+<defs><marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#19332f"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="10" y="22" fill="#19332f" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Árbol A</text>
+<path d="M203.1 84.1 L146.9 130.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M236.9 84.1 L293.1 130.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M116.3 162.2 L83.7 202.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M140.4 164.4 L159.6 200.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M297.8 163.3 L272.2 201.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M321.3 163.9 L343.7 201.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M60.7 239.9 L44.3 275.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M344.6 239.4 L325.4 275.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M365.4 239.4 L384.6 275.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<g><circle cx="35" cy="295" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="35" y="295" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">8</text></g>
+<g><circle cx="70" cy="220" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="70" y="220" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">12</text></g>
+<g><circle cx="130" cy="145" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="130" y="145" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">19</text></g>
+<g><circle cx="170" cy="220" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="170" y="220" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">31</text></g>
+<g><circle cx="220" cy="70" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="220" y="70" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">38</text></g>
+<g><circle cx="260" cy="220" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="260" y="220" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">41</text></g>
+<g><circle cx="310" cy="145" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="310" y="145" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">45</text></g>
+<g><circle cx="315" cy="295" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="315" y="295" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">47</text></g>
+<g><circle cx="355" cy="220" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="355" y="220" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">50</text></g>
+<g><circle cx="395" cy="295" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="395" y="295" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">55</text></g>
+<text x="10" y="342" fill="#19332f" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Árbol B</text>
+<path d="M203.1 404.1 L146.9 450.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M236.9 404.1 L293.1 450.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M116.3 482.2 L83.7 522.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M140.4 484.4 L159.6 520.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M297.8 483.3 L272.2 521.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M321.3 483.9 L343.7 521.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M60.7 559.9 L44.3 595.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M344.6 559.4 L325.4 595.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M365.4 559.4 L384.6 595.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<g><circle cx="35" cy="615" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="35" y="615" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">8</text></g>
+<g><circle cx="70" cy="540" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="70" y="540" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">12</text></g>
+<g><circle cx="130" cy="465" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="130" y="465" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">19</text></g>
+<g><circle cx="170" cy="540" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="170" y="540" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">31</text></g>
+<g><circle cx="220" cy="390" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="220" y="390" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">38</text></g>
+<g><circle cx="260" cy="540" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="260" y="540" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">41</text></g>
+<g><circle cx="310" cy="465" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="310" y="465" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">45</text></g>
+<g><circle cx="315" cy="615" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="315" y="615" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">47</text></g>
+<g><circle cx="355" cy="540" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="355" y="540" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">50</text></g>
+<g><circle cx="395" cy="615" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="395" y="615" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">55</text></g>
+<text x="10" y="662" fill="#19332f" font-family="system-ui, sans-serif" font-size="18" font-weight="700">Árbol C</text>
+<path d="M203.1 724.1 L146.9 770.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M236.9 724.1 L293.1 770.9" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M116.3 802.2 L83.7 842.8" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M140.4 804.4 L159.6 840.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M297.8 803.3 L272.2 841.7" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M321.3 803.9 L343.7 841.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M60.7 879.9 L44.3 915.1" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M344.6 879.4 L325.4 915.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<path d="M365.4 879.4 L384.6 915.6" fill="none" stroke="#19332f" stroke-width="2"/>
+<g><circle cx="35" cy="935" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="35" y="935" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">8</text></g>
+<g><circle cx="70" cy="860" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="70" y="860" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">12</text></g>
+<g><circle cx="130" cy="785" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="130" y="785" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">19</text></g>
+<g><circle cx="170" cy="860" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="170" y="860" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">31</text></g>
+<g><circle cx="220" cy="710" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="220" y="710" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">38</text></g>
+<g><circle cx="260" cy="860" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="260" y="860" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">41</text></g>
+<g><circle cx="310" cy="785" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="310" y="785" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">45</text></g>
+<g><circle cx="315" cy="935" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="315" y="935" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">47</text></g>
+<g><circle cx="355" cy="860" r="22" fill="#1b1b1b" stroke="#19332f" stroke-width="1.5"/><text x="355" y="860" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">50</text></g>
+<g><circle cx="395" cy="935" r="22" fill="#b3261e" stroke="#19332f" stroke-width="1.5"/><text x="395" y="935" fill="#ffffff" font-family="system-ui, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dy=".35em">55</text></g>
+</svg>
